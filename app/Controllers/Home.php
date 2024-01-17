@@ -8,4 +8,12 @@ class Home extends BaseController
     {
         return view('beranda');
     }
+    public function dashboard()
+    {
+        echo view('admin/layout/head');
+        echo view('admin/layout/side');
+        echo view('admin/layout/nav');
+        echo view('admin/dashboard');
+        echo view('admin/layout/script');
+    }
 }

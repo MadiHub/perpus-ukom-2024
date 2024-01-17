@@ -19,7 +19,8 @@
         /* Responsive container for mobile */
         @media only screen and (max-width: 767px) {
             .container {
-                width: 95%;
+                max-width: 1200px;
+                width: 100%;
                 margin: auto;
             }
         }
@@ -38,11 +39,11 @@
         /* responsive card tab */
         @media (min-width: 768px) and (max-width: 991px) {
             .card {
-                width: 13rem; 
+                width: 12rem; 
             }
         }
 
-        .judul h5 a {
+        .judul h6 a {
             font-weight: 500;
             font-size: 20px;
             color: black;
@@ -52,7 +53,7 @@
             transition: color 0.3s; 
         }
 
-        .judul h5 a:hover {
+        .judul h6 a:hover {
             color: #0193C5;
             text-decoration: none; /* Menghilangkan garis bawah pada hover */
         }
@@ -138,7 +139,7 @@
                         </div>
                         <div class="card-body">
                             <div class="judul">
-                                <h5 class="mb-4"><a href="#">Ancika 1995</a></h5>
+                                <h6 class="mb-4"><a href="#">Ancika 1995</a></h6>
                             </div>
                             <hr>
                             <p>Kategori : Fiksi</p>
@@ -155,7 +156,7 @@
                         </div>
                         <div class="card-body">
                             <div class="judul">
-                                <h5 class="mb-4"><a href="#">Dongeng Free Fire</a></h5>
+                                <h6 class="mb-4"><a href="#">Dongeng Free Fire</a></h6>
                             </div>
                             <hr>
                             <p>Kategori : Fiksi</p>
@@ -172,7 +173,7 @@
                         </div>
                         <div class="card-body">
                             <div class="judul">
-                                <h5 class="mb-4"><a href="#">Kedamaian</a></h5>
+                                <h6 class="mb-4"><a href="#">Kedamaian</a></h6>
                             </div>
                             <hr>
                             <p>Kategori : Fiksi</p>
@@ -189,7 +190,7 @@
                         </div>
                         <div class="card-body">
                             <div class="judul">
-                                <h5 class="mb-4"><a href="#">Lorem Ipsum</a></h5>
+                                <h6 class="mb-4"><a href="#">Lorem Ipsum</a></h6>
                             </div>
                             <hr>
                             <p>Kategori : Fiksi</p>
