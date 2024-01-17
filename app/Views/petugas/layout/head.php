@@ -40,5 +40,4 @@
     <!-- We use those styles to show code examples, you should remove them in your application.-->
     <link href="<?= base_url() ?>admin/dist/css/examples.css" rel="stylesheet">
     <link href="<?= base_url() ?>admin/dist/vendors/@coreui/chartjs/css/coreui-chartjs.css" rel="stylesheet">
-    <link href="<?= base_url() ?>admin/dist/vendors/@coreui/icons/css/free.min.css" rel="stylesheet">
   </head>

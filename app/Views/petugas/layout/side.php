@@ -13,7 +13,7 @@
         <li class="nav-item"><a class="nav-link" href="<?= base_url() ?>admin/dist/index.html">
             <svg class="nav-icon">
               <use xlink:href="<?= base_url() ?>admin/dist/vendors/@coreui/icons/svg/free.svg#cil-speedometer"></use>
-            </svg> Dashboard Admin</a></li>
+            </svg> Dashboard Petugas</a></li>
         <li class="nav-item"><a class="nav-link" href="<?= base_url() ?>admin/dist/colors.html">
             <svg class="nav-icon">
               <use xlink:href="<?= base_url() ?>admin/dist/vendors/@coreui/icons/svg/free.svg#cil-drop"></use>

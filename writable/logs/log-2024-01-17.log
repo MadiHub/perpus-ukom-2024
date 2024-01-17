@@ -5,3 +5,277 @@ in APPPATH/Controllers/Home.php on line 18.
  3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
  4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
  5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+CRITICAL - 2024-01-17 13:40:52 --> Invalid file: "admin/dashboard_petugas.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/Petugas.php(12): view()
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Petugas->dashboard_petugas()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+CRITICAL - 2024-01-17 13:42:55 --> Array to string conversion
+in APPPATH/Controllers/Petugas.php on line 12.
+ 1 APPPATH/Controllers/Petugas.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Petugas->dashboard_petugas()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-01-17 14:23:32 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelRoles is deprecated in APPPATH/Controllers/Auth.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-01-17 14:23:37 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelRoles is deprecated in APPPATH/Controllers/Auth.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-01-17 14:26:11 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelRoles is deprecated in APPPATH/Controllers/Auth.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-01-17 14:26:34 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelRoles is deprecated in APPPATH/Controllers/Auth.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-01-17 14:26:39 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelRoles is deprecated in APPPATH/Controllers/Auth.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+INFO - 2024-01-17 14:26:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-01-17 14:26:39 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelRoles is deprecated in APPPATH/Controllers/Auth.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-01-17 14:26:57 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelRoles is deprecated in APPPATH/Controllers/Auth.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-01-17 14:27:02 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelRoles is deprecated in APPPATH/Controllers/Auth.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+CRITICAL - 2024-01-17 14:27:02 --> Undefined variable $nis
+in APPPATH/Controllers/Auth.php on line 39.
+ 1 APPPATH/Controllers/Auth.php(39): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Auth->proses_login()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-01-17 14:27:11 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelRoles is deprecated in APPPATH/Controllers/Auth.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+ERROR - 2024-01-17 14:27:11 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: YES) in /home/madi/Documents/project/ci4/perpus-ukom-2024/system/Database/MySQLi/Connection.php:184
+Stack trace:
+#0 /home/madi/Documents/project/ci4/perpus-ukom-2024/system/Database/MySQLi/Connection.php(184): mysqli->real_connect()
+#1 /home/madi/Documents/project/ci4/perpus-ukom-2024/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/madi/Documents/project/ci4/perpus-ukom-2024/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/madi/Documents/project/ci4/perpus-ukom-2024/system/Database/BaseBuilder.php(1748): CodeIgniter\Database\BaseConnection->query()
+#4 /home/madi/Documents/project/ci4/perpus-ukom-2024/system/Model.php(871): CodeIgniter\Database\BaseBuilder->getWhere()
+#5 /home/madi/Documents/project/ci4/perpus-ukom-2024/app/Models/ModelRoles.php(18): CodeIgniter\Model->__call()
+#6 /home/madi/Documents/project/ci4/perpus-ukom-2024/app/Controllers/Auth.php(39): App\Models\ModelRoles->dapatkan_user_role()
+#7 /home/madi/Documents/project/ci4/perpus-ukom-2024/system/CodeIgniter.php(942): App\Controllers\Auth->proses_login()
+#8 /home/madi/Documents/project/ci4/perpus-ukom-2024/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#9 /home/madi/Documents/project/ci4/perpus-ukom-2024/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 /home/madi/Documents/project/ci4/perpus-ukom-2024/system/Commands/Server/rewrite.php(47): require_once('...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: YES) in /home/madi/Documents/project/ci4/perpus-ukom-2024/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /home/madi/Documents/project/ci4/perpus-ukom-2024/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/madi/Documents/project/ci4/perpus-ukom-2024/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/madi/Documents/project/ci4/perpus-ukom-2024/system/Database/BaseBuilder.php(1748): CodeIgniter\Database\BaseConnection->query()
+#3 /home/madi/Documents/project/ci4/perpus-ukom-2024/system/Model.php(871): CodeIgniter\Database\BaseBuilder->getWhere()
+#4 /home/madi/Documents/project/ci4/perpus-ukom-2024/app/Models/ModelRoles.php(18): CodeIgniter\Model->__call()
+#5 /home/madi/Documents/project/ci4/perpus-ukom-2024/app/Controllers/Auth.php(39): App\Models\ModelRoles->dapatkan_user_role()
+#6 /home/madi/Documents/project/ci4/perpus-ukom-2024/system/CodeIgniter.php(942): App\Controllers\Auth->proses_login()
+#7 /home/madi/Documents/project/ci4/perpus-ukom-2024/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#8 /home/madi/Documents/project/ci4/perpus-ukom-2024/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#10 /home/madi/Documents/project/ci4/perpus-ukom-2024/system/Commands/Server/rewrite.php(47): require_once('...')
+#11 {main}
+CRITICAL - 2024-01-17 14:27:11 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: YES)
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1748): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(871): CodeIgniter\Database\BaseBuilder->getWhere()
+ 4 APPPATH/Models/ModelRoles.php(18): CodeIgniter\Model->__call()
+ 5 APPPATH/Controllers/Auth.php(39): App\Models\ModelRoles->dapatkan_user_role()
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Auth->proses_login()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-01-17 14:27:43 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelRoles is deprecated in APPPATH/Controllers/Auth.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-01-17 14:28:05 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelRoles is deprecated in APPPATH/Controllers/Auth.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-01-17 14:28:06 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelRoles is deprecated in APPPATH/Controllers/Auth.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-01-17 14:28:10 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelRoles is deprecated in APPPATH/Controllers/Auth.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+INFO - 2024-01-17 14:28:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-01-17 14:28:13 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelRoles is deprecated in APPPATH/Controllers/Auth.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-01-17 14:28:17 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelRoles is deprecated in APPPATH/Controllers/Auth.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+INFO - 2024-01-17 14:28:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-01-17 14:29:35 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelRoles is deprecated in APPPATH/Controllers/Auth.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-01-17 14:29:38 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelRoles is deprecated in APPPATH/Controllers/Auth.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-01-17 15:32:33 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelRoles is deprecated in APPPATH/Controllers/Auth.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+INFO - 2024-01-17 15:32:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-01-17 15:32:33 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelRoles is deprecated in APPPATH/Controllers/Auth.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-01-17 15:46:08 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelRoles is deprecated in APPPATH/Controllers/Auth.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+INFO - 2024-01-17 15:46:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-01-17 15:46:08 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelRoles is deprecated in APPPATH/Controllers/Auth.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-01-17 15:46:15 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelRoles is deprecated in APPPATH/Controllers/Auth.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+CRITICAL - 2024-01-17 15:46:15 --> Call to undefined method App\Models\ModelRoles::dapatkan_user_role
+in SYSTEMPATH/Model.php on line 873.
+ 1 APPPATH/Controllers/Auth.php(27): CodeIgniter\Model->__call()
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Auth->proses_login()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-01-17 15:46:22 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelRoles is deprecated in APPPATH/Controllers/Auth.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-01-17 15:46:28 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelRoles is deprecated in APPPATH/Controllers/Auth.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+CRITICAL - 2024-01-17 15:46:28 --> Call to undefined method App\Models\ModelRoles::dapatkan_user_role
+in SYSTEMPATH/Model.php on line 873.
+ 1 APPPATH/Controllers/Auth.php(27): CodeIgniter\Model->__call()
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Auth->proses_login()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-01-17 15:47:13 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelRoles is deprecated in APPPATH/Controllers/Auth.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+INFO - 2024-01-17 15:47:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-01-17 15:47:14 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelRoles is deprecated in APPPATH/Controllers/Auth.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-01-17 15:48:07 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelRoles is deprecated in APPPATH/Controllers/Auth.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+INFO - 2024-01-17 15:48:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-01-17 15:48:15 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelRoles is deprecated in APPPATH/Controllers/Auth.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+INFO - 2024-01-17 15:48:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-01-17 15:48:15 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelRoles is deprecated in APPPATH/Controllers/Auth.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-01-17 15:49:42 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelRoles is deprecated in APPPATH/Controllers/Auth.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+INFO - 2024-01-17 15:49:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
