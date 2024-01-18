@@ -10,38 +10,26 @@
         </svg>
       </div>
       <ul class="sidebar-nav" data-coreui="navigation" data-simplebar="">
-        <li class="nav-item"><a class="nav-link" href="<?= base_url() ?>admin/dist/index.html">
+      <li class="nav-item"><a class="nav-link" href="<?= base_url() ?>dashboard_admin">
             <svg class="nav-icon">
               <use xlink:href="<?= base_url() ?>admin/dist/vendors/@coreui/icons/svg/free.svg#cil-speedometer"></use>
             </svg> Dashboard Admin</a></li>
         <li class="nav-item"><a class="nav-link" href="<?= base_url() ?>admin/dist/colors.html">
             <svg class="nav-icon">
-              <use xlink:href="<?= base_url() ?>admin/dist/vendors/@coreui/icons/svg/free.svg#cil-drop"></use>
-            </svg> Colors</a></li>
-        <li class="nav-item"><a class="nav-link" href="<?= base_url() ?>admin/dist/typography.html">
+              <use xlink:href="<?= base_url() ?>admin/dist/vendors/@coreui/icons/svg/free.svg#cil-book"></use>
+            </svg> Daftar Buku</a></li>
+        <li class="nav-item"><a class="nav-link" href="<?= base_url() ?>kategori_buku">
             <svg class="nav-icon">
-              <use xlink:href="<?= base_url() ?>admin/dist/vendors/@coreui/icons/svg/free.svg#cil-pencil"></use>
-            </svg> Typography</a></li>
+              <use xlink:href="<?= base_url() ?>admin/dist/vendors/@coreui/icons/svg/free.svg#cil-list"></use>
+            </svg> Kategori Buku</a></li>
         <li class="nav-group"><a class="nav-link nav-group-toggle" href="<?= base_url() ?>admin/dist/#">
             <svg class="nav-icon">
-              <use xlink:href="<?= base_url() ?>admin/dist/vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
-            </svg> Base</a>
+              <use xlink:href="<?= base_url() ?>admin/dist/vendors/@coreui/icons/svg/free.svg#cil-group"></use>
+            </svg> Users</a>
           <ul class="nav-group-items">
-            <li class="nav-item"><a class="nav-link" href="<?= base_url() ?>admin/dist/base/accordion.html"><span class="nav-icon"></span> Accordion</a></li>
-            <li class="nav-item"><a class="nav-link" href="<?= base_url() ?>admin/dist/base/breadcrumb.html"><span class="nav-icon"></span> Breadcrumb</a></li>
-            <li class="nav-item"><a class="nav-link" href="<?= base_url() ?>admin/dist/base/cards.html"><span class="nav-icon"></span> Cards</a></li>
-            <li class="nav-item"><a class="nav-link" href="<?= base_url() ?>admin/dist/base/carousel.html"><span class="nav-icon"></span> Carousel</a></li>
-            <li class="nav-item"><a class="nav-link" href="<?= base_url() ?>admin/dist/base/collapse.html"><span class="nav-icon"></span> Collapse</a></li>
-            <li class="nav-item"><a class="nav-link" href="<?= base_url() ?>admin/dist/base/list-group.html"><span class="nav-icon"></span> List group</a></li>
-            <li class="nav-item"><a class="nav-link" href="<?= base_url() ?>admin/dist/base/navs-tabs.html"><span class="nav-icon"></span> Navs &amp; Tabs</a></li>
-            <li class="nav-item"><a class="nav-link" href="<?= base_url() ?>admin/dist/base/pagination.html"><span class="nav-icon"></span> Pagination</a></li>
-            <li class="nav-item"><a class="nav-link" href="<?= base_url() ?>admin/dist/base/placeholders.html"><span class="nav-icon"></span> Placeholders</a></li>
-            <li class="nav-item"><a class="nav-link" href="<?= base_url() ?>admin/dist/base/popovers.html"><span class="nav-icon"></span> Popovers</a></li>
-            <li class="nav-item"><a class="nav-link" href="<?= base_url() ?>admin/dist/base/progress.html"><span class="nav-icon"></span> Progress</a></li>
-            <li class="nav-item"><a class="nav-link" href="<?= base_url() ?>admin/dist/base/scrollspy.html"><span class="nav-icon"></span> Scrollspy</a></li>
-            <li class="nav-item"><a class="nav-link" href="<?= base_url() ?>admin/dist/base/spinners.html"><span class="nav-icon"></span> Spinners</a></li>
-            <li class="nav-item"><a class="nav-link" href="<?= base_url() ?>admin/dist/base/tables.html"><span class="nav-icon"></span> Tables</a></li>
-            <li class="nav-item"><a class="nav-link" href="<?= base_url() ?>admin/dist/base/tooltips.html"><span class="nav-icon"></span> Tooltips</a></li>
+            <li class="nav-item"><a class="nav-link" href="<?= base_url() ?>admin/dist/base/accordion.html"><span class="nav-icon"></span> Admin</a></li>
+            <li class="nav-item"><a class="nav-link" href="<?= base_url() ?>admin/dist/base/breadcrumb.html"><span class="nav-icon"></span> Petugas</a></li>
+            <li class="nav-item"><a class="nav-link" href="<?= base_url() ?>admin/dist/base/cards.html"><span class="nav-icon"></span> Member</a></li>            
           </ul>
         </li>
         

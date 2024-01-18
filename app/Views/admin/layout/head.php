@@ -41,4 +41,9 @@
     <link href="<?= base_url() ?>admin/dist/css/examples.css" rel="stylesheet">
     <link href="<?= base_url() ?>admin/dist/vendors/@coreui/chartjs/css/coreui-chartjs.css" rel="stylesheet">
     <link href="<?= base_url() ?>admin/dist/vendors/@coreui/icons/css/free.min.css" rel="stylesheet">
+    <!-- datatables -->
+    <link rel="stylesheet" href="<?= base_url() ?>DataTables/datatables.min.css">
+    <link rel="stylesheet" href="<?= base_url() ?>bootstrap/css/bootstrap.min.css">
+
+
   </head>
