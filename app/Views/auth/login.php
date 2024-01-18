@@ -34,5 +34,33 @@
 			</div>
 		</div>
 	</div>
+     <!-- script jquery -->
+    <script src="<?= base_url() ?>jquery/jquery.slim.min.js"></script>
+    <!-- sweet allert -->
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  
+  <script>
+      $(function() {
+          <?php if (session()->has("success")) { ?>
+              Swal.fire({
+                  icon: 'success',
+                  title: 'Berhasil',
+                  text: '<?= session("success") ?>'
+              })
+          <?php } ?>
+      });
+  </script>
+
+  <script>
+      $(function() {
+          <?php if (session()->has("error")) { ?>
+              Swal.fire({
+                  icon: 'error',
+                  title: 'Error',
+                  text: '<?= session("error") ?>'
+              })
+          <?php } ?>
+      });
+  </script>
 </body>
 </html>

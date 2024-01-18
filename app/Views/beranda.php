@@ -208,6 +208,20 @@
     <script src="<?= base_url() ?>popper/popper.js"></script>
     <!-- script bootsrap -->
     <script src="<?= base_url() ?>bootstrap/js/bootstrap.min.js"></script>
+    <!-- script bootsrap -->
+    <!-- script sweeetalert -->
+    <script src="<?= base_url() ?>sweetalert/alert.js"></script>
+    <script>
+		$(function() {
+			<?php if (session()->has("success")) { ?>
+				Swal.fire({
+					icon: 'success',
+					title: 'Berhasil Login',
+					text: '<?= session("success") ?>'
+				})
+			<?php } ?>
+		});
+	</script>
     <!-- owl script -->
     <script src="<?= base_url() ?>owl-slide/dist/owl.carousel.min.js"></script>
     <script>
@@ -228,5 +242,17 @@
             owl.trigger('stop.owl.autoplay')
         })
     </script>
+      <script>
+		$(function() {
+			<?php if (session()->has("success")) { ?>
+				Swal.fire({
+					icon: 'success',
+					title: 'Berhasil Login',
+					text: '<?= session("success") ?>'
+				})
+			<?php } ?>
+		});
+	</script>
+    
 </body>
 </html>

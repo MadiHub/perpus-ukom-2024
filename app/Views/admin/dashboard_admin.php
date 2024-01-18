@@ -66,4 +66,18 @@
         <div class="ms-auto">Powered by&nbsp;<a href="<?= base_url() ?>admin/dist/https://coreui.io/docs/">Rahmadi Cahyo Saputro</a></div>
       </footer>
     </div>
-    
+
+    <!-- script jquery -->
+    <script src="<?= base_url() ?>jquery/jquery.slim.min.js"></script>
+    <script src="<?= base_url() ?>sweetalert/alert.js"></script>
+    <script>
+      $(function() {
+        <?php if (session()->has("success")) { ?>
+          Swal.fire({
+            icon: 'success',
+            title: 'Berhasil Login',
+            text: '<?= session("success") ?>'
+          })
+        <?php } ?>
+      });
+	  </script>

@@ -13,7 +13,9 @@ class Auth extends BaseController
     public function login()
     {
         $data = [
-            'judul' => 'Login'
+            'judul' => 'Login',
+            'validation' => \Config\Services::validation()
+
         ];
         echo view('auth/login', $data);
     }
