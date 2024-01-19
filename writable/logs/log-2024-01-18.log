@@ -1943,3 +1943,4 @@ WARNING - 2024-01-18 16:02:08 --> [DEPRECATED] Creation of dynamic property App\
  4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
  5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
 INFO - 2024-01-18 16:02:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-18 16:03:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

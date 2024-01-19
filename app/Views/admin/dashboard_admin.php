@@ -75,7 +75,7 @@
         <?php if (session()->has("success")) { ?>
           Swal.fire({
             icon: 'success',
-            title: 'Berhasil Login',
+            title: 'Berhasil',
             text: '<?= session("success") ?>'
           })
         <?php } ?>

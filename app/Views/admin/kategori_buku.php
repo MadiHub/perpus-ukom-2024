@@ -8,7 +8,7 @@
             </button>
                 <div class="card">
                     <div class="card-body">
-                        <table id="myTable" class="table table-bordered table-striped table-hover">
+                        <table id="myTablekategori" class="table table-bordered table-striped table-hover">
                             <thead>
                                 <tr>
                                     <th>#</th>
@@ -28,7 +28,9 @@
                                             data-nama_kategori_buku="<?= $k_buku['nama_kategori_buku'] ?>"
                                             > EDIT
                                         </button>
-                                        <a href="" class="btn btn-danger">Hapus</a>
+                                        <button type="button" class="btn btn-danger" onclick="hapusKBuku('<?= $k_buku['id_kategori_buku'] ?>', '<?= $k_buku['nama_kategori_buku'] ?>')">
+                                            HAPUS
+                                        </button>
                                     </td>
                                 </tr>
                                 <?php endforeach; ?>
@@ -48,14 +50,7 @@
       </footer>
     </div>
     
-    <!-- script datatables -->
-    <script src="<?= base_url() ?>jquery/jquery.slim.min.js"></script>
-    <script src="<?= base_url() ?>DataTables/datatables.min.js"></script>  
-    <script>
-      $(document).ready(function() {
-          $('#myTable').DataTable();
-      });
-    </script>
+    
 
     <!-- script bootsrap -->
     <script src="<?= base_url() ?>bootstrap/js/bootstrap.min.js"></script>
@@ -101,10 +96,42 @@
         </div>
     </div>
     </div>
+
+    <!-- script jquery -->
+    <script src="<?= base_url() ?>jquery/jquery.slim.min.js"></script>
+    <script src="<?= base_url() ?>DataTables/datatables.min.js"></script>  
+    <script>
+      $(document).ready(function() {
+          $('#myTablekategori').DataTable();
+      });
+    </script>
+    <script src="<?= base_url() ?>sweetalert/alert.js"></script>
     <!-- script edit kategori buku -->
     <script>
         $(document).on('click', '#btn-edit-k-buku', function() {
             $('.modal-body #id_kategori_buku').val($(this).data('id_kategori_buku'));
             $('.modal-body #nama_kategori_buku').val($(this).data('nama_kategori_buku'));
         })
+    </script>
+
+
+    <!-- script hapus buku -->
+    <script>
+        function hapusKBuku(id_kategori_buku, nama_kategori_buku) {
+            Swal.fire({
+                title: "Apa anda yakin?",
+                text: "Data kategori buku : " + nama_kategori_buku + " ini akan terhapus!",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Ya",
+                cancelButtonText: "Batal" 
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = '<?= base_url() ?>hapus_kategori_buku/' + id_kategori_buku;
+
+                }
+            });
+        }
     </script>

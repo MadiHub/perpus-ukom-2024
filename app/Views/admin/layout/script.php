@@ -6,19 +6,19 @@
     <script src="<?= base_url() ?>admin/dist/vendors/@coreui/chartjs/js/coreui-chartjs.js"></script>
     <script src="<?= base_url() ?>admin/dist/vendors/@coreui/utils/js/coreui-utils.js"></script>
     <script src="<?= base_url() ?>admin/dist/js/main.js"></script>
+
+    <!-- script jquery -->
     <script src="<?= base_url() ?>sweetalert/alert.js"></script>
     <script>
-		$(function() {
-			<?php if (session()->has("success")) { ?>
-				Swal.fire({
-					icon: 'success',
-					title: 'Berhasil Login',
-					text: '<?= session("success") ?>'
-				})
-			<?php } ?>
-		});
-	</script>
-  
-   
+      $(function() {
+        <?php if (session()->has("success")) { ?>
+          Swal.fire({
+            icon: 'success',
+            title: 'Berhasil',
+            text: '<?= session("success") ?>'
+          })
+        <?php } ?>
+      });
+	  </script>
   </body>
 </html>

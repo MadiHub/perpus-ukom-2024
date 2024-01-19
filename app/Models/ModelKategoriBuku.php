@@ -10,15 +10,6 @@ class ModelKategoriBuku extends Model
     protected $primaryKey = 'id_kategori_buku';
     protected $allowedFields = ['id_kategori_buku', 'nama_kategori_buku'];
 
-    public function dapatkan_user_role($email = false)
-    {
-        if ($email === false) {
-            return $this->findAll();
-        } else {
-            return $this->getWhere(['email' => $email]);
-        }
-    }
-
     public function tambah_kategori_buku($data)
     {
         $builder = $this->db->table($this->table);
@@ -48,5 +39,11 @@ class ModelKategoriBuku extends Model
         $builder = $this->db->table($this->table);
         $builder->where('id_kategori_buku', $id_kategori_buku);
         return $builder->update($data);
+    }
+
+    public function hapus_kategori_buku($id_kategori_buku)
+    {
+        $builder = $this->db->table($this->table);
+        return $builder->delete(['id_kategori_buku' => $id_kategori_buku]);
     }
 }
