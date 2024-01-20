@@ -1,19 +1,21 @@
 <?php
 
 namespace App\Controllers;
+use App\Models\ModelBuku;
 
 class Home extends BaseController
 {
+    public function __construct()
+    {
+        $this->ModelBuku = new ModelBuku();
+    }
+
     public function index(): string
     {
-        return view('beranda');
-    }
-    public function dashboard()
-    {
-        echo view('admin/layout/head');
-        echo view('admin/layout/side');
-        echo view('admin/layout/nav');
-        echo view('admin/dashboard');
-        echo view('admin/layout/script');
+        $semua_buku = $this->ModelBuku->semua_buku();
+        $data = [
+        'semua_buku' => $semua_buku,  
+        ];
+        return view('beranda', $data);
     }
 }

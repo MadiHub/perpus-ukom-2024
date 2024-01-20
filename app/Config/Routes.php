@@ -25,8 +25,8 @@ $routes->post('proses_tambah_buku', 'Admin::proses_tambah_buku');
 $routes->post('proses_edit_buku', 'Admin::proses_edit_buku');
 $routes->get('hapus_buku/(:segment)', 'Admin::hapus_buku/$1');
 
-
-
-
 // petugas
 $routes->get('dashboard_petugas', 'Petugas::dashboard_petugas');
+
+// pinjam buku
+$routes->get('pinjam_buku/(:segment)', 'PinjamBuku::pinjam_buku/$1');

@@ -131,75 +131,26 @@
                 </div>
             </div>
             <div class="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">
+                <?php foreach($semua_buku as $buku) : ?>
                 <!-- Card 1 -->
                 <div class="col">
                     <div class="card mb-3 mr-2">
                         <div class="img mt-1 mr-1 ml-1 mb-1" style="max-height: 250px; overflow: hidden;">
-                            <img src="buku/1.jpg" class="card-img-top img-fluid" alt="course">
+                            <img src="<?= base_url() ?>buku/<?= $buku['sampul_buku']?>" class="card-img-top img-fluid" alt="course">
                         </div>
                         <div class="card-body">
                             <div class="judul">
-                                <h6 class="mb-4"><a href="#">Ancika 1995</a></h6>
+                                <h6 class="mb-4"><a href="#"><?= $buku['judul']?></a></h6>
                             </div>
                             <hr>
-                            <p>Kategori : Fiksi</p>
+                            <p>Kategori : <?= $buku['nama_kategori_buku']?></p>
                             <hr>
-                            <button class="btn btn-block btn-primary w-100">Pinjam</button>
+                            <a href="<?= base_url() ?>pinjam_buku/<?= $buku['id_buku']?>" class="btn btn-block btn-primary w-100">Pinjam</a>
                         </div>
                     </div>
                 </div>
-                <!-- Card 2 -->
-                <div class="col">
-                    <div class="card mb-3 mr-2">
-                        <div class="img mt-1 mr-1 ml-1 mb-1" style="max-height: 250px; overflow: hidden;">
-                            <img src="buku/2.jpg" class="card-img-top img-fluid" alt="course">
-                        </div>
-                        <div class="card-body">
-                            <div class="judul">
-                                <h6 class="mb-4"><a href="#">Dongeng Free Fire</a></h6>
-                            </div>
-                            <hr>
-                            <p>Kategori : Fiksi</p>
-                            <hr>
-                            <button class="btn btn-block btn-primary w-100">Pinjam</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card 3 -->
-                <div class="col">
-                    <div class="card mb-3 mr-2">
-                        <div class="img mt-1 mr-1 ml-1 mb-1" style="max-height: 250px; overflow: hidden;">
-                            <img src="buku/3.jpg" class="card-img-top img-fluid" alt="course">
-                        </div>
-                        <div class="card-body">
-                            <div class="judul">
-                                <h6 class="mb-4"><a href="#">Kedamaian</a></h6>
-                            </div>
-                            <hr>
-                            <p>Kategori : Fiksi</p>
-                            <hr>
-                            <button class="btn btn-block btn-primary w-100">Pinjam</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card 4 -->
-                <div class="col">
-                    <div class="card mb-3 mr-2">
-                        <div class="img mt-1 mr-1 ml-1 mb-1" style="max-height: 250px; overflow: hidden;">
-                            <img src="buku/4.jpg" class="card-img-top img-fluid" alt="course">
-                        </div>
-                        <div class="card-body">
-                            <div class="judul">
-                                <h6 class="mb-4"><a href="#">Lorem Ipsum</a></h6>
-                            </div>
-                            <hr>
-                            <p>Kategori : Fiksi</p>
-                            <hr>
-                            <button class="btn btn-block btn-primary w-100">Pinjam</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                <?php endforeach ?>
+                
         </div>
     </div>
     <!-- script jquery -->

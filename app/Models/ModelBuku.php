@@ -29,13 +29,17 @@ class ModelBuku extends Model
 
 
     public function dapatkan_buku($id_buku = false)
-    {
-        if ($id_buku === false) {
-            return $this->findAll();
-        } else {
-            return $this->getWhere(['id_buku' => $id_buku]);
-        }
+{
+    $this->select('*');
+    $this->join('tb_kategori_buku', 'tb_kategori_buku.id_kategori_buku = '.$this->table.'.id_kategori_buku');
+
+    if ($id_buku === false) {
+        return $this->findAll();
+    } else {
+        return $this->getWhere(['id_buku' => $id_buku])->getRow();
     }
+}
+
 
     public function edit_buku($data, $id_buku)
     {
