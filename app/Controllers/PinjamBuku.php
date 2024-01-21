@@ -45,7 +45,7 @@ class PinjamBuku extends BaseController
                 'sampul_buku' => $sampul_buku,
                 'nama_kategori_buku' => $nama_kategori_buku,
             ];
-            echo view('pinjam_buku', $data);
+            echo view('member/pinjam_buku', $data);
         } else {
             return redirect()->to(base_url('/login_member'));
         }
@@ -80,5 +80,26 @@ class PinjamBuku extends BaseController
 
         session()->setFlashdata('success', 'Anda Berhasil Meminjam Buku');
         return redirect()->to(base_url('/'));
+    }
+
+    public function buku_dipinjam()
+    {
+        $status_login = session()->get('status_login');
+        $id_member = session()->get('id_member');
+        $nama_lengkap = session()->get('nama_lengkap');
+        $email = session()->get('email');
+        $tanggal_pinjam = date("Y-m-d");
+        
+        $buku_dipinjam_by_member = $this->ModelPeminjaman->buku_dipinjam_by_member($id_member);
+
+        if ($status_login == TRUE) {
+            $data = [
+                'buku_dipinjam_by_member'  => $buku_dipinjam_by_member,
+               
+            ];
+            echo view('member/buku_dipinjam', $data);
+        } else {
+            return redirect()->to(base_url('/login_member'));
+        }
     }
 }

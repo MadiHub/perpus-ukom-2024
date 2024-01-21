@@ -23,7 +23,6 @@ class Home extends BaseController
         $id_member = session()->get('id_member');
         $username = session()->get('username');
         $dapatkan_member = $this->ModelMember->dapatkan_member($email)->getRow();
-        $buku_dipinjam_by_member = $this->ModelPeminjaman->buku_dipinjam_by_member($id_member);
 
         $semua_buku = $this->ModelBuku->semua_buku();
         $data = [
@@ -31,8 +30,7 @@ class Home extends BaseController
             'status_login' => $status_login,  
             'username' => $username,  
             'email' => $email,  
-            'buku_dipinjam_by_member' => $buku_dipinjam_by_member,  
         ];
-        return view('beranda', $data);
+        return view('member/beranda', $data);
     }
 }
