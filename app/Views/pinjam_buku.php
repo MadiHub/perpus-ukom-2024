@@ -52,9 +52,30 @@
                 Form Pinjam Buku
             </div>
             <div class="card-body">
-            <div class="mb-3">
-                <input type="password" class="form-control" id="exampleInputPassword1" value="">
-            </div>
+                <form method="post" action="<?= base_url() ?>proses_pinjam_buku">
+                    <input type="hidden" class="form-control" value="<?= $id_member ?>" name="id_member" readonly>
+                    <input type="hidden" class="form-control" value="<?= $id_buku ?>" name="id_buku" readonly>
+
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Nama Peminjam</label>
+                        <input type="text" class="form-control" value="<?= $nama_lengkap ?>" readonly>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email Peminjam</label>
+                        <input type="email" class="form-control" value="<?= $email ?>" readonly>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Tanggal Pinjam</label>
+                        <input type="date" class="form-control" value="<?= $tanggal_pinjam ?>" id="tanggal_peminjaman" name="tanggal_peminjaman" readonly>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Tanggal Pengembalian <span class="text-danger">* Wajib isi</span></label>
+                        <input type="date" class="form-control" id="tanggal_pengembalian" name="tanggal_pengembalian"  required onchange="validasiTanggal()">
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-primary" type="submit">Pinjam Sekarang</button>
+                    </div>
+				</form>
             </div>
         </div>
     </div>
@@ -68,5 +89,25 @@
     <!-- script bootsrap -->
     <!-- script sweeetalert -->
     <script src="<?= base_url() ?>sweetalert/alert.js"></script>
+    <script>
+    function validasiTanggal() {
+        var tanggal_peminjaman = new Date(document.getElementById("tanggal_peminjaman").value);
+        var tanggalPengembalian = new Date(document.getElementById("tanggal_pengembalian").value);
+
+        // Menghitung selisih hari
+        var selisihHari = (tanggalPengembalian - tanggal_peminjaman) / (1000 * 3600 * 24);
+
+        if (tanggal_peminjaman > tanggalPengembalian) {
+            alert("Tanggal pengembalian tidak boleh kurang dari tanggal peminjaman.");
+            // Atur tanggal pengembalian kembali ke tanggal peminjaman atau ambil tindakan lain sesuai kebutuhan.
+            document.getElementById("tanggal_pengembalian").value = "";
+        } else if (selisihHari > 7) {
+            alert("Peminjaman buku dibatasi hingga 7 hari.");
+            // Atur tanggal pengembalian kembali ke tanggal peminjaman atau ambil tindakan lain sesuai kebutuhan.
+            document.getElementById("tanggal_pengembalian").value = "";
+        }
+    }
+    </script>
+
 </body>
 </html>

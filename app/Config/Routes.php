@@ -8,8 +8,12 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/', 'Home::index');
 
 // auth
-$routes->get('login', 'Auth::login');
-$routes->post('proses_login', 'Auth::proses_login');
+$routes->get('login_petugas', 'Auth::login_petugas');
+$routes->post('proses_login_petugas', 'Auth::proses_login_petugas');
+$routes->get('login_member', 'Auth::login_member');
+$routes->post('proses_login_member', 'Auth::proses_login_member');
+$routes->get('register_member', 'Auth::register_member');
+$routes->post('proses_register_member', 'Auth::proses_register_member');
 $routes->get('logout', 'Auth::logout');
 
 // admin 
@@ -30,3 +34,4 @@ $routes->get('dashboard_petugas', 'Petugas::dashboard_petugas');
 
 // pinjam buku
 $routes->get('pinjam_buku/(:segment)', 'PinjamBuku::pinjam_buku/$1');
+$routes->post('proses_pinjam_buku', 'PinjamBuku::proses_pinjam_buku');

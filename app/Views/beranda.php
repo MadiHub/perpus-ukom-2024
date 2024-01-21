@@ -198,8 +198,19 @@
 			<?php if (session()->has("success")) { ?>
 				Swal.fire({
 					icon: 'success',
-					title: 'Berhasil Login',
+					title: 'Berhasil',
 					text: '<?= session("success") ?>'
+				})
+			<?php } ?>
+		});
+	</script>
+    <script>
+		$(function() {
+			<?php if (session()->has("error")) { ?>
+				Swal.fire({
+					icon: 'error',
+					title: 'Gagal',
+					text: '<?= session("error") ?>'
 				})
 			<?php } ?>
 		});
