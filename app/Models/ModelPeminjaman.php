@@ -54,12 +54,13 @@ class ModelPeminjaman extends Model
     public function getAllStatusDipinjam()
     {
         return $this->select('tb_peminjaman.*, tb_member.*, tb_buku.*, tb_kategori_buku.nama_kategori_buku')
-        ->join('tb_member', 'tb_member.id_member = tb_peminjaman.id_member')
-        ->join('tb_buku', 'tb_buku.id_buku = tb_peminjaman.id_buku')
-        ->join('tb_kategori_buku', 'tb_kategori_buku.id_kategori_buku = tb_buku.id_kategori_buku')
-        ->where('status_peminjaman', 'di-pinjam')
-        ->get()
-        ->getResultArray();
+            ->join('tb_member', 'tb_member.id_member = tb_peminjaman.id_member')
+            ->join('tb_buku', 'tb_buku.id_buku = tb_peminjaman.id_buku')
+            ->join('tb_kategori_buku', 'tb_kategori_buku.id_kategori_buku = tb_buku.id_kategori_buku')
+            ->where('status_peminjaman', 'di-pinjam')
+            ->orderBy('tanggal_peminjaman', 'DESC') // Urutan tanggal terbaru (DESC)
+            ->get()
+            ->getResultArray();
     }
 
     // query untuk method daftar_pengembalian
@@ -70,6 +71,7 @@ class ModelPeminjaman extends Model
         ->join('tb_buku', 'tb_buku.id_buku = tb_peminjaman.id_buku')
         ->join('tb_kategori_buku', 'tb_kategori_buku.id_kategori_buku = tb_buku.id_kategori_buku')
         ->where('status_peminjaman', 'di-kembalikan')
+        ->orderBy('tanggal_pengembalian', 'DESC') // Urutan tanggal terbaru (DESC)
         ->get()
         ->getResultArray();
     }
@@ -82,5 +84,33 @@ class ModelPeminjaman extends Model
         return $builder->update($data);
     }
     
+    public function cetak_peminjaman($bulan, $tahun, $status_peminjaman)
+    {
+        return $this->select('tb_peminjaman.*, tb_member.*, tb_buku.*, tb_kategori_buku.nama_kategori_buku')
+            ->join('tb_member', 'tb_member.id_member = tb_peminjaman.id_member')
+            ->join('tb_buku', 'tb_buku.id_buku = tb_peminjaman.id_buku')
+            ->join('tb_kategori_buku', 'tb_kategori_buku.id_kategori_buku = tb_buku.id_kategori_buku')
+            ->where('status_peminjaman', $status_peminjaman)
+            ->where('MONTH(tanggal_peminjaman)', $bulan)
+            ->where('YEAR(tanggal_peminjaman)', $tahun)
+            ->orderBy('tanggal_peminjaman', 'DESC') // Urutan tanggal terbaru (DESC)
+            ->get()
+            ->getResultArray();
+    }
+
+    public function cetak_pengembalian($bulan, $tahun, $status_peminjaman)
+    {
+        return $this->select('tb_peminjaman.*, tb_member.*, tb_buku.*, tb_kategori_buku.nama_kategori_buku')
+            ->join('tb_member', 'tb_member.id_member = tb_peminjaman.id_member')
+            ->join('tb_buku', 'tb_buku.id_buku = tb_peminjaman.id_buku')
+            ->join('tb_kategori_buku', 'tb_kategori_buku.id_kategori_buku = tb_buku.id_kategori_buku')
+            ->where('status_peminjaman', $status_peminjaman)
+            ->where('MONTH(tanggal_peminjaman)', $bulan)
+            ->where('YEAR(tanggal_peminjaman)', $tahun)
+            ->orderBy('tanggal_peminjaman', 'DESC') // Urutan tanggal terbaru (DESC)
+            ->get()
+            ->getResultArray();
+    }
+
     
 }

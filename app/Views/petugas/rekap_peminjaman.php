@@ -4,45 +4,37 @@
           <div class="row">
                 <div class="card">
                     <div class="card-body">
-                        <table id="myTable" class="table table-bordered table-striped table-hover">
-                            <thead>
-                                <tr>
-                                   <th>#</th>
-                                    <th>Sampul</th>
-                                    <th>Judul Buku</th>
-                                    <th>Status</th>
-                                    <th>Nama</th>
-                                    <th>Email</th>
-                                    <th>Tanggal Pengembalian</th>
-                                    <th>Detail Member</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <?php $no = 1; foreach($semua_pengembali as $pengembali): ?>
-                                <tr>
-                                    <td><?= $no++ ?></td>
-                                    <td><img src="<?= base_url() ?>buku/<?= $pengembali['sampul_buku'] ?>" alt="" width="50"></td>
-                                    <td><?= $pengembali['judul'] ?></td>
-                                    <td><span class="badge bg-success"><?= $pengembali['status_peminjaman'] ?></span></td>
-                                    <td><?= $pengembali['nama_lengkap'] ?></td>
-                                    <td><?= $pengembali['email'] ?></td>
-                                    <td><?= $pengembali['tanggal_pengembalian'] ?></td>
-                                    <td>
-                                        <button type="button" class="btn btn-success mr-2" id="btn-detail-member"
-                                            data-bs-toggle="modal"  data-bs-target="#detailMember"
-                                            data-id_peminjaman="<?= $pengembali['id_peminjaman'] ?>"
-                                            data-nama_lengkap="<?= $pengembali['nama_lengkap'] ?>"
-                                            data-email="<?= $pengembali['email'] ?>"
-                                            data-no_telpon="<?= $pengembali['no_telpon'] ?>"
-                                            data-alamat="<?= $pengembali['alamat'] ?>"
-                                            > DETAIL
-                                        </button>
-                                    </td>
-                                </tr>
-                                <?php endforeach; ?>
-                                
-                            </tbody>
-                        </table>
+                        <form action="<?= base_url()?>cetak_peminjaman" target="_blank" method="post">
+                            <input type="hidden" value="di-pinjam" name="status_dipinjam" readonly>
+                            <div class="form-group mt-3" >
+                                <label for="bulan" class="form-label">--Pilih Bulan--</label>
+                                <select name="bulan" id="bulan" class="form-control">
+                                    <?php
+                                    $x = 0;
+                                    for ($i = 1; $i <= 12; $i++) {
+                                    ?>
+                                        <option value="<?= $i ?>" <?= date("m") == $i ? 'selected' : ''?>><?= $nm_bulan[$i] ?></option>
+                                    <?php
+                                    }
+                                    ?>
+
+                                </select>
+                            </div>
+                            <div class="form-group mt-3">
+                                <label for="bulan" class="form-label">--Pilih Tahun--</label>
+                                <select name="tahun" id="tahun" class="form-control">
+                                    <?php
+                                    $tahunMulai = 2022;
+                                    $tahunSekarang = date("Y");
+                                    for ($tahun = $tahunMulai; $tahun <= $tahunSekarang; $tahun++) {
+                                    ?>
+                                        <option value="<?= $tahun ?>" <?= date("Y") == $tahun ? 'selected' : ''?>><?= $tahun ?></option>                                    <?php
+                                    }
+                                    ?>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-danger w-100 mt-3"><i class='fas fa-print'></i> CETAK</button>
+                        </form>
                     </div>
                 </div>
             </div>

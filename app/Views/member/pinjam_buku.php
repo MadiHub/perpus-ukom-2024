@@ -86,13 +86,7 @@
     <script src="<?= base_url() ?>popper/popper.js"></script>
     <!-- script bootsrap -->
     <script src="<?= base_url() ?>bootstrap/js/bootstrap.min.js"></script>
-    <!-- script datatables -->
-    <script src="<?= base_url() ?>DataTables/datatables.min.js"></script>  
-    <script>
-      $(document).ready(function() {
-          $('#myTablekategori').DataTable();
-      });
-    </script>
+    <!-- script bootsrap -->
     <!-- script sweeetalert -->
     <script src="<?= base_url() ?>sweetalert/alert.js"></script>
     <script>

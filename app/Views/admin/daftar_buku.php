@@ -11,12 +11,12 @@
                             <thead>
                                 <tr>
                                     <th>#</th>
+                                    <th>Sampul</th>
                                     <th>Judul</th>
                                     <th>Nama Kategori Buku</th>
                                     <th>Penulis</th>
                                     <th>Penerbit</th>
                                     <th>Tahun Terbit</th>
-                                    <th>Sampul</th>
                                     <th>Aksi</th>
                                 </tr>
                             </thead>
@@ -24,12 +24,12 @@
                                 <?php $no = 1; foreach($semua_buku as $buku): ?>
                                 <tr>
                                     <td><?= $no++ ?></td>
+                                    <td><img src="<?= base_url() ?>buku/<?= $buku['sampul_buku'] ?>" alt="" width="50"></td>
                                     <td><?= $buku['judul'] ?></td>
                                     <td><?= $buku['nama_kategori_buku'] ?></td>
                                     <td><?= $buku['penulis'] ?></td>
                                     <td><?= $buku['penerbit'] ?></td>
                                     <td><?= $buku['tahun_terbit'] ?></td>
-                                    <td><img src="<?= base_url() ?>buku/<?= $buku['sampul_buku'] ?>" alt="" width="50"></td>
                                     <td>
                                         <button type="button" class="btn btn-success mr-2" id="btn-edit-buku"
                                             data-bs-toggle="modal"  data-bs-target="#editBuku"
