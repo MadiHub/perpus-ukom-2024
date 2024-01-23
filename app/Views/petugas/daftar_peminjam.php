@@ -1,4 +1,4 @@
-   
+  
       <div class="body flex-grow-1 px-3">
         <div class="container-lg">
           <div class="row">
@@ -18,7 +18,7 @@
                                     <th>Aksi</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody class="text-center">
                                 <?php $no = 1; foreach($semua_peminjam as $peminjam): ?>
                                 <tr>
                                     <td><?= $no++ ?></td>
@@ -29,23 +29,22 @@
                                     <td><?= $peminjam['email'] ?></td>
                                     <td><?= $peminjam['tanggal_peminjaman'] ?></td>
                                     <td>
-                                        <button type="button" class="btn btn-success mr-2" id="btn-detail-member"
+                                        <button type="button" class="btn btn-warning mr-2" id="btn-detail-member"
                                             data-bs-toggle="modal"  data-bs-target="#detailMember"
                                             data-id_peminjaman="<?= $peminjam['id_peminjaman'] ?>"
                                             data-nama_lengkap="<?= $peminjam['nama_lengkap'] ?>"
                                             data-email="<?= $peminjam['email'] ?>"
                                             data-no_telpon="<?= $peminjam['no_telpon'] ?>"
                                             data-alamat="<?= $peminjam['alamat'] ?>"
-                                            > DETAIL
+                                            > <i class="fa-solid fa-address-card mr-2"></i> Member
                                         </button>
                                     </td>
                                     <td>
-                                       
                                         <button type="button" class="btn btn-success mr-2" id="btn-edit-peminjam"
                                             data-bs-toggle="modal"  data-bs-target="#editPeminjam"
                                             data-id_peminjaman="<?= $peminjam['id_peminjaman'] ?>"
                                             data-status_peminjaman="<?= $peminjam['status_peminjaman'] ?>"
-                                            > EDIT
+                                            > <i class="fa-solid fa-pen-to-square"></i>
                                         </button>
                                     </td>
                                 </tr>
@@ -90,12 +89,10 @@
             <form method="post" action="<?= base_url() ?>proses_edit_peminjaman">
                 <input type="hidden" class="form-control" name="id_peminjaman" id="id_peminjaman" aria-describedby="id peminjaman buku" >
                 <div class="mb-3">
-                    <select class="form-select" aria-label="Default select example" name="status_peminjaman">
-                        <option value="di-kembalikan" selected>Di Kembalikan</option>
-                    </select>
+                    <input type="text" value="di-kembalikan" class="form-control" name="status_peminjaman" aria-describedby="status_peminjaman buku" placeholder="status_peminjaman Buku" readonly>
                 </div>
                 
-                <button type="submit" class="btn btn-primary w-100">Edit</button>
+                <button type="submit" class="btn btn-success w-100">Simpan Perubahan</button>
             </form>
             </div>
             </div>
@@ -123,10 +120,8 @@
                     <input type="text" class="form-control" name="no_telpon" id="no_telpon" aria-describedby="penerbit buku" readonly>
                 </div>                
                 <div class="mb-3">
-                    <div class="form-floating">
-                        <textarea class="form-control" placeholder="Leave a comment here" id="alamat"></textarea>
-                        <label for="floatingTextarea">Alamat</label>
-                    </div>
+                    <label for="form-label">Alamat</label>
+                    <textarea class="form-control" placeholder="Leave a comment here" id="alamat" readonly></textarea>
                 </div>                
             </div>
             </div>

@@ -33,7 +33,7 @@
                                     ?>
                                 </select>
                             </div>
-                            <button type="submit" class="btn btn-danger w-100 mt-3"><i class='fas fa-print'></i> CETAK</button>
+                            <button type="submit" class="btn btn-danger w-100 mt-3"><i class='fas fa-print'></i> PRINT</button>
                         </form>
                     </div>
                 </div>

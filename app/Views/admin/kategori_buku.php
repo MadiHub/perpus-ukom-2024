@@ -4,7 +4,7 @@
         <div class="container-lg">
           <div class="row">
             <button type="button" class="btn btn-primary mb-3" style="width: 200px"data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Tambah Kategori
+            <i class="fa-solid fa-square-plus"></i> Tambah Kategori
             </button>
                 <div class="card">
                     <div class="card-body">
@@ -26,10 +26,10 @@
                                             data-bs-toggle="modal"  data-bs-target="#editKBuku"
                                             data-id_kategori_buku="<?= $k_buku['id_kategori_buku'] ?>"
                                             data-nama_kategori_buku="<?= $k_buku['nama_kategori_buku'] ?>"
-                                            > EDIT
+                                            > <i class="fa-solid fa-square-pen"></i>
                                         </button>
                                         <button type="button" class="btn btn-danger" onclick="hapusKBuku('<?= $k_buku['id_kategori_buku'] ?>', '<?= $k_buku['nama_kategori_buku'] ?>')">
-                                            HAPUS
+                                            <i class="fa-solid fa-trash-can"></i>
                                         </button>
                                     </td>
                                 </tr>
@@ -89,7 +89,6 @@
             <div class="mb-3">
             <input type="text" class="form-control" name="nama_kategori_buku" id="nama_kategori_buku" aria-describedby="nama kategori buku" placeholder="Nama Kategori Buku">
             </div>
-            
             <button type="submit" class="btn btn-success w-100">Simpan Perubahan</button>
         </form>
         </div>

@@ -21,6 +21,16 @@
                 margin: auto;
             }
         }
+
+
+        input[readonly] {
+            background-color: #D0D0D0;
+            /* Ganti #your_color_here dengan kode warna yang diinginkan */
+        }
+        textarea[readonly] {
+            background-color: #D0D0D0;
+            /* Ganti #your_color_here dengan kode warna yang diinginkan */
+        }
     </style>
 </head>
 <body>

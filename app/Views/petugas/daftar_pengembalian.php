@@ -5,7 +5,7 @@
                 <div class="card">
                     <div class="card-body">
                         <table id="myTable" class="table table-bordered table-striped table-hover">
-                            <thead>
+                            <thead class="text-center">
                                 <tr>
                                    <th>#</th>
                                     <th>Sampul</th>
@@ -17,7 +17,7 @@
                                     <th>Detail Member</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody class="text-center">
                                 <?php $no = 1; foreach($semua_pengembali as $pengembali): ?>
                                 <tr>
                                     <td><?= $no++ ?></td>
@@ -28,14 +28,14 @@
                                     <td><?= $pengembali['email'] ?></td>
                                     <td><?= $pengembali['tanggal_pengembalian'] ?></td>
                                     <td>
-                                        <button type="button" class="btn btn-success mr-2" id="btn-detail-member"
+                                        <button type="button" class="btn btn-warning mr-2" id="btn-detail-member"
                                             data-bs-toggle="modal"  data-bs-target="#detailMember"
                                             data-id_peminjaman="<?= $pengembali['id_peminjaman'] ?>"
                                             data-nama_lengkap="<?= $pengembali['nama_lengkap'] ?>"
                                             data-email="<?= $pengembali['email'] ?>"
                                             data-no_telpon="<?= $pengembali['no_telpon'] ?>"
                                             data-alamat="<?= $pengembali['alamat'] ?>"
-                                            > DETAIL
+                                            > <i class="fa-solid fa-address-card mr-2"></i> Member
                                         </button>
                                     </td>
                                 </tr>
@@ -84,8 +84,7 @@
                         <option value="di-kembalikan" selected>Di Kembalikan</option>
                     </select>
                 </div>
-                
-                <button type="submit" class="btn btn-primary w-100">Edit</button>
+                <button type="submit" class="btn btn-success w-100">Simpan Perubahan</button>
             </form>
             </div>
             </div>
@@ -142,10 +141,8 @@
                     <input type="text" class="form-control" name="no_telpon" id="no_telpon" aria-describedby="penerbit buku" readonly>
                 </div>                
                 <div class="mb-3">
-                    <div class="form-floating">
-                        <textarea class="form-control" placeholder="Leave a comment here" id="alamat"></textarea>
-                        <label for="floatingTextarea">Alamat</label>
-                    </div>
+                    <label for="form-label">Alamat</label>
+                    <textarea class="form-control" placeholder="Leave a comment here" id="alamat" readonly></textarea>
                 </div>                
             </div>
             </div>

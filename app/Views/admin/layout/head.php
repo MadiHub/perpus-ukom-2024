@@ -44,6 +44,18 @@
     <!-- datatables -->
     <link rel="stylesheet" href="<?= base_url() ?>DataTables/datatables.min.css">
     <link rel="stylesheet" href="<?= base_url() ?>bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?= base_url() ?>fontawesome/css/all.min.css">
 
+    <style>
+        input[readonly] {
+            background-color: #D0D0D0;
+            /* Ganti #your_color_here dengan kode warna yang diinginkan */
+        }
+        textarea[readonly] {
+            background-color: #D0D0D0;
+            /* Ganti #your_color_here dengan kode warna yang diinginkan */
+        }
+
+    </style>
 
   </head>

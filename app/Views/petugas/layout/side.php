@@ -16,15 +16,15 @@
             </svg> Dashboard Petugas</a></li>
         <li class="nav-item"><a class="nav-link" href="<?= base_url() ?>daftar_peminjam">
             <svg class="nav-icon">
-              <use xlink:href="<?= base_url() ?>admin/dist/vendors/@coreui/icons/svg/free.svg#cil-book"></use>
+              <use xlink:href="<?= base_url() ?>admin/dist/vendors/@coreui/icons/svg/free.svg#cil-indent-increase"></use>
             </svg> Daftar Peminjam</a></li>
         <li class="nav-item"><a class="nav-link" href="<?= base_url() ?>daftar_pengembalian">
             <svg class="nav-icon">
-              <use xlink:href="<?= base_url() ?>admin/dist/vendors/@coreui/icons/svg/free.svg#cil-list"></use>
+              <use xlink:href="<?= base_url() ?>admin/dist/vendors/@coreui/icons/svg/free.svg#cil-indent-decrease"></use>
             </svg> Daftar Pengembalian</a></li>
         <li class="nav-group"><a class="nav-link nav-group-toggle" href="<?= base_url() ?>admin/dist/#">
             <svg class="nav-icon">
-              <use xlink:href="<?= base_url() ?>admin/dist/vendors/@coreui/icons/svg/free.svg#cil-group"></use>
+              <use xlink:href="<?= base_url() ?>admin/dist/vendors/@coreui/icons/svg/free.svg#cil-print"></use>
             </svg> Rekap</a>
           <ul class="nav-group-items">
             <li class="nav-item"><a class="nav-link" href="<?= base_url() ?>rekap_peminjaman"><span class="nav-icon"></span> Peminjam Buku</a></li>

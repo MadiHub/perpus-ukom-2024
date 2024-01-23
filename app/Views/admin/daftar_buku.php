@@ -3,7 +3,7 @@
         <div class="container-lg">
           <div class="row">
             <button type="button" class="btn btn-primary mb-3" style="width: 200px"data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Tambah Buku
+            <i class="fa-solid fa-square-plus"></i>  Tambah Buku
             </button>
                 <div class="card">
                     <div class="card-body">
@@ -40,10 +40,10 @@
                                             data-penulis="<?= $buku['penulis'] ?>"
                                             data-penerbit="<?= $buku['penerbit'] ?>"
                                             data-tahun_terbit="<?= $buku['tahun_terbit'] ?>"
-                                            > EDIT
+                                            > <i class="fa-solid fa-square-pen"></i>
                                         </button>
                                         <button type="button" class="btn btn-danger" onclick="hapusBuku('<?= $buku['id_buku'] ?>', '<?= $buku['judul'] ?>')">
-                                            HAPUS
+                                            <i class="fa-solid fa-trash-can"></i>
                                         </button>
                                     </td>
                                 </tr>
@@ -120,7 +120,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
         <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Edit Kategori Buku</h1>
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Edit Buku</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -152,7 +152,7 @@
 
             </div>
             
-            <button type="submit" class="btn btn-primary w-100">Edit</button>
+            <button type="submit" class="btn btn-success w-100">Simpan Perubahan</button>
         </form>
         </div>
         </div>
