@@ -58,6 +58,7 @@ class PinjamBuku extends BaseController
         $id_buku = $request->getVar('id_buku');
         $tanggal_peminjaman = $request->getVar('tanggal_peminjaman');
         $tanggal_pengembalian = $request->getVar('tanggal_pengembalian');
+        $total_pinjam = $request->getVar('total_pinjam');
         $status_peminjaman = 'di-pinjam';
 
         // Verifikasi apakah buku sudah dipinjam oleh anggota
@@ -74,9 +75,17 @@ class PinjamBuku extends BaseController
             'tanggal_peminjaman' => $tanggal_peminjaman,
             'tanggal_pengembalian' => $tanggal_pengembalian,
             'status_peminjaman' => $status_peminjaman,
-
+            'total_pinjam' => $total_pinjam,
         ];
         $tambah_peminjaman = $this->ModelPeminjaman->tambah_peminjaman($data);
+
+        $dapatkan_buku = $this->ModelBuku->dapatkan_buku($id_buku);
+        $stok_sekarang = $dapatkan_buku->stok;
+
+        $stok_baru = $stok_sekarang - $total_pinjam;
+
+        $ubah = $this->ModelBuku->edit_buku_dipinjam($id_buku, $stok_baru);
+
 
         session()->setFlashdata('success', 'Anda Berhasil Meminjam Buku');
         return redirect()->to(base_url('/'));

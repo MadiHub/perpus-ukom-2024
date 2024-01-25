@@ -82,6 +82,10 @@
                         <label for="exampleInputPassword1" class="form-label">Tanggal Pengembalian <span class="text-danger">* Wajib isi</span></label>
                         <input type="date" class="form-control" id="tanggal_pengembalian" name="tanggal_pengembalian"  required onchange="validasiTanggal()">
                     </div>
+                    <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Total Pinjam</label>
+                        <input type="number" class="form-control" name="total_pinjam">
+                    </div>
                     <div class="d-grid gap-2">
                         <button class="btn btn-primary" type="submit">Pinjam Sekarang</button>
                     </div>

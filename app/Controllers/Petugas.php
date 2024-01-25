@@ -13,71 +13,170 @@ class Petugas extends BaseController
 
     public function dashboard_petugas()
     {
-        $data = [
-            'judul' => 'Dashboard Petugas'
-        ];
-        echo view('petugas/layout/head', $data);
-        echo view('petugas/layout/side');
-        echo view('petugas/layout/nav');
-        echo view('petugas/dashboard_petugas');
-        echo view('petugas/layout/script');
+        // data sesion wajib
+        $status_login = session()->get('status_login');
+        $nama_lengkap = session()->get('nama_lengkap');
+        $email = session()->get('email');
+        $role = session()->get('role');
+
+        if ($status_login == TRUE) {
+            if ($role == 'petugas') {
+                $data = [
+                    'judul' => 'Dashboard Petugas',
+                    // data sesion wajib
+                    'nama_lengkap' => $nama_lengkap,
+                    'email' => $email,
+                    'nama_lengkap' => $nama_lengkap,
+                    'role' => $role,
+                ];
+                echo view('petugas/layout/head', $data);
+                echo view('petugas/layout/side');
+                echo view('petugas/layout/nav');
+                echo view('petugas/dashboard_petugas');
+                echo view('petugas/layout/script');
+            } else {
+                return redirect()->to(base_url('/not_found'));            
+            }
+        } else {
+            return redirect()->to(base_url('/login_petugas'));
+        }
     }
 
     public function daftar_peminjam()
     {
+        // data sesion wajib
+        $status_login = session()->get('status_login');
+        $nama_lengkap = session()->get('nama_lengkap');
+        $email = session()->get('email');
+        $role = session()->get('role');
+
         $semua_peminjam = $this->ModelPeminjaman->getAllStatusDipinjam();
-        $data = [
-            'judul' => 'Daftar Peminjam',
-            'semua_peminjam' => $semua_peminjam,
-        ];
-        echo view('petugas/layout/head', $data);
-        echo view('petugas/layout/side');
-        echo view('petugas/layout/nav');
-        echo view('petugas/daftar_peminjam');
-        echo view('petugas/layout/script');
+    
+        if ($status_login == TRUE) {
+            if ($role == 'petugas') {
+                $data = [
+                    'judul' => 'Daftar Peminjam',
+                    'semua_peminjam' => $semua_peminjam,
+                    // data sesion wajib
+                    'nama_lengkap' => $nama_lengkap,
+                    'email' => $email,
+                    'nama_lengkap' => $nama_lengkap,
+                    'role' => $role,
+                ];
+                echo view('petugas/layout/head', $data);
+                echo view('petugas/layout/side');
+                echo view('petugas/layout/nav');
+                echo view('petugas/daftar_peminjam');
+                echo view('petugas/layout/script');
+            } else {
+                return redirect()->to(base_url('/not_found'));            
+            }
+        } else {
+            return redirect()->to(base_url('/login_petugas'));
+        }
     }
 
     public function proses_edit_peminjaman()
     {
         $request = \Config\Services::request();
         $id_peminjaman = $this->request->getPost('id_peminjaman');
+        $total_pinjam = $this->request->getPost('total_pinjam');
+        $total_pengembalian = $this->request->getPost('total_pengembalian');
         $status_peminjaman = $this->request->getPost('status_peminjaman');
-        $data = [
-            'status_peminjaman' => $status_peminjaman,
-        ];
-        $edit = $this->ModelPeminjaman->edit_status_peminjaman($data, $id_peminjaman);
-        session()->setFlashdata('success', 'Berhasil Edit Status Pengembalian !');
-        return redirect()->to(base_url('daftar_peminjam'));
+  
+        $sisa_total_pinjam = $total_pinjam - $total_pengembalian;
+
+        if ($total_pengembalian < $total_pinjam) {
+            $data = [
+                // 'status_peminjaman' => $status_peminjaman,
+                'total_pinjam' => $sisa_total_pinjam,
+                'total_pengembalian' => $total_pengembalian,
+            ];
+            $edit = $this->ModelPeminjaman->edit_status_peminjaman($data, $id_peminjaman);
+            session()->setFlashdata('success', 'Berhasil Edit Status Pengembalian !');
+            return redirect()->to(base_url('daftar_peminjam'));
+        } else {
+            $data = [
+                'status_peminjaman' => $status_peminjaman,
+                'total_pinjam' => $sisa_total_pinjam,
+                'total_pengembalian' => $total_pengembalian,
+            ];
+            $edit = $this->ModelPeminjaman->edit_status_peminjaman($data, $id_peminjaman);
+            session()->setFlashdata('success', 'Berhasil Edit Status Pengembalian !');
+            return redirect()->to(base_url('daftar_peminjam'));
+        }
+        
+       
     }
 
     public function daftar_pengembalian()
     {
+        // data sesion wajib
+        $status_login = session()->get('status_login');
+        $nama_lengkap = session()->get('nama_lengkap');
+        $email = session()->get('email');
+        $role = session()->get('role');
+
         $semua_pengembali = $this->ModelPeminjaman->getAllStatusDikembalikan();
-        $data = [
-            'judul' => 'Daftar Pengembalian',
-            'semua_pengembali' => $semua_pengembali,
-        ];
-        echo view('petugas/layout/head', $data);
-        echo view('petugas/layout/side');
-        echo view('petugas/layout/nav');
-        echo view('petugas/daftar_pengembalian');
-        echo view('petugas/layout/script');
+      
+        if ($status_login == TRUE) {
+            if ($role == 'petugas') {
+                $data = [
+                    'judul' => 'Daftar Pengembalian',
+                    'semua_pengembali' => $semua_pengembali,
+                    // data sesion wajib
+                    'nama_lengkap' => $nama_lengkap,
+                    'email' => $email,
+                    'nama_lengkap' => $nama_lengkap,
+                    'role' => $role,
+                ];
+                echo view('petugas/layout/head', $data);
+                echo view('petugas/layout/side');
+                echo view('petugas/layout/nav');
+                echo view('petugas/daftar_pengembalian');
+                echo view('petugas/layout/script');
+            } else {
+                return redirect()->to(base_url('/not_found'));            
+            }
+        } else {
+            return redirect()->to(base_url('/login_petugas'));
+        }
     }
 
     public function rekap_peminjaman()
     {
+        // data sesion wajib
+        $status_login = session()->get('status_login');
+        $nama_lengkap = session()->get('nama_lengkap');
+        $email = session()->get('email');
+        $role = session()->get('role');
+
         $nm_bulan = ["", "Januari", "Februari", "Maret", "April", "
         Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
 
-        $data = [
-            'judul' => 'Rekap Peminjaman Buku',
-            'nm_bulan' =>  $nm_bulan
-        ];
-        echo view('petugas/layout/head', $data);
-        echo view('petugas/layout/side');
-        echo view('petugas/layout/nav');
-        echo view('petugas/rekap_peminjaman');
-        echo view('petugas/layout/script');
+        if ($status_login == TRUE) {
+            if ($role == 'petugas') {
+                $data = [
+                    'judul' => 'Rekap Peminjaman Buku',
+                    'nm_bulan' =>  $nm_bulan,
+                    // data sesion wajib
+                    'nama_lengkap' => $nama_lengkap,
+                    'email' => $email,
+                    'nama_lengkap' => $nama_lengkap,
+                    'role' => $role,
+                ];
+                echo view('petugas/layout/head', $data);
+                echo view('petugas/layout/side');
+                echo view('petugas/layout/nav');
+                echo view('petugas/rekap_peminjaman');
+                echo view('petugas/layout/script');
+            } else {
+                return redirect()->to(base_url('/not_found'));            
+            }
+        } else {
+            return redirect()->to(base_url('/login_petugas'));
+        }
+        
     }
 
     public function cetak_peminjaman()
@@ -101,18 +200,39 @@ class Petugas extends BaseController
 
     public function rekap_pengembalian()
     {
+        // data sesion wajib
+        $status_login = session()->get('status_login');
+        $nama_lengkap = session()->get('nama_lengkap');
+        $email = session()->get('email');
+        $role = session()->get('role');
+
         $nm_bulan = ["", "Januari", "Februari", "Maret", "April", "
         Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
 
-        $data = [
-            'judul' => 'Rekap Pengembalian Buku',
-            'nm_bulan' =>  $nm_bulan
-        ];
-        echo view('petugas/layout/head', $data);
-        echo view('petugas/layout/side');
-        echo view('petugas/layout/nav');
-        echo view('petugas/rekap_pengembalian');
-        echo view('petugas/layout/script');
+        if ($status_login == TRUE) {
+            if ($role == 'petugas') {
+                $data = [
+                    'judul' => 'Rekap Pengembalian Buku',
+                    'nm_bulan' =>  $nm_bulan,
+                    // data sesion wajib
+                    'nama_lengkap' => $nama_lengkap,
+                    'email' => $email,
+                    'nama_lengkap' => $nama_lengkap,
+                    'role' => $role,
+                ];
+                echo view('petugas/layout/head', $data);
+                echo view('petugas/layout/side');
+                echo view('petugas/layout/nav');
+                echo view('petugas/rekap_pengembalian');
+                echo view('petugas/layout/script');
+            } else {
+                return redirect()->to(base_url('/not_found'));
+            }
+        } else {
+            return redirect()->to(base_url('/login_petugas'));
+        }
+
+        
     }
 
     public function cetak_pengembalian()

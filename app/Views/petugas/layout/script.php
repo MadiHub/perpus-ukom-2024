@@ -9,8 +9,9 @@
     <script>
     </script>
 
-<!-- script jquery -->
-<script src="<?= base_url() ?>sweetalert/alert.js"></script>
+    <!-- script jquery -->
+    <!-- <script src="<?= base_url() ?>jquery/jquery.slim.min.js"></script> -->
+    <script src="<?= base_url() ?>sweetalert/alert.js"></script>
     <script>
       $(function() {
         <?php if (session()->has("success")) { ?>

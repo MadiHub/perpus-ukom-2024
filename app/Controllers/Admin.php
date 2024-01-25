@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Models\ModelKategoriBuku;
 use App\Models\ModelBuku;
+use App\Models\ModelSubKategori;
 
 
 class Admin extends BaseController
@@ -12,38 +13,80 @@ class Admin extends BaseController
     {
         $this->ModelKategoriBuku = new ModelKategoriBuku();
         $this->ModelBuku = new ModelBuku();
+        $this->ModelSubKategori = new ModelSubKategori();
     }
 
     public function dashboard_admin()
     {
-        $data = [
-            'judul' => 'Dashboard Admin'
-        ];
-        echo view('admin/layout/head', $data);
-        echo view('admin/layout/side');
-        echo view('admin/layout/nav');
-        echo view('admin/dashboard_admin');
-        echo view('admin/layout/script');
+        // data sesion wajib
+        $status_login = session()->get('status_login');
+        $nama_lengkap = session()->get('nama_lengkap');
+        $email = session()->get('email');
+        $role = session()->get('role');
+
+        if ($status_login == TRUE) {
+            if ($role == 'admin') {
+                $data = [
+                    'judul' => 'Dashboard Admin',
+                    // data sesion wajib
+                    'nama_lengkap' => $nama_lengkap,
+                    'email' => $email,
+                    'nama_lengkap' => $nama_lengkap,
+                    'role' => $role,
+                ];
+                echo view('admin/layout/head', $data);
+                echo view('admin/layout/side');
+                echo view('admin/layout/nav');
+                echo view('admin/dashboard_admin');
+                echo view('admin/layout/script');
+            } else {
+                return redirect()->to(base_url('/not_found'));            
+            }
+        } else {
+            return redirect()->to(base_url('/login_petugas'));
+        }
     }
 
     public function kategori_buku()
     {
+        // data sesion wajib
+        $status_login = session()->get('status_login');
+        $nama_lengkap = session()->get('nama_lengkap');
+        $email = session()->get('email');
+        $role = session()->get('role');
+
         $semua_kategori_buku = $this->ModelKategoriBuku->semua_kategori_buku();
-        $data = [
-            'judul' => 'Kategori Buku',
-            'semua_kategori_buku' => $semua_kategori_buku,
-        ];
-        echo view('admin/layout/head', $data);
-        echo view('admin/layout/side');
-        echo view('admin/layout/nav');
-        echo view('admin/kategori_buku');
-        echo view('admin/layout/script');
+
+        if ($status_login == TRUE) {
+            if ($role == 'admin') {
+                $data = [
+                    'judul' => 'Kategori Buku',
+                    'semua_kategori_buku' => $semua_kategori_buku,
+                    // data sesion wajib
+                    'nama_lengkap' => $nama_lengkap,
+                    'email' => $email,
+                    'nama_lengkap' => $nama_lengkap,
+                    'role' => $role,
+                ];
+                echo view('admin/layout/head', $data);
+                echo view('admin/layout/side');
+                echo view('admin/layout/nav');
+                echo view('admin/kategori_buku');
+                echo view('admin/layout/script');
+            } else {
+                return redirect()->to(base_url('/not_found'));            
+            }
+        } else {
+            return redirect()->to(base_url('/login_petugas'));
+        }
     }
 
     public function proses_tambah_kategori_buku()
     {
+        $id_kategori_buku = $this->request->getPost('id_kategori_buku');
         $nama_kategori_buku = $this->request->getPost('nama_kategori_buku');
         $data = [
+            'id_kategori_buku' => $id_kategori_buku,
             'nama_kategori_buku' => $nama_kategori_buku
         ];
         $simpan = $this->ModelKategoriBuku->tambah_kategori_buku($data);
@@ -56,7 +99,6 @@ class Admin extends BaseController
         $id_kategori_buku = $this->request->getPost('id_kategori_buku');
         $nama_kategori_buku = $this->request->getPost('nama_kategori_buku');
         $data = [
-            'nama_kategori_buku' => $nama_kategori_buku,
             'nama_kategori_buku' => $nama_kategori_buku
         ];
         $simpan = $this->ModelKategoriBuku->edit_kategori_buku($data, $id_kategori_buku);
@@ -78,41 +120,163 @@ class Admin extends BaseController
         }
     }
 
+    public function sub_kategori()
+    {
+        // data sesion wajib
+        $status_login = session()->get('status_login');
+        $nama_lengkap = session()->get('nama_lengkap');
+        $email = session()->get('email');
+        $role = session()->get('role');
+
+        $semua_sub_kategori = $this->ModelSubKategori->semua_sub_kategori();
+
+        $semua_kategori_buku = $this->ModelKategoriBuku->semua_kategori_buku();
+
+        if ($status_login == TRUE) {
+            if ($role == 'admin') {
+                $data = [
+                    'judul' => 'Sub Kategori',
+                    'semua_sub_kategori' => $semua_sub_kategori,
+                    'semua_kategori_buku' => $semua_kategori_buku,
+                    // data sesion wajib
+                    'nama_lengkap' => $nama_lengkap,
+                    'email' => $email,
+                    'nama_lengkap' => $nama_lengkap,
+                    'role' => $role,
+                ];
+                echo view('admin/layout/head', $data);
+                echo view('admin/layout/side');
+                echo view('admin/layout/nav');
+                echo view('admin/sub_kategori');
+                echo view('admin/layout/script');
+            } else {
+                return redirect()->to(base_url('/not_found'));            
+            }
+        } else {
+            return redirect()->to(base_url('/login_petugas'));
+        }
+    }
+
+    public function proses_tambah_sub_kategori()
+    {
+        $nama_sub_kategori = $this->request->getPost('nama_sub_kategori');
+        $id_kategori_buku = $this->request->getPost('id_kategori_buku');
+        $id_sub_kategori = $this->request->getPost('id_sub_kategori');
+        $data = [
+            'id_kategori_buku' => $id_kategori_buku,
+            'id_sub_kategori' => $id_sub_kategori,
+            'nama_sub_kategori' => $nama_sub_kategori,
+
+        ];
+        $simpan = $this->ModelSubKategori->tambah_sub_kategori($data);
+        session()->setFlashdata('success', 'Berhasil Sub Kategori Buku !');
+        return redirect()->to(base_url('/sub_kategori'));
+    }
+
+    public function proses_edit_sub_kategori()
+    {
+        $id_sub_kategori = $this->request->getPost('id_sub_kategori');
+        $id_kategori_buku = $this->request->getPost('id_kategori_buku');
+        $nama_sub_kategori = $this->request->getPost('nama_sub_kategori');
+        $data = [
+            'id_sub_kategori' => $id_sub_kategori,
+            'id_kategori_buku' => $id_kategori_buku,
+            'nama_sub_kategori' => $nama_sub_kategori,        
+        ];
+        $simpan = $this->ModelSubKategori->edit_sub_kategori($data, $id_sub_kategori);
+        session()->setFlashdata('success', 'Berhasil Edit Sub Kategori !');
+        return redirect()->to(base_url('/sub_kategori'));
+    }
+
+    public function loadSubKategori () {
+        $id_kategori_buku = $this->request->getPost('id_kategori_buku');
+
+        $getSubByKategori = $this->ModelSubKategori->getSubByKategori($id_kategori_buku);
+        $data = [
+            'semua_sub_kategori' => $getSubByKategori,
+        ];
+        return view('admin/loadSubKategori', $data);
+       
+    }
+    public function hapus_sub_kategori($id_sub_kategori)
+    {
+        $dapatkanSubKategori = $this->ModelSubKategori->dapatkanSubKategori($id_sub_kategori);
+        if (isset($dapatkanSubKategori)) {
+            $this->ModelSubKategori->hapus_sub_kategori($id_sub_kategori);
+            session()->setFlashdata("success", "Berhasil Hapus Sub Kategori");
+            return redirect()->to(base_url('sub_kategori'));
+        } else {
+            session()->setFlashdata("error", "Gagal Hapus Sub Kategori");
+            return redirect()->to(base_url('sub_kategori'));
+        }
+    }
+
     public function daftar_buku()
     {
+        // data sesion wajib
+        $status_login = session()->get('status_login');
+        $nama_lengkap = session()->get('nama_lengkap');
+        $email = session()->get('email');
+        $role = session()->get('role');
+
         $semua_kategori_buku = $this->ModelKategoriBuku->semua_kategori_buku();
         $semua_buku = $this->ModelBuku->semua_buku();
-        $data = [
-            'judul' => 'Daftar Buku',
-            'semua_kategori_buku' => $semua_kategori_buku,
-            'semua_buku' => $semua_buku,
-        ];
-        echo view('admin/layout/head', $data);
-        echo view('admin/layout/side');
-        echo view('admin/layout/nav');
-        echo view('admin/daftar_buku');
-        echo view('admin/layout/script');
+        $semua_sub_kategori = $this->ModelSubKategori->semua_sub_kategori();
+
+
+        if ($status_login == TRUE) {
+            if ($role == 'admin') {
+                $data = [
+                    'judul' => 'Daftar Buku',
+                    'semua_kategori_buku' => $semua_kategori_buku,
+                    'semua_sub_kategori' => $semua_sub_kategori,
+                    'semua_buku' => $semua_buku,
+                    // data sesion wajib
+                    'nama_lengkap' => $nama_lengkap,
+                    'email' => $email,
+                    'nama_lengkap' => $nama_lengkap,
+                    'role' => $role,
+                ];
+                echo view('admin/layout/head', $data);
+                echo view('admin/layout/side');
+                echo view('admin/layout/nav');
+                echo view('admin/daftar_buku');
+                // echo view('admin/layout/script');
+            } else {
+                return redirect()->to(base_url('/not_found'));            }
+        } else {
+            return redirect()->to(base_url('/login_petugas'));
+        }
     }
 
     public function proses_tambah_buku()
     {
         $request = \Config\Services::request();
         $judul = $this->request->getPost('judul');
+        $id_buku = $this->request->getPost('id_buku');
         $id_kategori_buku = $this->request->getPost('id_kategori_buku');
+        $id_sub_kategori = $this->request->getPost('id_sub_kategori');
         $penulis = $this->request->getPost('penulis');
         $penerbit = $this->request->getPost('penerbit');
         $tahun_terbit = $this->request->getPost('tahun_terbit');
+        $stok = $this->request->getPost('stok');
         $sampul_buku = $request->getFile('sampul_buku');
     
+        $id_kategori_buku = ($id_kategori_buku !== null) ? $id_kategori_buku : 'null';
+        $id_sub_kategori = ($id_sub_kategori !== null) ? $id_sub_kategori : 'null';
+
         $direktori_foto = 'buku';
         $fileName = $judul . '_' . time() . '.png';
     
         $data = [
             'judul' => $judul,
+            'id_buku' => $id_buku,
             'id_kategori_buku' => $id_kategori_buku,
+            'id_sub_kategori' => $id_sub_kategori,
             'penulis' => $penulis,
             'penerbit' => $penerbit,
             'tahun_terbit' => $tahun_terbit,
+            'stok' => $stok,
             'sampul_buku' => $fileName,
         ];
     
@@ -129,7 +293,9 @@ class Admin extends BaseController
         $judul = $this->request->getPost('judul');
         $id_buku = $this->request->getPost('id_buku');
         $id_kategori_buku = $this->request->getPost('id_kategori_buku');
+        $id_sub_kategori = $this->request->getPost('id_sub_kategori');
         $penulis = $this->request->getPost('penulis');
+        $stok = $this->request->getPost('stok');
         $penerbit = $this->request->getPost('penerbit');
         $tahun_terbit = $this->request->getPost('tahun_terbit');
         $sampul_buku = $request->getFile('sampul_buku');
@@ -151,10 +317,10 @@ class Admin extends BaseController
             $data = [
                 'judul' => $judul,
                 'id_buku' => $id_buku,
-                'id_kategori_buku' => $id_kategori_buku,
                 'penulis' => $penulis,
                 'penerbit' => $penerbit,
                 'tahun_terbit' => $tahun_terbit,
+                'stok' => $stok,
                 'sampul_buku' => $fileName,
             ];
     
@@ -170,9 +336,9 @@ class Admin extends BaseController
              $data = [
                 'judul' => $judul,
                 'id_buku' => $id_buku,
-                'id_kategori_buku' => $id_kategori_buku,
                 'penulis' => $penulis,
                 'penerbit' => $penerbit,
+                'stok' => $stok,
                 'tahun_terbit' => $tahun_terbit,
             ];
     
@@ -181,10 +347,28 @@ class Admin extends BaseController
             return redirect()->to(base_url('daftar_buku'));
         }    
     }
+    public function proses_edit_kategori_sub_buku()
+    {
+        $request = \Config\Services::request();
+        $id_buku = $this->request->getPost('id_buku');
+        $id_kategori_buku = $this->request->getPost('id_kategori_buku');
+        $id_sub_kategori = $this->request->getPost('id_sub_kategori');
+        
+        // Update data buku
+        $data = [
+            'id_kategori_buku' => $id_kategori_buku,
+            'id_sub_kategori' => $id_sub_kategori,
+        ];
+
+        $simpan = $this->ModelBuku->edit_buku($data, $id_buku);
+
+        session()->setFlashdata('success', 'Data Berhasil Diubah');
+        return redirect()->to(base_url('daftar_buku'));
+    }
     
     public function hapus_buku($id_buku)
     {
-        $dapatkan_buku = $this->ModelBuku->dapatkan_buku($id_buku)->getRow();
+        $dapatkan_buku = $this->ModelBuku->dapatkan_buku($id_buku);
         $direktori_foto = 'buku';
         if (isset($dapatkan_buku)) {
             // Hapus file sampul_buku jika ada
@@ -199,4 +383,6 @@ class Admin extends BaseController
             return redirect()->to(base_url('daftar_buku'));
         }
     }
+
+    
 }

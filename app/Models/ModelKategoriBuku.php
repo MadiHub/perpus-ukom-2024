@@ -20,6 +20,7 @@ class ModelKategoriBuku extends Model
     {
         $query = $this->db->table($this->table);
         $batasan = $query->select('*')
+            ->orderBy('id_kategori_buku', 'ASC') 
             ->get()->getResultArray();
         return $batasan;
     }

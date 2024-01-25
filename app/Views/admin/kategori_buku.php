@@ -12,6 +12,7 @@
                             <thead>
                                 <tr>
                                     <th>#</th>
+                                    <th>Id Kategori</th>
                                     <th>Nama Kategori</th>
                                     <th>Aksi</th>
                                 </tr>
@@ -20,6 +21,7 @@
                                 <?php $no = 1; foreach($semua_kategori_buku as $k_buku): ?>
                                 <tr>
                                     <td><?= $no++ ?></td>
+                                    <td><?= $k_buku['id_kategori_buku'] ?></td>
                                     <td><?= $k_buku['nama_kategori_buku'] ?></td>
                                     <td>
                                         <button type="button" class="btn btn-success mr-2" id="btn-edit-k-buku"
@@ -66,9 +68,13 @@
         <div class="modal-body">
         <form method="post" action="<?= base_url() ?>proses_tambah_kategori_buku">
             <div class="mb-3">
-            <input type="text" class="form-control" name="nama_kategori_buku"  aria-describedby="nama kategori buku" placeholder="Nama Kategori Buku">
-            </div>
-            
+                <label for="input" class="form-label">Id Kategori</label>
+                <input type="text" class="form-control" name="id_kategori_buku" aria-describedby="nama kategori buku" placeholder="Id Kategori Buku">
+            </div>    
+            <div class="mb-3">
+                <label for="input" class="form-label">Nama Kategori</label>
+                <input type="text" class="form-control" name="nama_kategori_buku"  aria-describedby="nama kategori buku" placeholder="Nama Kategori Buku">
+            </div>    
             <button type="submit" class="btn btn-primary w-100">Tambah</button>
         </form>
         </div>
@@ -87,7 +93,12 @@
         <form method="post" action="<?= base_url() ?>proses_edit_kategori_buku">
         <input type="hidden" name="id_kategori_buku" id="id_kategori_buku">
             <div class="mb-3">
-            <input type="text" class="form-control" name="nama_kategori_buku" id="nama_kategori_buku" aria-describedby="nama kategori buku" placeholder="Nama Kategori Buku">
+                <label for="input" class="form-label">Id Kategori</label>
+                <input type="text" class="form-control" name="id_kategori_buku" id="id_kategori_buku" aria-describedby="nama kategori buku" placeholder="Id Kategori Buku" readonly>
+            </div> 
+            <div class="mb-3">
+                <label for="input" class="form-label">Nama Kategori</label>
+                <input type="text" class="form-control" name="nama_kategori_buku" id="nama_kategori_buku" aria-describedby="nama kategori buku" placeholder="Nama Kategori Buku">
             </div>
             <button type="submit" class="btn btn-success w-100">Simpan Perubahan</button>
         </form>

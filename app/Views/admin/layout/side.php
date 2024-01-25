@@ -2,9 +2,10 @@
 <body>
     <div class="sidebar sidebar-dark sidebar-fixed" id="sidebar">
       <div class="sidebar-brand d-none d-md-flex">
-        <svg class="sidebar-brand-full" width="118" height="46" alt="CoreUI Logo">
+        <!-- <svg class="sidebar-brand-full" width="118" height="46" alt="CoreUI Logo">
           <use xlink:href="<?= base_url() ?>admin/dist/assets/brand/coreui.svg#full"></use>
-        </svg>
+        </svg> -->
+        <h4><?= $nama_lengkap ?></h4>
         <svg class="sidebar-brand-narrow" width="46" height="46" alt="CoreUI Logo">
           <use xlink:href="<?= base_url() ?>admin/dist/assets/brand/coreui.svg#signet"></use>
         </svg>
@@ -22,6 +23,11 @@
             <svg class="nav-icon">
               <use xlink:href="<?= base_url() ?>admin/dist/vendors/@coreui/icons/svg/free.svg#cil-list"></use>
             </svg> Kategori Buku</a></li>
+        <li class="nav-item"><a class="nav-link" href="<?= base_url() ?>sub_kategori">
+            <svg class="nav-icon">
+              <use xlink:href="<?= base_url() ?>admin/dist/vendors/@coreui/icons/svg/free.svg#cil-playlist-add
+"></use>
+            </svg> Sub Kategori</a></li>
         <li class="nav-group"><a class="nav-link nav-group-toggle" href="<?= base_url() ?>admin/dist/#">
             <svg class="nav-icon">
               <use xlink:href="<?= base_url() ?>admin/dist/vendors/@coreui/icons/svg/free.svg#cil-group"></use>

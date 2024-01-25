@@ -13,6 +13,7 @@
                                     <th>Status</th>
                                     <th>Nama</th>
                                     <th>Email</th>
+                                    <th>Total Pinjam</th>
                                     <th>Tanggal Pinjam</th>
                                     <th>Detail Member</th>
                                     <th>Aksi</th>
@@ -27,6 +28,7 @@
                                     <td><span class="badge bg-danger"><?= $peminjam['status_peminjaman'] ?></span></td>
                                     <td><?= $peminjam['nama_lengkap'] ?></td>
                                     <td><?= $peminjam['email'] ?></td>
+                                    <td><?= $peminjam['total_pinjam'] ?> Buku</td>
                                     <td><?= $peminjam['tanggal_peminjaman'] ?></td>
                                     <td>
                                         <button type="button" class="btn btn-warning mr-2" id="btn-detail-member"
@@ -44,6 +46,7 @@
                                             data-bs-toggle="modal"  data-bs-target="#editPeminjam"
                                             data-id_peminjaman="<?= $peminjam['id_peminjaman'] ?>"
                                             data-status_peminjaman="<?= $peminjam['status_peminjaman'] ?>"
+                                            data-total_pinjam="<?= $peminjam['total_pinjam'] ?>"
                                             > <i class="fa-solid fa-pen-to-square"></i>
                                         </button>
                                     </td>
@@ -91,7 +94,14 @@
                 <div class="mb-3">
                     <input type="text" value="di-kembalikan" class="form-control" name="status_peminjaman" aria-describedby="status_peminjaman buku" placeholder="status_peminjaman Buku" readonly>
                 </div>
-                
+                <div class="mb-3">
+                    <label for="total_pinjam" class="form-label">Total Pinjam</label>
+                    <input type="number" class="form-control" name="total_pinjam" id="total_pinjam" aria-describedby="total_pinjam buku" placeholder="total_pinjam Buku" readonly>
+                </div>
+                <div class="mb-3">
+                    <label for="total_pengembalian" class="form-label">Total Pengembalian</label>
+                    <input type="number" class="form-control" name="total_pengembalian" aria-describedby="total_pengembalian buku" placeholder="total_pengembalian Buku" oninput="validateTotalPengembalian()">
+                </div>
                 <button type="submit" class="btn btn-success w-100">Simpan Perubahan</button>
             </form>
             </div>
@@ -132,6 +142,7 @@
         $(document).on('click', '#btn-edit-peminjam', function() {
             $('.modal-body #id_peminjaman').val($(this).data('id_peminjaman'));
             $('.modal-body #status_peminjaman').val($(this).data('status_peminjaman'));
+            $('.modal-body #total_pinjam').val($(this).data('total_pinjam'));
         })
     </script>
     <!-- script detail member -->
@@ -165,4 +176,49 @@
             });
         }
     </script>
+
+    <!-- Skrip untuk menangani validasi input total_pinjam -->
+<!-- <script>
+    $(document).ready(function() {
+        function handleTotalPinjamValidation(totalPinjamInput, totalPinjam) {
+            // Menambahkan event listener untuk setiap perubahan pada input total_pinjam
+            totalPinjamInput.on('input', function() {
+                var totalPinjamInputValue = parseInt(this.value);
+
+                // Membandingkan dengan nilai total_pinjam dari atribut data
+                if (totalPinjamInputValue > totalPinjam) {
+                    alert('Total pinjam tidak boleh melebihi nilai awal.');
+                    this.value = totalPinjam;
+                }
+            });
+        }
+
+        $('#editPeminjam').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget); // Tombol yang membuka modal
+            var totalPinjam = button.data('total_pinjam'); // Mendapatkan nilai total_pinjam dari tombol
+
+            var modal = $(this);
+            var totalPinjamInput = modal.find('#total_pinjam');
+
+            totalPinjamInput.val(totalPinjam); // Menetapkan nilai total_pinjam pada input modal
+
+            // Menangani validasi input total_pinjam
+            handleTotalPinjamValidation(totalPinjamInput, totalPinjam);
+        });
+    });
+</script> -->
+<script>
+    function validateTotalPengembalian() {
+        var totalPengembalianInput = document.getElementsByName("total_pengembalian")[0];
+        var totalPinjam = parseInt(document.getElementById("total_pinjam").value);
+        var totalPengembalian = parseInt(totalPengembalianInput.value);
+
+        if (totalPengembalian > totalPinjam) {
+            alert('Total pengembalian tidak boleh melebihi total pinjam.');
+            totalPengembalianInput.value = totalPinjam;
+        }
+    }
+</script>
+
+
     

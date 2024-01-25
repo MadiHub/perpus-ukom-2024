@@ -8,7 +8,7 @@ class ModelPeminjaman extends Model
 {
     protected $table = 'tb_peminjaman';
     protected $primaryKey = 'id_peminjaman';
-    protected $allowedFields = ['id_peminjaman', 'id_member', 'id_buku', 'tanggal_peminjaman','tanggal_pengembalian', 'status_peminjaman'];
+    protected $allowedFields = ['id_peminjaman', 'id_member', 'id_buku', 'tanggal_peminjaman','tanggal_pengembalian', 'status_peminjaman', 'total_pinjam', 'total_pengembalian'];
 
     public function dapatkan_peminjaman($email = false)
     {
@@ -16,6 +16,15 @@ class ModelPeminjaman extends Model
             return $this->findAll();
         } else {
             return $this->getWhere(['email' => $email]);
+        }
+    }
+
+    public function dapatkan_peminjaman_byId($id_peminjaman = false)
+    {
+        if ($id_peminjaman === false) {
+            return $this->findAll();
+        } else {
+            return $this->getWhere(['id_peminjaman' => $id_peminjaman]);
         }
     }
 
@@ -111,6 +120,4 @@ class ModelPeminjaman extends Model
             ->get()
             ->getResultArray();
     }
-
-    
 }

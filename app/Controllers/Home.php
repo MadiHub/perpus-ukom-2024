@@ -26,11 +26,16 @@ class Home extends BaseController
 
         $semua_buku = $this->ModelBuku->semua_buku();
         $data = [
+            'judul' => 'Beranda Member',
             'semua_buku' => $semua_buku,  
             'status_login' => $status_login,  
             'username' => $username,  
             'email' => $email,  
         ];
         return view('member/beranda', $data);
+    }
+
+    public function not_found() {
+        return view('not_found');
     }
 }

@@ -37,8 +37,9 @@ class Auth extends BaseController
                     // Menyimpan data user ke dalam sesi
                     session()->set([
                         'email' => $dapatkan_user_role->email,
+                        'role' => $dapatkan_user_role->role,
+                        'nama_lengkap' => $dapatkan_user_role->nama_lengkap,
                         'status_login' => TRUE,
-
                     ]);
 
                     session()->setFlashdata('success', 'Anda Berhasil Login');
@@ -46,8 +47,9 @@ class Auth extends BaseController
                 } else {
                     session()->set([
                         'email' => $dapatkan_user_role->email,
+                        'role' => $dapatkan_user_role->role,
+                        'nama_lengkap' => $dapatkan_user_role->nama_lengkap,
                         'status_login' => TRUE,
-
                     ]);
 
                     session()->setFlashdata('success', 'Anda Berhasil Login');
