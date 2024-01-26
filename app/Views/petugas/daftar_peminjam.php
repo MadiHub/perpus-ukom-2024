@@ -45,7 +45,9 @@
                                         <button type="button" class="btn btn-success mr-2" id="btn-edit-peminjam"
                                             data-bs-toggle="modal"  data-bs-target="#editPeminjam"
                                             data-id_peminjaman="<?= $peminjam['id_peminjaman'] ?>"
+                                            data-id_member="<?= $peminjam['id_member'] ?>"
                                             data-status_peminjaman="<?= $peminjam['status_peminjaman'] ?>"
+                                            data-tanggal_pengembalian="<?= $peminjam['tanggal_pengembalian'] ?>"
                                             data-total_pinjam="<?= $peminjam['total_pinjam'] ?>"
                                             > <i class="fa-solid fa-pen-to-square"></i>
                                         </button>
@@ -90,17 +92,43 @@
             </div>
             <div class="modal-body">
             <form method="post" action="<?= base_url() ?>proses_edit_peminjaman">
-                <input type="hidden" class="form-control" name="id_peminjaman" id="id_peminjaman" aria-describedby="id peminjaman buku" >
+                <input type="hidden" class="form-control" name="id_peminjaman" id="id_peminjaman">
+                <input type="hidden" class="form-control" name="id_member" id="id_member">
                 <div class="mb-3">
-                    <input type="text" value="di-kembalikan" class="form-control" name="status_peminjaman" aria-describedby="status_peminjaman buku" placeholder="status_peminjaman Buku" readonly>
+                    <label for="total_pinjam" class="form-label">Status</label>
+                    <input type="text" value="di-kembalikan" class="form-control" name="status_peminjaman" placeholder="status_peminjaman Buku" readonly>
                 </div>
                 <div class="mb-3">
                     <label for="total_pinjam" class="form-label">Total Pinjam</label>
-                    <input type="number" class="form-control" name="total_pinjam" id="total_pinjam" aria-describedby="total_pinjam buku" placeholder="total_pinjam Buku" readonly>
+                    <input type="number" class="form-control" name="total_pinjam" id="total_pinjam" placeholder="total_pinjam Buku" readonly>
+                </div>
+                <div class="mb-3">
+                    <label for="total_pinjam" class="form-label">Tanggal Pengembalian</label>
+                    <input type="date" id="tanggal_pengembalian" class="form-control" name="tanggal_pengembalian" placeholder="status_peminjaman Buku" readonly>
                 </div>
                 <div class="mb-3">
                     <label for="total_pengembalian" class="form-label">Total Pengembalian</label>
-                    <input type="number" class="form-control" name="total_pengembalian" aria-describedby="total_pengembalian buku" placeholder="total_pengembalian Buku" oninput="validateTotalPengembalian()">
+                    <input type="number" class="form-control" name="total_pengembalian" placeholder="Masukkan Total Pengembalian Buku" oninput="validateTotalPengembalian()">
+                </div>
+                <div class="mb-3">
+                    <label for="total_pinjam" class="form-label">Tanggal Hari Ini</label>
+                    <input type="date" value="" class="form-control" id="tanggal_hari_ini" name="tanggal_hari_ini" placeholder="status_peminjaman Buku">
+                </div>
+                <div class="mb-3">
+                    <label for="total_pinjam" class="form-label">Total Keterlambatan</label>
+                    <input type="text" class="form-control" id="total_keterlambatan" name="total_keterlambatan" readonly>
+                </div>
+                <div class="mb-3">
+                    <label for="total_pinjam" class="form-label">Total Denda</label>
+                    <input type="text" class="form-control" id="total_denda" name="total_denda" readonly >
+                </div>
+                <div class="mb-3">
+                    <label for="total_pinjam" class="form-label">Uang Dibayar</label>
+                    <input type="text" class="form-control" id="uang_dibayarkan" name="uang_dibayarkan" >
+                </div>
+                <div class="mb-3">
+                    <label for="total_pinjam" class="form-label">Kembalian</label>
+                    <input type="number" class="form-control" id="uang_kembalian" name="uang_kembalian" readonly>
                 </div>
                 <button type="submit" class="btn btn-success w-100">Simpan Perubahan</button>
             </form>
@@ -141,6 +169,8 @@
     <script>
         $(document).on('click', '#btn-edit-peminjam', function() {
             $('.modal-body #id_peminjaman').val($(this).data('id_peminjaman'));
+            $('.modal-body #id_member').val($(this).data('id_member'));
+            $('.modal-body #tanggal_pengembalian').val($(this).data('tanggal_pengembalian'));
             $('.modal-body #status_peminjaman').val($(this).data('status_peminjaman'));
             $('.modal-body #total_pinjam').val($(this).data('total_pinjam'));
         })
@@ -177,36 +207,8 @@
         }
     </script>
 
-    <!-- Skrip untuk menangani validasi input total_pinjam -->
-<!-- <script>
-    $(document).ready(function() {
-        function handleTotalPinjamValidation(totalPinjamInput, totalPinjam) {
-            // Menambahkan event listener untuk setiap perubahan pada input total_pinjam
-            totalPinjamInput.on('input', function() {
-                var totalPinjamInputValue = parseInt(this.value);
 
-                // Membandingkan dengan nilai total_pinjam dari atribut data
-                if (totalPinjamInputValue > totalPinjam) {
-                    alert('Total pinjam tidak boleh melebihi nilai awal.');
-                    this.value = totalPinjam;
-                }
-            });
-        }
-
-        $('#editPeminjam').on('show.bs.modal', function (event) {
-            var button = $(event.relatedTarget); // Tombol yang membuka modal
-            var totalPinjam = button.data('total_pinjam'); // Mendapatkan nilai total_pinjam dari tombol
-
-            var modal = $(this);
-            var totalPinjamInput = modal.find('#total_pinjam');
-
-            totalPinjamInput.val(totalPinjam); // Menetapkan nilai total_pinjam pada input modal
-
-            // Menangani validasi input total_pinjam
-            handleTotalPinjamValidation(totalPinjamInput, totalPinjam);
-        });
-    });
-</script> -->
+<!-- Validasi total peminjaman -->
 <script>
     function validateTotalPengembalian() {
         var totalPengembalianInput = document.getElementsByName("total_pengembalian")[0];
@@ -220,5 +222,90 @@
     }
 </script>
 
+<script>
+    // Ambil elemen input tanggal_pengembalian
+    var tanggalPengembalianInput = document.getElementById('tanggal_pengembalian');
+    // Ambil elemen input tanggal_hari_ini
+    var tanggalHariIniInput = document.getElementById('tanggal_hari_ini');
+    // Ambil elemen input total_keterlambatan
+    var totalKeterlambatanInput = document.getElementById('total_keterlambatan');
+    // Ambil elemen input total_denda
+    var totalDendaInput = document.getElementById('total_denda');
 
-    
+    // Tambahkan event listener untuk memonitor perubahan nilai tanggal_hari_ini
+    tanggalHariIniInput.addEventListener('input', hitungTotalKeterlambatan);
+
+    // Fungsi untuk menghitung total keterlambatan
+    function hitungTotalKeterlambatan() {
+        // Ambil nilai tanggal_pengembalian dan tanggal_hari_ini
+        var tanggalPengembalian = tanggalPengembalianInput.value;
+        var tanggalHariIni = tanggalHariIniInput.value;
+
+        // Jika tanggal_pengembalian diisi dan tanggal_hari_ini > tanggal_pengembalian
+        if (tanggalPengembalian && tanggalHariIni > tanggalPengembalian) {
+            // Hitung selisih hari
+            var selisihHari = Math.floor((new Date(tanggalHariIni) - new Date(tanggalPengembalian)) / (24 * 60 * 60 * 1000));
+            
+            // Tampilkan hasil pada input total_keterlambatan
+            totalKeterlambatanInput.value = (selisihHari > 0) ? selisihHari : (selisihHari === 0) ? 'Tidak Terlambat' : '';
+
+            // Hitung total denda (2000 per hari)
+            var totalDenda = (selisihHari > 0) ? selisihHari * 2000 : 0;
+            totalDendaInput.value = totalDenda;
+        } else {
+            // Kosongkan input total_keterlambatan dan total_denda jika tidak terlambat
+            totalKeterlambatanInput.value = '-';
+            totalDendaInput.value = '-';
+        }
+    }
+
+    // Panggil fungsi untuk menghitung total keterlambatan saat halaman dimuat
+    hitungTotalKeterlambatan();
+</script>
+
+<script>
+    // Ambil elemen input total_denda
+    var totalDendaInput = document.getElementById('total_denda');
+    // Ambil elemen input uang_dibayarkan
+    var uangDibayarkanInput = document.getElementById('uang_dibayarkan');
+    // Ambil elemen input uang_kembalian
+    var uangKembalianInput = document.getElementById('uang_kembalian');
+
+    // Tambahkan event listener untuk memonitor perubahan nilai uang_dibayarkan
+    uangDibayarkanInput.addEventListener('input', hitungUangKembalian);
+
+    // Fungsi untuk menghitung uang kembalian
+    function hitungUangKembalian() {
+        // Ambil nilai total_denda dan uang_dibayarkan
+        var totalDenda = parseInt(totalDendaInput.value) || 0;
+        var uangDibayarkan = parseInt(uangDibayarkanInput.value) || 0;
+
+        // Hitung uang kembalian
+        var uangKembalian = uangDibayarkan - totalDenda;
+
+        // Tampilkan hasil pada input uang_kembalian
+        uangKembalianInput.value = uangKembalian;
+
+        
+    }
+
+    // Panggil fungsi untuk menghitung uang kembalian saat halaman dimuat
+    hitungUangKembalian();
+</script>
+
+<!-- format rp -->
+<script>
+    function formatRupiah(input) {
+        // Mengambil nilai input
+        let nilai = input.value;
+
+        // Menghapus karakter selain digit
+        nilai = nilai.replace(/\D/g, '');
+
+        // Format sebagai mata uang Rupiah
+        let hasilFormat = "Rp " + new Intl.NumberFormat('id-ID').format(nilai);
+
+        // Menampilkan hasil format pada input
+        input.value = hasilFormat;
+    }
+</script>

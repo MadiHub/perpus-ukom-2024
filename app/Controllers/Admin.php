@@ -299,7 +299,7 @@ class Admin extends BaseController
         $penerbit = $this->request->getPost('penerbit');
         $tahun_terbit = $this->request->getPost('tahun_terbit');
         $sampul_buku = $request->getFile('sampul_buku');
-    
+
         $direktori_foto = 'buku';
         $fileName = $judul . '_' . time() . '.png';
     

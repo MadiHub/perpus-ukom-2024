@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 use App\Models\ModelPeminjaman;
+use App\Models\ModelPengembalian;
 
 
 class Petugas extends BaseController
@@ -9,6 +10,7 @@ class Petugas extends BaseController
     public function __construct()
     {
         $this->ModelPeminjaman = new ModelPeminjaman();
+        $this->ModelPengembalian = new ModelPengembalian();
     }
 
     public function dashboard_petugas()
@@ -80,33 +82,71 @@ class Petugas extends BaseController
     {
         $request = \Config\Services::request();
         $id_peminjaman = $this->request->getPost('id_peminjaman');
+        $id_pengembalian = $this->request->getPost('id_pengembalian');
+        $id_member = $this->request->getPost('id_member');
+        $tanggal_pengembalian = $this->request->getPost('tanggal_pengembalian');
+        $tanggal_hari_ini = $this->request->getPost('tanggal_hari_ini');
         $total_pinjam = $this->request->getPost('total_pinjam');
         $total_pengembalian = $this->request->getPost('total_pengembalian');
+        $uang_dibayarkan = $this->request->getPost('uang_dibayarkan');
+        $uang_kembalian = $this->request->getPost('uang_kembalian');
         $status_peminjaman = $this->request->getPost('status_peminjaman');
-  
+            
+        $total_keterlambatan = $this->request->getPost('total_keterlambatan');
+        $total_denda = $this->request->getPost('total_denda');
+
+        // dd($total_keterlambatan, $total_denda);
         $sisa_total_pinjam = $total_pinjam - $total_pengembalian;
 
-        if ($total_pengembalian < $total_pinjam) {
-            $data = [
-                // 'status_peminjaman' => $status_peminjaman,
+        // if ($total_pengembalian < $total_pinjam) {
+        //     $data = [
+        //         // 'status_peminjaman' => $status_peminjaman,
+        //         'total_pinjam' => $sisa_total_pinjam,
+        //         'total_pengembalian' => $total_pengembalian,
+        //     ];
+        //     $edit = $this->ModelPeminjaman->edit_status_peminjaman($data, $id_peminjaman);
+        //     session()->setFlashdata('success', 'Berhasil Edit Status Pengembalian !');
+        //     return redirect()->to(base_url('daftar_peminjam'));
+        // } else {
+        //     $data = [
+        //         'status_peminjaman' => $status_peminjaman,
+        //         'total_pinjam' => $sisa_total_pinjam,
+        //         'total_pengembalian' => $total_pengembalian,
+        //     ];
+        //     $edit = $this->ModelPeminjaman->edit_status_peminjaman($data, $id_peminjaman);
+        //     session()->setFlashdata('success', 'Berhasil Edit Status Pengembalian !');
+        //     return redirect()->to(base_url('daftar_peminjam'));
+        // }
+
+
+        if($sisa_total_pinjam != '0') {
+            $data_peminjaman = [
                 'total_pinjam' => $sisa_total_pinjam,
-                'total_pengembalian' => $total_pengembalian,
             ];
-            $edit = $this->ModelPeminjaman->edit_status_peminjaman($data, $id_peminjaman);
-            session()->setFlashdata('success', 'Berhasil Edit Status Pengembalian !');
-            return redirect()->to(base_url('daftar_peminjam'));
+            $edit = $this->ModelPeminjaman->edit_status_peminjaman($data_peminjaman, $id_peminjaman);
         } else {
-            $data = [
+            $data_peminjaman = [
                 'status_peminjaman' => $status_peminjaman,
                 'total_pinjam' => $sisa_total_pinjam,
-                'total_pengembalian' => $total_pengembalian,
             ];
-            $edit = $this->ModelPeminjaman->edit_status_peminjaman($data, $id_peminjaman);
-            session()->setFlashdata('success', 'Berhasil Edit Status Pengembalian !');
-            return redirect()->to(base_url('daftar_peminjam'));
+            $edit = $this->ModelPeminjaman->edit_status_peminjaman($data_peminjaman, $id_peminjaman);
         }
         
        
+        $data_pengembalian = [
+            'id_pengembalian' => $id_pengembalian,
+            'id_member' => $id_member,
+            'id_peminjaman' => $id_peminjaman,
+            'tanggal_pengembalian' => $tanggal_hari_ini,
+            'total_pengembalian' => $total_pengembalian,
+            'hari_keterlambatan' => $total_keterlambatan,
+            'total_denda' => $total_denda,
+            'uang_dibayarkan' => $uang_dibayarkan,
+            'uang_kembalian' => $uang_kembalian,
+        ];
+        $tambah = $this->ModelPengembalian->tambah_pengembalian($data_pengembalian);
+        session()->setFlashdata('success', 'Berhasil Edit Status Pengembalian !');
+        return redirect()->to(base_url('daftar_peminjam'));
     }
 
     public function daftar_pengembalian()
