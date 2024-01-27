@@ -270,7 +270,7 @@ class Admin extends BaseController
         $id_sub_kategori = ($id_sub_kategori !== null) ? $id_sub_kategori : 'null';
 
         $direktori_foto = 'buku';
-        $fileName = $judul . '_' . time() . '.png';
+        $fileName = $id_buku . '_' . $judul . '.png';
     
         $data = [
             'judul' => $judul,

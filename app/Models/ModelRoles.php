@@ -19,6 +19,15 @@ class ModelRoles extends Model
         }
     }
 
+    public function dapatkan_user_role($email = false)
+    {
+        if ($email === false) {
+            return $this->findAll();
+        } else {
+            return $this->getWhere(['email' => $email]);
+        }
+    }
+
     public function semua_admin()
     {
         $query = $this->db->table($this->table);

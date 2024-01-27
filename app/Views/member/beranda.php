@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="<?= base_url() ?>owl-slide/dist/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="<?= base_url() ?>owl-slide/dist/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="<?= base_url() ?>fontawesome/css/all.min.css">
 
     <style>
         .container {
@@ -26,94 +27,121 @@
         }
 
         .navbar-nav .nav-link.active {
-         color:  rgb(48, 21, 248) !important;
+         color:  #DF791E !important;
          }
+         .navbar {
+        transition: background-color 0.3s, box-shadow 0.3s;
+        }
+        .navbar.sticky {
+        background-color: #ffffff; /* Sticky background color */
+        box-shadow: 0 4px 2px -2px rgba(0,0,0,0.1); /* Sticky box shadow */
+        }
 
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 3;
+            }
+        }
+        .navbar.fadeIn {
+        animation: fadeIn 0.5s ease-in-out;
+        }
         /* responsive card mobile */
         @media (max-width: 767px) {
             .card {
                 width: 11rem;
             }
         }
-
         /* responsive card tab */
         @media (min-width: 768px) and (max-width: 991px) {
             .card {
                 width: 12rem; 
             }
         }
-
         .judul h6 a {
-            font-weight: 500;
+            font-weight: 500px;
             font-size: 20px;
             color: black;
-            display: block;
-            margin-bottom: 10px;
             text-decoration: none;
             transition: color 0.3s; 
         }
-
         .judul h6 a:hover {
-            color: #0193C5;
-            text-decoration: none; /* Menghilangkan garis bawah pada hover */
+            color: #0E51A5;
+            text-decoration: none; 
         }
-
-
+        .kategori p a {
+            font-weight: 500;
+            font-size: 15px;
+            color: #DF791E;
+            text-decoration: none;
+            transition: color 0.3s; 
+        }
         input[readonly] {
             background-color: #D0D0D0;
-            /* Ganti #your_color_here dengan kode warna yang diinginkan */
         }
         textarea[readonly] {
             background-color: #D0D0D0;
-            /* Ganti #your_color_here dengan kode warna yang diinginkan */
         }
+        .img-card {
+            transition: box-shadow 0.7s;
+            border: none; /* Menghilangkan border */
 
+        }
+        .img-card:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transform: scale(1.03);
+            cursor: pointer; /* Ganti cursor saat dihover */
+            opacity: 0.9; /* Nilai opacitas selama dihover (0.0 - 1.0) */
+
+        }
     </style>
     
 
 </head>
 <body>
-
-   <!-- navbar -->
-    <div class="container">
-        <nav class="navbar navbar-expand-lg ">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Navbar</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Dropdown link
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                    </li>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light" >
+        <div class="container">
+            <a class="navbar-brand" href="#"
+            ><img id="logo" src="<?= base_url() ?>logo/logo1.png" alt="Logo" draggable="false" width="75"
+            /> <span style="color:#DF791E;">Eternal Library</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item">
+                <a class="nav-link mx-2 active" href="#!"><i class="fa-solid fa-house active"></i> Beranda</a>
+                </li>
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa-solid fa-clock-rotate-left"></i> Riwayat
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="buku_dipinjam">Riwayat Peminjaman</a></li>
+                    <li><a class="dropdown-item" href="#">Riwayat Pengembalian</a></li>
                 </ul>
-                </div>
+                </li>
+                <li class="nav-item ms-3">
+                    <?php if($status_login == null) {
+                        echo "<a class='btn btn-danger btn-rounded' href='login_member'>Masuk | Daftar</a>";
+                    } else {
+                        echo "<a class='btn btn-danger btn-rounded' href='logout'><i class='fa-solid fa-right-to-bracket'></i></a>";
+                    }
+                    ?>
+                </li>
+            </ul>
             </div>
-        </nav>
-    </div>
-    <!-- navbar end -->
+        </div>
+    </nav>
+    <!-- Navbar -->
 
     <!-- banner -->
-    <div class="container">
-        <div class="owl-carousel mt-5">
-            <div class="img-banner ">
+    <div class="container" style="margin-top:110px">
+        <div class="owl-carousel">
+            <div class="img-banner" style="height:10px;">
                 <img class=" img-fluid rounded" width="400" src="<?= base_url() ?>banner/1.jpg" alt="">
             </div>
             <div class="img-banner ">
@@ -142,23 +170,21 @@
                 <?php foreach($semua_buku as $buku) : ?>
                 <!-- Card 1 -->
                 <div class="col">
-                    <div class="card mb-3 mr-2">
-                        <div class="img mt-1 mr-1 ml-1 mb-1" style="max-height: 250px; overflow: hidden;">
-                            <img src="<?= base_url() ?>buku/<?= $buku['sampul_buku']?>" class="card-img-top img-fluid" alt="course">
-                        </div>
-                        <div class="card-body">
-                            <div class="judul">
-                                <h6 class="mb-4"><a href="#"><?= $buku['judul']?></a></h6>
+                        <div class="card mr-2" style="border: none; background: transparent;">
+                            <a href="<?= base_url() ?>pinjam_buku/<?= $buku['id_buku']?>">
+                                <div class="img-card mt-1 mr-1 ml-1 mb-1" style="max-height: 400px; max-weight: 400px; overflow: hidden;">
+                                    <img src="<?= base_url() ?>buku/<?= $buku['sampul_buku']?>" class="card-img-top img-fluid" alt="course">
+                                </div>
+                            </a>
+                            <div class="kategori mt-2">
+                                <p><a href="#"><?= $buku['nama_kategori_buku']?></a></p>
                             </div>
-                            <hr>
-                            <p>Kategori : <?= $buku['nama_kategori_buku']?></p>
-                            <hr>
-                            <a href="<?= base_url() ?>pinjam_buku/<?= $buku['id_buku']?>" class="btn btn-block btn-primary w-100">Pinjam</a>
+                            <div class="judul">
+                                <h6 class="mb-2"><a href="<?= base_url() ?>pinjam_buku/<?= $buku['id_buku']?>"><?= $buku['judul']?></a></h6>
+                            </div>
                         </div>
-                    </div>
                 </div>
                 <?php endforeach ?>
-                
         </div>
     </div>
     <!-- script jquery -->
@@ -235,5 +261,19 @@
 		});
 	</script>
     
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var navbar = document.querySelector(".navbar");
+
+      function handleScroll() {
+        navbar.classList.toggle("sticky", window.scrollY > 0);
+      }
+
+      window.addEventListener("scroll", handleScroll);
+
+      // Initial check for sticky on page load
+      handleScroll();
+    });
+  </script>
 </body>
 </html>
