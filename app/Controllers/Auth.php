@@ -61,7 +61,7 @@ class Auth extends BaseController
                 return redirect()->to(base_url('/login_petugas'));
             }
         } else {
-            session()->setFlashdata('error', 'Akun Ditemukan!');
+            session()->setFlashdata('error', 'Akun Tidak Ditemukan!');
             return redirect()->to(base_url('/login_petugas'));
         }
     }

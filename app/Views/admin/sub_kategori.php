@@ -126,6 +126,8 @@
 
     <!-- script jquery -->
     <script src="<?= base_url() ?>jquery/jquery.slim.min.js"></script>
+    <script src="<?= base_url() ?>DataTables/datatables.min.js"></script>  
+
     <!-- sweetalert -->
     <script src="<?= base_url() ?>sweetalert/alert.js"></script>
     <script>

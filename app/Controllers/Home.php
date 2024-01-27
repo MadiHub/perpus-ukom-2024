@@ -29,6 +29,7 @@ class Home extends BaseController
             'judul' => 'Beranda Member',
             'semua_buku' => $semua_buku,  
             'status_login' => $status_login,  
+            'id_member' => $id_member,  
             'username' => $username,  
             'email' => $email,  
         ];

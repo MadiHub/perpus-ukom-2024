@@ -91,6 +91,10 @@
             <th>Nama</th>
             <th>Email</th>
             <th>Tanggal Pengembalian</th>
+            <th>Hari Keterlambatan</th>
+            <th>Total Denda</th>
+            <th>Uang Dibayarkan</th>
+            <th>Uang Kembalian</th>
         </tr>
         
     </thead>
@@ -110,10 +114,14 @@
                 <td><?= $no++ ?></td>
                 <td><img src="<?= base_url() ?>buku/<?= $data['sampul_buku'] ?>" alt="" width="50"></td>
                 <td><?= $data['judul'] ?></td>
-                <td><span class="badge bg-success"><?= $data['status_peminjaman'] ?></span></td>
+                <td><span class="badge bg-success">di-kembalikan</span></td>
                 <td><?= $data['nama_lengkap'] ?></td>
                 <td><?= $data['email'] ?></td>
-                <td><?= $data['tanggal_peminjaman'] ?></td>
+                <td><?= $data['tanggal_pengembalian'] ?></td>
+                <td><?= $data['hari_keterlambatan'] ?></td>
+                <td><?= $data['total_denda'] ?></td>
+                <td><?= $data['uang_dibayarkan'] ?></td>
+                <td><?= $data['uang_kembalian'] ?></td>
 
             </tr>
         <?php } } ?>

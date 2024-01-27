@@ -181,6 +181,17 @@
 			<?php } ?>
 		});
 	</script>
+    <script>
+		$(function() {
+			<?php if (session()->has("info")) { ?>
+				Swal.fire({
+					icon: 'info',
+					title: 'Info',
+					text: '<?= session("info") ?>'
+				})
+			<?php } ?>
+		});
+	</script>
     <!-- owl script -->
     <script src="<?= base_url() ?>owl-slide/dist/owl.carousel.min.js"></script>
     <script>

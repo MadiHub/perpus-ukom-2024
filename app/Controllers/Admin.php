@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Models\ModelKategoriBuku;
 use App\Models\ModelBuku;
 use App\Models\ModelSubKategori;
+use App\Models\ModelRoles;
 
 
 class Admin extends BaseController
@@ -14,6 +15,7 @@ class Admin extends BaseController
         $this->ModelKategoriBuku = new ModelKategoriBuku();
         $this->ModelBuku = new ModelBuku();
         $this->ModelSubKategori = new ModelSubKategori();
+        $this->ModelRoles = new ModelRoles();
     }
 
     public function dashboard_admin()
@@ -241,7 +243,7 @@ class Admin extends BaseController
                 echo view('admin/layout/side');
                 echo view('admin/layout/nav');
                 echo view('admin/daftar_buku');
-                // echo view('admin/layout/script');
+                echo view('admin/layout/script');
             } else {
                 return redirect()->to(base_url('/not_found'));            }
         } else {
@@ -305,7 +307,7 @@ class Admin extends BaseController
     
         // Jika sampul_buku tidak null dan valid, maka proses
         if ($sampul_buku && $sampul_buku->isValid()) {
-            $buku = $this->ModelBuku->dapatkan_buku($id_buku);
+            $buku = $this->ModelBuku->dapatkan_admin($id_buku);
             $sampul_lama = $buku->sampul_buku;
     
             // Hapus file lama jika ada
@@ -368,12 +370,12 @@ class Admin extends BaseController
     
     public function hapus_buku($id_buku)
     {
-        $dapatkan_buku = $this->ModelBuku->dapatkan_buku($id_buku);
+        $dapatkan_admin = $this->ModelBuku->dapatkan_admin($id_buku);
         $direktori_foto = 'buku';
-        if (isset($dapatkan_buku)) {
+        if (isset($dapatkan_admin)) {
             // Hapus file sampul_buku jika ada
-            if ($dapatkan_buku->sampul_buku && file_exists($direktori_foto . '/' . $dapatkan_buku->sampul_buku)) {
-                unlink($direktori_foto . '/' . $dapatkan_buku->sampul_buku);
+            if ($dapatkan_admin->sampul_buku && file_exists($direktori_foto . '/' . $dapatkan_admin->sampul_buku)) {
+                unlink($direktori_foto . '/' . $dapatkan_admin->sampul_buku);
             }
             $this->ModelBuku->hapus_buku($id_buku);
             session()->setFlashdata("success", "Berhasil Hapus Buku");
@@ -384,5 +386,96 @@ class Admin extends BaseController
         }
     }
 
+    public function daftar_admin()
+    {
+        // data sesion wajib
+        $status_login = session()->get('status_login');
+        $nama_lengkap = session()->get('nama_lengkap');
+        $email = session()->get('email');
+        $role = session()->get('role');
+        $semua_admin = $this->ModelRoles->semua_admin();
+
+        if ($status_login == TRUE) {
+            if ($role == 'admin') {
+                $data = [
+                    'judul' => 'Daftar Admin',
+                    // data sesion wajib
+                    'nama_lengkap' => $nama_lengkap,
+                    'email' => $email,
+                    'semua_admin' => $semua_admin,
+                    'nama_lengkap' => $nama_lengkap,
+                    'role' => $role,
+                ];
+                echo view('admin/layout/head', $data);
+                echo view('admin/layout/side');
+                echo view('admin/layout/nav');
+                echo view('admin/daftar_admin');
+                echo view('admin/layout/script');
+            } else {
+                return redirect()->to(base_url('/not_found'));            
+            }
+        } else {
+            return redirect()->to(base_url('/login_petugas'));
+        }
+    }
+
+    public function proses_tambah_admin() 
+    {
+        $request = \Config\Services::request();
+        $nama_lengkap = $this->request->getPost('nama_lengkap');
+        $alamat = $this->request->getPost('alamat');
+        $email = $this->request->getPost('email');
+        $password = $this->request->getPost('password');
+        $no_telpon = $this->request->getPost('no_telpon');
+        $role = $this->request->getPost('role');
+
+        $data = [
+            'nama_lengkap' => $nama_lengkap,
+            'email' => $email,
+            'alamat' => $alamat,
+            'password' => $password,
+            'role' => $role,
+            'no_telpon' => $no_telpon,
+        ];
+        $this->ModelRoles->tambah_petugas($data);
+        session()->setFlashdata("success", "Berhasil Tambah Admin");
+        return redirect()->to(base_url('daftar_admin'));
+    }
+
+    public function proses_edit_admin() 
+    {
+        $request = \Config\Services::request();
+        $id_role = $this->request->getPost('id_role');
+        $nama_lengkap = $this->request->getPost('nama_lengkap');
+        $alamat = $this->request->getPost('alamat');
+        $email = $this->request->getPost('email');
+        $no_telpon = $this->request->getPost('no_telpon');
+        $role = $this->request->getPost('role');
+        $password = $this->request->getPost('password');
+
+        $data = [
+            'nama_lengkap' => $nama_lengkap,
+            'email' => $email,
+            'alamat' => $alamat,
+            'role' => $role,
+            'no_telpon' => $no_telpon,
+            'password' => $password,
+        ];
+        $this->ModelRoles->edit_admin($data, $id_role);
+        session()->setFlashdata("success", "Berhasil Edit Admin");
+        return redirect()->to(base_url('daftar_admin'));
+    }
     
+    public function hapus_admin($id_role)
+    {
+        $dapatkan_admin = $this->ModelRoles->dapatkan_petugas($id_role);
+        if (isset($dapatkan_admin)) {
+            $this->ModelRoles->hapus_admin($id_role);
+            session()->setFlashdata("success", "Berhasil Hapus Admin");
+            return redirect()->to(base_url('daftar_admin'));
+        } else {
+            session()->setFlashdata("error", "Gagal Hapus Admin");
+            return redirect()->to(base_url('daftar_admin'));
+        }
+    }
 }

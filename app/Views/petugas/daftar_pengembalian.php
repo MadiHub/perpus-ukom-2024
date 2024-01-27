@@ -14,6 +14,9 @@
                                     <th>Nama</th>
                                     <th>Email</th>
                                     <th>Tanggal Pengembalian</th>
+                                    <th>Total Pengembalian</th>
+                                    <th>Hari Keterlambatan</th>
+                                    <th>Detail Denda</th>
                                     <th>Detail Member</th>
                                 </tr>
                             </thead>
@@ -23,12 +26,24 @@
                                     <td><?= $no++ ?></td>
                                     <td><img src="<?= base_url() ?>buku/<?= $pengembali['sampul_buku'] ?>" alt="" width="50"></td>
                                     <td><?= $pengembali['judul'] ?></td>
-                                    <td><span class="badge bg-success"><?= $pengembali['status_peminjaman'] ?></span></td>
+                                    <td><span class="badge bg-success">di-kembalikan</span></td>
                                     <td><?= $pengembali['nama_lengkap'] ?></td>
                                     <td><?= $pengembali['email'] ?></td>
                                     <td><?= $pengembali['tanggal_pengembalian'] ?></td>
+                                    <td><?= $pengembali['total_pengembalian'] ?></td>
+                                    <td><?= $pengembali['hari_keterlambatan'] ?></td>
                                     <td>
-                                        <button type="button" class="btn btn-warning mr-2" id="btn-detail-member"
+                                        <button type="button" class="btn btn-warning mr-2" id="btn-detail-denda"
+                                            data-bs-toggle="modal"  data-bs-target="#detailDenda"
+                                            data-hari_keterlambatan="<?= $pengembali['hari_keterlambatan'] ?>"
+                                            data-total_denda="<?= $pengembali['total_denda'] ?>"
+                                            data-uang_dibayarkan="<?= $pengembali['uang_dibayarkan'] ?>"
+                                            data-uang_kembalian="<?= $pengembali['uang_kembalian'] ?>"
+                                            > <i class="fas fa-money-bill-wave"></i> Denda
+                                        </button>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="btn btn-success mr-2" id="btn-detail-member"
                                             data-bs-toggle="modal"  data-bs-target="#detailMember"
                                             data-id_peminjaman="<?= $pengembali['id_peminjaman'] ?>"
                                             data-nama_lengkap="<?= $pengembali['nama_lengkap'] ?>"
@@ -68,28 +83,6 @@
     <!-- script bootsrap -->
     <script src="<?= base_url() ?>bootstrap/js/bootstrap.min.js"></script>
     
-    <!-- Modal Edit Peminjaman-->
-    <div class="modal fade" id="editPeminjam" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Edit Status Peminjaman</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-            <form method="post" action="<?= base_url() ?>proses_edit_peminjaman">
-                <input type="hidden" class="form-control" name="id_peminjaman" id="id_peminjaman" aria-describedby="id peminjaman buku" >
-                <div class="mb-3">
-                    <select class="form-select" aria-label="Default select example" name="status_peminjaman">
-                        <option value="di-kembalikan" selected>Di Kembalikan</option>
-                    </select>
-                </div>
-                <button type="submit" class="btn btn-success w-100">Simpan Perubahan</button>
-            </form>
-            </div>
-            </div>
-        </div>
-    </div>
     <!-- script edit buku -->
     <script>
         $(document).on('click', '#btn-edit-peminjam', function() {
@@ -119,6 +112,35 @@
         }
     </script>
     
+    <!-- Modal Detail Denda-->
+    <div class="modal fade" id="detailDenda" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Detail Denda</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label for="nama" class="form-label">Hari Keterlambatan</label>
+                    <input type="text" class="form-control" name="hari_keterlambatan" id="hari_keterlambatan" readonly>
+                </div>                
+                <div class="mb-3">
+                    <label for="nama" class="form-label">Total Denda</label>
+                    <input type="text" class="form-control" name="total_denda" id="total_denda" readonly>
+                </div>                
+                <div class="mb-3">
+                    <label for="nama" class="form-label">Uang Dibayarkan</label>
+                    <input type="text" class="form-control" name="uang_dibayarkan" id="uang_dibayarkan" readonly>
+                </div>                
+                <div class="mb-3">
+                    <label for="nama" class="form-label">Uang Kembalian</label>
+                    <input type="text" class="form-control" name="uang_kembalian" id="uang_kembalian" readonly>
+                </div>              
+            </div>
+            </div>
+        </div>
+    </div>
     <!-- Modal Detail Member-->
     <div class="modal fade" id="detailMember" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -149,6 +171,15 @@
         </div>
     </div>
 
+    <!-- script detail denda -->
+    <script>
+        $(document).on('click', '#btn-detail-denda', function() {
+            $('.modal-body #hari_keterlambatan').val($(this).data('hari_keterlambatan'));
+            $('.modal-body #total_denda').val($(this).data('total_denda'));
+            $('.modal-body #uang_dibayarkan').val($(this).data('uang_dibayarkan'));
+            $('.modal-body #uang_kembalian').val($(this).data('uang_kembalian'));
+        })
+    </script>
     <!-- script detail member -->
     <script>
         $(document).on('click', '#btn-detail-member', function() {

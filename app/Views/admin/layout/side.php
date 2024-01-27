@@ -25,17 +25,16 @@
             </svg> Kategori Buku</a></li>
         <li class="nav-item"><a class="nav-link" href="<?= base_url() ?>sub_kategori">
             <svg class="nav-icon">
-              <use xlink:href="<?= base_url() ?>admin/dist/vendors/@coreui/icons/svg/free.svg#cil-playlist-add
-"></use>
+              <use xlink:href="<?= base_url() ?>admin/dist/vendors/@coreui/icons/svg/free.svg#cil-playlist-add"></use>
             </svg> Sub Kategori</a></li>
         <li class="nav-group"><a class="nav-link nav-group-toggle" href="<?= base_url() ?>admin/dist/#">
             <svg class="nav-icon">
               <use xlink:href="<?= base_url() ?>admin/dist/vendors/@coreui/icons/svg/free.svg#cil-group"></use>
             </svg> Users</a>
           <ul class="nav-group-items">
-            <li class="nav-item"><a class="nav-link" href="<?= base_url() ?>admin/dist/base/accordion.html"><span class="nav-icon"></span> Admin</a></li>
-            <li class="nav-item"><a class="nav-link" href="<?= base_url() ?>admin/dist/base/breadcrumb.html"><span class="nav-icon"></span> Petugas</a></li>
-            <li class="nav-item"><a class="nav-link" href="<?= base_url() ?>admin/dist/base/cards.html"><span class="nav-icon"></span> Member</a></li>            
+            <li class="nav-item"><a class="nav-link" href="<?= base_url() ?>daftar_admin"><span class="nav-icon"></span> Admin</a></li>
+            <li class="nav-item"><a class="nav-link" href="<?= base_url() ?>daftar_petugas"><span class="nav-icon"></span> Petugas</a></li>
+            <li class="nav-item"><a class="nav-link" href="<?= base_url() ?>daftar_member"><span class="nav-icon"></span> Member</a></li>            
           </ul>
         </li>
         

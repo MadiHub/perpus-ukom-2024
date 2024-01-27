@@ -28,7 +28,6 @@ class ModelBuku extends Model
         return $batasan;
     }
     
-
     public function dapatkan_buku($id_buku = false)
     {
         $this->select('*');
@@ -40,19 +39,6 @@ class ModelBuku extends Model
             return $this->getWhere(['id_buku' => $id_buku])->getRow();
         }
     }
-    // public function dapatkan_buku($id_buku = false)
-    // {
-    //     $this->select('*');
-    //     $this->join('tb_kategori_buku', 'FIND_IN_SET(tb_kategori_buku.id_kategori_buku, ' . $this->table . '.id_kategori_buku) > 0', 'left');
-    
-    //     if ($id_buku === false) {
-    //         return $this->findAll();
-    //     } else {
-    //         return $this->getWhere(['id_buku' => $id_buku])->getResult();
-    //     }
-    // }
-    
-
 
     public function edit_buku($data, $id_buku)
     {

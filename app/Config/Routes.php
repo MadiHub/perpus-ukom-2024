@@ -19,7 +19,12 @@ $routes->get('logout', 'Auth::logout');
 
 // admin 
 $routes->get('dashboard_admin', 'Admin::dashboard_admin');
-
+$routes->get('daftar_admin', 'Admin::daftar_admin');
+$routes->post('proses_tambah_admin', 'Admin::proses_tambah_admin');
+$routes->post('proses_edit_admin', 'Admin::proses_edit_admin');
+$routes->get('hapus_admin/(:segment)', 'Admin::hapus_admin/$1');
+$routes->get('daftar_petugas', 'Admin::daftar_petugas');
+$routes->get('daftar_member', 'Admin::daftar_member');
 // admin kategori buku
 $routes->get('kategori_buku', 'Admin::kategori_buku');
 $routes->post('proses_tambah_kategori_buku', 'Admin::proses_tambah_kategori_buku');
@@ -34,8 +39,6 @@ $routes->post('proses_edit_sub_kategori', 'Admin::proses_edit_sub_kategori');
 $routes->get('hapus_kategori_buku/(:segment)', 'Admin::hapus_kategori_buku/$1');
 $routes->post('admin/getDataByKategori', 'Admin::loadSubKategori');
 $routes->get('hapus_sub_kategori/(:segment)', 'Admin::hapus_sub_kategori/$1');
-
-
 
 // admin buku
 $routes->get('daftar_buku', 'Admin::daftar_buku');

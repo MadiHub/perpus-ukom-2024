@@ -84,40 +84,17 @@ class Petugas extends BaseController
         $id_peminjaman = $this->request->getPost('id_peminjaman');
         $id_pengembalian = $this->request->getPost('id_pengembalian');
         $id_member = $this->request->getPost('id_member');
+        $id_buku = $this->request->getPost('id_buku');
         $tanggal_pengembalian = $this->request->getPost('tanggal_pengembalian');
         $tanggal_hari_ini = $this->request->getPost('tanggal_hari_ini');
         $total_pinjam = $this->request->getPost('total_pinjam');
         $total_pengembalian = $this->request->getPost('total_pengembalian');
         $uang_dibayarkan = $this->request->getPost('uang_dibayarkan');
         $uang_kembalian = $this->request->getPost('uang_kembalian');
-        $status_peminjaman = $this->request->getPost('status_peminjaman');
-            
+        $status_peminjaman = $this->request->getPost('status_peminjaman');            
         $total_keterlambatan = $this->request->getPost('total_keterlambatan');
         $total_denda = $this->request->getPost('total_denda');
-
-        // dd($total_keterlambatan, $total_denda);
         $sisa_total_pinjam = $total_pinjam - $total_pengembalian;
-
-        // if ($total_pengembalian < $total_pinjam) {
-        //     $data = [
-        //         // 'status_peminjaman' => $status_peminjaman,
-        //         'total_pinjam' => $sisa_total_pinjam,
-        //         'total_pengembalian' => $total_pengembalian,
-        //     ];
-        //     $edit = $this->ModelPeminjaman->edit_status_peminjaman($data, $id_peminjaman);
-        //     session()->setFlashdata('success', 'Berhasil Edit Status Pengembalian !');
-        //     return redirect()->to(base_url('daftar_peminjam'));
-        // } else {
-        //     $data = [
-        //         'status_peminjaman' => $status_peminjaman,
-        //         'total_pinjam' => $sisa_total_pinjam,
-        //         'total_pengembalian' => $total_pengembalian,
-        //     ];
-        //     $edit = $this->ModelPeminjaman->edit_status_peminjaman($data, $id_peminjaman);
-        //     session()->setFlashdata('success', 'Berhasil Edit Status Pengembalian !');
-        //     return redirect()->to(base_url('daftar_peminjam'));
-        // }
-
 
         if($sisa_total_pinjam != '0') {
             $data_peminjaman = [
@@ -136,6 +113,7 @@ class Petugas extends BaseController
         $data_pengembalian = [
             'id_pengembalian' => $id_pengembalian,
             'id_member' => $id_member,
+            'id_buku' => $id_buku,
             'id_peminjaman' => $id_peminjaman,
             'tanggal_pengembalian' => $tanggal_hari_ini,
             'total_pengembalian' => $total_pengembalian,
@@ -157,7 +135,7 @@ class Petugas extends BaseController
         $email = session()->get('email');
         $role = session()->get('role');
 
-        $semua_pengembali = $this->ModelPeminjaman->getAllStatusDikembalikan();
+        $semua_pengembali = $this->ModelPengembalian->semua_dikembalikan();
       
         if ($status_login == TRUE) {
             if ($role == 'petugas') {
@@ -279,10 +257,9 @@ class Petugas extends BaseController
     {
         $bulan = $this->request->getPost('bulan');
         $tahun = $this->request->getPost('tahun');
-        $status_peminjaman =  $this->request->getPost('status_dikembalikan');
 
         $nm_bulan = ["", "Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
-        $cetak_pengembalian = $this->ModelPeminjaman->cetak_pengembalian($bulan, $tahun, $status_peminjaman);
+        $cetak_pengembalian = $this->ModelPengembalian->cetak_pengembalian($bulan, $tahun);
         $data = [
             'judul' => 'Cetak Peminjaman',
             'bulan' => $bulan,

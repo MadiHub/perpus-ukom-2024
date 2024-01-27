@@ -45,6 +45,7 @@
                                         <button type="button" class="btn btn-success mr-2" id="btn-edit-peminjam"
                                             data-bs-toggle="modal"  data-bs-target="#editPeminjam"
                                             data-id_peminjaman="<?= $peminjam['id_peminjaman'] ?>"
+                                            data-id_buku="<?= $peminjam['id_buku'] ?>"
                                             data-id_member="<?= $peminjam['id_member'] ?>"
                                             data-status_peminjaman="<?= $peminjam['status_peminjaman'] ?>"
                                             data-tanggal_pengembalian="<?= $peminjam['tanggal_pengembalian'] ?>"
@@ -94,6 +95,7 @@
             <form method="post" action="<?= base_url() ?>proses_edit_peminjaman">
                 <input type="hidden" class="form-control" name="id_peminjaman" id="id_peminjaman">
                 <input type="hidden" class="form-control" name="id_member" id="id_member">
+                <input type="hidden" class="form-control" name="id_buku" id="id_buku">
                 <div class="mb-3">
                     <label for="total_pinjam" class="form-label">Status</label>
                     <input type="text" value="di-kembalikan" class="form-control" name="status_peminjaman" placeholder="status_peminjaman Buku" readonly>
@@ -165,10 +167,11 @@
             </div>
         </div>
     </div>
-    <!-- script edit buku -->
+    <!-- script edit peminjaman -->
     <script>
         $(document).on('click', '#btn-edit-peminjam', function() {
             $('.modal-body #id_peminjaman').val($(this).data('id_peminjaman'));
+            $('.modal-body #id_buku').val($(this).data('id_buku'));
             $('.modal-body #id_member').val($(this).data('id_member'));
             $('.modal-body #tanggal_pengembalian').val($(this).data('tanggal_pengembalian'));
             $('.modal-body #status_peminjaman').val($(this).data('status_peminjaman'));

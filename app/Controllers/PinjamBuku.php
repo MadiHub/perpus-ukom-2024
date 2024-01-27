@@ -31,21 +31,26 @@ class PinjamBuku extends BaseController
         $nama_kategori_buku = $dapatkan_buku->nama_kategori_buku;
 
         if ($status_login == TRUE) {
-            $data = [
-                'id_buku'  => $id_buku,
-                'id_member'  => $id_member,
-                'id_kategori_buku' => $id_kategori_buku,
-                'nama_lengkap' => $nama_lengkap,
-                'email' => $email,
-                'tanggal_pinjam' => $tanggal_pinjam,
-                'judul' => $judul,
-                'penulis' => $penulis,
-                'penerbit' => $penerbit,
-                'tahun_terbit' => $tahun_terbit,
-                'sampul_buku' => $sampul_buku,
-                'nama_kategori_buku' => $nama_kategori_buku,
-            ];
-            echo view('member/pinjam_buku', $data);
+            if ($id_member) {
+                $data = [
+                    'id_buku'  => $id_buku,
+                    'id_member'  => $id_member,
+                    'id_kategori_buku' => $id_kategori_buku,
+                    'nama_lengkap' => $nama_lengkap,
+                    'email' => $email,
+                    'tanggal_pinjam' => $tanggal_pinjam,
+                    'judul' => $judul,
+                    'penulis' => $penulis,
+                    'penerbit' => $penerbit,
+                    'tahun_terbit' => $tahun_terbit,
+                    'sampul_buku' => $sampul_buku,
+                    'nama_kategori_buku' => $nama_kategori_buku,
+                ];
+                echo view('member/pinjam_buku', $data);
+            } else {
+                session()->setFlashdata('info', 'Petugas Tidak Bisa Meminjam Buku');
+                return redirect()->to(base_url('/'));
+            }
         } else {
             return redirect()->to(base_url('/login_member'));
         }

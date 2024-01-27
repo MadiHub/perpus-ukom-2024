@@ -77,7 +77,7 @@
                                         <button type="button" class="btn btn-danger" onclick="hapusBuku('<?= $buku['id_buku'] ?>', '<?= $buku['judul'] ?>')">
                                             <i class="fa-solid fa-trash-can"></i>
                                         </button>
-                                        <button type="button" class="btn btn-success mr-2" id="btn-edit-buku-sub-k"
+                                        <button type="button" class="btn btn-success mt-3" id="btn-edit-buku-sub-k"
                                             data-bs-toggle="modal"  data-bs-target="#editSubKatBuku"
                                             data-id_buku="<?= $buku['id_buku'] ?>"
                                             data-judul="<?= $buku['judul'] ?>"
@@ -273,6 +273,8 @@
     
     <!-- script jquery -->
     <script src="<?= base_url() ?>jquery/jquery.slim.min.js"></script>
+    <script src="<?= base_url() ?>DataTables/datatables.min.js"></script>  
+
     <script src="<?= base_url() ?>sweetalert/alert.js"></script>
 
 
