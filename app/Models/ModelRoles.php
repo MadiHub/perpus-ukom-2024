@@ -29,6 +29,16 @@ class ModelRoles extends Model
         return $batasan;
     }
 
+    public function semua_petugas()
+    {
+        $query = $this->db->table($this->table);
+        $batasan = $query->select('*')
+            ->where('role', 'petugas')
+            ->get()
+            ->getResultArray();
+        return $batasan;
+    }
+
     public function tambah_petugas($data)
     {
         $builder = $this->db->table($this->table);

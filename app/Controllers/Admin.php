@@ -6,6 +6,7 @@ use App\Models\ModelKategoriBuku;
 use App\Models\ModelBuku;
 use App\Models\ModelSubKategori;
 use App\Models\ModelRoles;
+use App\Models\ModelMember;
 
 
 class Admin extends BaseController
@@ -16,6 +17,7 @@ class Admin extends BaseController
         $this->ModelBuku = new ModelBuku();
         $this->ModelSubKategori = new ModelSubKategori();
         $this->ModelRoles = new ModelRoles();
+        $this->ModelMember = new ModelMember();
     }
 
     public function dashboard_admin()
@@ -476,6 +478,131 @@ class Admin extends BaseController
         } else {
             session()->setFlashdata("error", "Gagal Hapus Admin");
             return redirect()->to(base_url('daftar_admin'));
+        }
+    }
+    public function daftar_petugas()
+    {
+        // data sesion wajib
+        $status_login = session()->get('status_login');
+        $nama_lengkap = session()->get('nama_lengkap');
+        $email = session()->get('email');
+        $role = session()->get('role');
+        $semua_petugas = $this->ModelRoles->semua_petugas();
+
+        if ($status_login == TRUE) {
+            if ($role == 'admin') {
+                $data = [
+                    'judul' => 'Daftar Admin',
+                    // data sesion wajib
+                    'nama_lengkap' => $nama_lengkap,
+                    'email' => $email,
+                    'semua_petugas' => $semua_petugas,
+                    'nama_lengkap' => $nama_lengkap,
+                    'role' => $role,
+                ];
+                echo view('admin/layout/head', $data);
+                echo view('admin/layout/side');
+                echo view('admin/layout/nav');
+                echo view('admin/daftar_petugas');
+                echo view('admin/layout/script');
+            } else {
+                return redirect()->to(base_url('/not_found'));            
+            }
+        } else {
+            return redirect()->to(base_url('/login_petugas'));
+        }
+    }
+
+    public function proses_tambah_petugas() 
+    {
+        $request = \Config\Services::request();
+        $nama_lengkap = $this->request->getPost('nama_lengkap');
+        $alamat = $this->request->getPost('alamat');
+        $email = $this->request->getPost('email');
+        $password = $this->request->getPost('password');
+        $no_telpon = $this->request->getPost('no_telpon');
+        $role = $this->request->getPost('role');
+
+        $data = [
+            'nama_lengkap' => $nama_lengkap,
+            'email' => $email,
+            'alamat' => $alamat,
+            'password' => $password,
+            'role' => $role,
+            'no_telpon' => $no_telpon,
+        ];
+        $this->ModelRoles->tambah_petugas($data);
+        session()->setFlashdata("success", "Berhasil Tambah Petugas");
+        return redirect()->to(base_url('daftar_petugas'));
+    }
+
+    public function proses_edit_petugas() 
+    {
+        $request = \Config\Services::request();
+        $id_role = $this->request->getPost('id_role');
+        $nama_lengkap = $this->request->getPost('nama_lengkap');
+        $alamat = $this->request->getPost('alamat');
+        $email = $this->request->getPost('email');
+        $no_telpon = $this->request->getPost('no_telpon');
+        $role = $this->request->getPost('role');
+        $password = $this->request->getPost('password');
+
+        $data = [
+            'nama_lengkap' => $nama_lengkap,
+            'email' => $email,
+            'alamat' => $alamat,
+            'role' => $role,
+            'no_telpon' => $no_telpon,
+            'password' => $password,
+        ];
+        $this->ModelRoles->edit_admin($data, $id_role);
+        session()->setFlashdata("success", "Berhasil Edit Petugas");
+        return redirect()->to(base_url('daftar_petugas'));
+    }
+    
+    public function hapus_petugas($id_role)
+    {
+        $dapatkan_admin = $this->ModelRoles->dapatkan_petugas($id_role);
+        if (isset($dapatkan_admin)) {
+            $this->ModelRoles->hapus_admin($id_role);
+            session()->setFlashdata("success", "Berhasil Hapus Petugas");
+            return redirect()->to(base_url('daftar_petugas'));
+        } else {
+            session()->setFlashdata("error", "Gagal Hapus Petugas");
+            return redirect()->to(base_url('daftar_petugas'));
+        }
+    }
+
+    public function daftar_member()
+    {
+        // data sesion wajib
+        $status_login = session()->get('status_login');
+        $nama_lengkap = session()->get('nama_lengkap');
+        $email = session()->get('email');
+        $role = session()->get('role');
+        $semua_member = $this->ModelMember->semua_member();
+
+        if ($status_login == TRUE) {
+            if ($role == 'admin') {
+                $data = [
+                    'judul' => 'Daftar Admin',
+                    // data sesion wajib
+                    'nama_lengkap' => $nama_lengkap,
+                    'email' => $email,
+                    'semua_member' => $semua_member,
+                    'nama_lengkap' => $nama_lengkap,
+                    'role' => $role,
+                ];
+                echo view('admin/layout/head', $data);
+                echo view('admin/layout/side');
+                echo view('admin/layout/nav');
+                echo view('admin/daftar_member');
+                echo view('admin/layout/script');
+            } else {
+                return redirect()->to(base_url('/not_found'));            
+            }
+        } else {
+            return redirect()->to(base_url('/login_petugas'));
         }
     }
 }

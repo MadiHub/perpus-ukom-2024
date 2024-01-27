@@ -24,4 +24,13 @@ class ModelMember extends Model
         $builder = $this->db->table($this->table);
         return $builder->insert($data);
     }
+
+    public function semua_member()
+    {
+        $query = $this->db->table($this->table);
+        $batasan = $query->select('*')
+            ->get()
+            ->getResultArray();
+        return $batasan;
+    }
 }
