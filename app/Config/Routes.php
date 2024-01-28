@@ -5,8 +5,12 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
-$routes->get('/', 'Home::index');
-$routes->get('not_found', 'Home::not_found');
+$routes->get('/', 'Member::index');
+$routes->get('not_found', 'Member::not_found');
+$routes->get('pinjam_buku/(:segment)', 'Member::pinjam_buku/$1');
+$routes->post('proses_pinjam_buku', 'Member::proses_pinjam_buku');
+$routes->post('proses_ulasan', 'Member::proses_ulasan');
+$routes->get('buku_dipinjam', 'Member::buku_dipinjam');
 
 // auth
 $routes->get('login_petugas', 'Auth::login_petugas');
@@ -63,9 +67,7 @@ $routes->get('rekap_pengembalian', 'Petugas::rekap_pengembalian');
 $routes->post('cetak_pengembalian', 'Petugas::cetak_pengembalian');
 
 // pinjam buku
-$routes->get('pinjam_buku/(:segment)', 'PinjamBuku::pinjam_buku/$1');
-$routes->post('proses_pinjam_buku', 'PinjamBuku::proses_pinjam_buku');
-$routes->get('buku_dipinjam', 'PinjamBuku::buku_dipinjam');
+
 
 // $routes->set404Override(function() {
 // 	return view('not_found');

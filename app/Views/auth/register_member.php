@@ -34,15 +34,11 @@
                         <input type="text" class="form-control" id="alamat" name="alamat">
                     </div>
                     <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Username</label>
-                        <input type="text" class="form-control" id="username" name="username">
-                    </div>
-                    <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Password</label>
                         <input type="password" class="form-control" id="password" name="password">
                     </div>
                     <div class="d-grid gap-2">
-                        <button class="btn btn-primary" type="submit">Login</button>
+                        <button class="btn btn-primary" type="submit">Register</button>
                     </div>
 				</form>
 				</div>

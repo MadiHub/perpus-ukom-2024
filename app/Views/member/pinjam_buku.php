@@ -1,62 +1,113 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pinjam Buku</title>
-    <link rel="stylesheet" href="<?= base_url() ?>bootstrap/css/bootstrap.min.css">
+<style>
+     .product-image {
+      max-width: 100%;
+      height: auto;
+    }
 
-    <style>
-         .container {
-            max-width: 1200px;
-            width: 75%;
-            margin: auto;
-        }
+</style>
 
-        /* Responsive container for mobile */
-        @media only screen and (max-width: 767px) {
-            .container {
-                max-width: 1200px;
-                width: 100%;
-                margin: auto;
-            }
-        }
-
-
-        input[readonly] {
-            background-color: #D0D0D0;
-            /* Ganti #your_color_here dengan kode warna yang diinginkan */
-        }
-        textarea[readonly] {
-            background-color: #D0D0D0;
-            /* Ganti #your_color_here dengan kode warna yang diinginkan */
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
+<!-- rateyo -->
+<link rel="stylesheet" href="<?= base_url() ?>rateyo/jquery.rateyo.min.css" />
+    
+    <div class="container-content" style="margin-top:110px">
         <div class="card mt-5">
-            <div class="card-header">
+            <div class="card-header text-center">
                 Detail Buku
             </div>
             <div class="card-body">
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-4 g-5">
-                        <div class="col">
-                            <img src="<?= base_url() ?>buku/<?= $sampul_buku ?>" alt="" width="200" class="img mx-auto d-block">
-                        </div>
-                        <div class="col ml-10">
-                            <p>Judul : <?= $judul ?></p>
-                            <p>Kategori : <?= $nama_kategori_buku ?></p>
-                            <p>Penulis : <?= $penulis ?></p>
-                            <p>Penerbit : <?= $penerbit ?></p>
-                            <p>Tahun Terbit : <?= $tahun_terbit ?></p>
+                <div class="row">
+                    <!-- Gambar Produk di Kiri -->
+                    <div class="col-md-4 text-center text-md-start">
+                    <img src="<?= base_url() ?>buku/<?= $sampul_buku ?>" alt="Produk" class="product-image img-fluid">
+                    </div>
+                    <!-- Penjelasan Produk di Kanan -->
+                    <div class="col-md-6">
+                        <table class="table table-bordered table-striped mt-4">
+                            <tbody>
+                            <tr>
+                                <th scope="row">Judul</th>
+                                <td><?= $judul ?></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Kategori</th>
+                                <td><?= $nama_kategori_buku ?></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Penulis</th>
+                                <td><?= $penulis ?></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Penerbit</th>
+                                <td><?= $penerbit ?></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Tahun Terbit</th>
+                                <td><?= $tahun_terbit ?></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div class="ulasan">
+                            <ul class="nav nav-tabs" id="myTabs">
+                                <li class="nav-item">
+                                    <a class="nav-link active text-secondary" aria-current="page" href="#" data-bs-toggle="tab" data-bs-target="#content1">Ulasan & Rating</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link  text-secondary" href="#" data-bs-toggle="tab" data-bs-target="#content2">Lihat Ulasan</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane fade show active" id="content1">
+                                    <form action="<?= base_url() ?>proses_ulasan" method="post">
+                                        <input type="hidden" name="id_member" value="<?= $id_member ?>">
+                                        <input type="hidden" name="id_buku"  value="<?= $id_buku ?>">
+                                        <div class="form-floating mt-3">
+                                            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" name="ulasan"></textarea>
+                                            <label for="floatingTextarea" class=" text-secondary">Berikan Ulasan</label>
+                                        </div>
+                                        <div id="rateYo" class="mt-2 mb-2"
+                                            data-rateyo-rating="0"
+                                            data-rateyo-num-stars="5"
+                                            data-rateyo-score="3">
+                                        </div>
+                                        <span class="result mt-3">Rating: 0</span>
+                                        <input type="hidden" name="rating">
+                                        <button class="btn w-100 mt-3" style="background-color: #DF791E; color: #ffff;">Kirim</button>
+                                    </form>
+                                </div>
+                                <div class="tab-pane fade" id="content2">
+                                    <div class="user-ulasan text-secondary mt-2">
+                                        <?php if(empty($semua_ulasan) ): ?>
+                                            <span style="color: #DF791E">Belum ada ulasan...</span>
+                                        <?php endif; ?>
+                                        <?php foreach($semua_ulasan as $ulasan): ?>
+                                        <div class="profil">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <span><?= $ulasan['tanggal_ulasan']?></span>
+                                                    <br>
+                                                    <i class="fa-solid fa-user"></i>   
+                                                    <span><?= $ulasan['nama_lengkap']?></span>
+                                                    <br>
+                                                    <span><?= $ulasan['ulasan'] ?></span>
+                                                </div>
+                                                <div class="col text-end">
+                                                    <div class="rating" data-rating="<?= $ulasan['rating'] ?>" id="rating-data<?= $ulasan['id_member'] ?>"></div>
+                                                    <span>Rating: <?= $ulasan['rating'] ?></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <?php endforeach; ?>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="container">
+    <div class="container-content">
         <div class="card mt-5">
             <div class="card-header">
                 Form Pinjam Buku
@@ -84,7 +135,7 @@
                     </div>
                     <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Total Pinjam</label>
-                        <input type="number" class="form-control" name="total_pinjam">
+                        <input type="number" class="form-control" name="total_pinjam" required>
                     </div>
                     <div class="d-grid gap-2">
                         <button class="btn btn-primary" type="submit">Pinjam Sekarang</button>
@@ -123,5 +174,71 @@
     }
     </script>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        var navbar = document.querySelector(".navbar");
+
+        function handleScroll() {
+            navbar.classList.toggle("sticky", window.scrollY > 0);
+        }
+
+        window.addEventListener("scroll", handleScroll);
+
+        // Initial check for sticky on page load
+        handleScroll();
+        });
+    </script>
+
+<!-- rateyo -->
+<script src="<?= base_url() ?>rateyo/jquery.rateyo.min.js"></script>
+<script>
+  $(function () {
+    $("#rateYo").rateYo({
+      onChange: function (rating, rateYoInstance) {
+        $(this).parent().find('.result').text('Rating: ' + rating);
+        $(this).parent().find('input[name=rating]').val(rating);
+      }
+    });
+  });
+</script>
+
+<!-- script sweeetalert -->
+<script src="<?= base_url() ?>sweetalert/alert.js"></script>
+    <script>
+		$(function() {
+			<?php if (session()->has("success")) { ?>
+				Swal.fire({
+					icon: 'success',
+					title: 'Berhasil',
+					text: '<?= session("success") ?>'
+				})
+			<?php } ?>
+		});
+</script>
+<script>
+		$(function() {
+			<?php if (session()->has("info")) { ?>
+				Swal.fire({
+					icon: 'info',
+					title: 'Info',
+					text: '<?= session("info") ?>'
+				})
+			<?php } ?>
+		});
+	</script>
+
+<script>
+  $(function () {
+    // Inisialisasi RateYo dengan nilai rating dari data
+    <?php foreach ($semua_ulasan as  $ulasan): ?>
+
+    $("#rating-data<?= $ulasan['id_member'] ?>").rateYo({
+      rating: <?= $ulasan['rating'] ?>,
+      readOnly: true, // Membuat rating hanya tampil dan tidak bisa diubah
+    });
+    <?php endforeach; ?>
+
+  });
+</script>
 </body>
 </html>
