@@ -6,6 +6,7 @@ use App\Models\ModelMember;
 use App\Models\ModelPeminjaman;
 use App\Models\ModelPengembalian;
 use App\Models\ModelUlasan;
+use App\Models\ModelKoleksiBuku;
 
 class Member extends BaseController
 {
@@ -16,6 +17,7 @@ class Member extends BaseController
         $this->ModelPeminjaman = new ModelPeminjaman();
         $this->ModelPengembalian = new ModelPengembalian();
         $this->ModelUlasan = new ModelUlasan();
+        $this->ModelKoleksiBuku = new ModelKoleksiBuku();
     }
 
     public function index()
@@ -187,6 +189,56 @@ class Member extends BaseController
         } else {
             return redirect()->to(base_url('/login_member'));
         }
+    }
+
+    public function koleksi_buku()
+    {
+        $status_login = session()->get('status_login');
+        $id_member = session()->get('id_member');
+        $nama_lengkap = session()->get('nama_lengkap');
+        $email = session()->get('email');
+        $status_login = session()->get('status_login');
+        $tanggal_pinjam = date("Y-m-d");
+        
+        $semua_koleksi_by_member = $this->ModelKoleksiBuku->semua_koleksi_by_member($id_member);
+
+        if ($status_login == TRUE) {
+            $data = [
+                'semua_koleksi_by_member'  => $semua_koleksi_by_member,
+                'status_login'  => $status_login,
+                'judul'  => 'Koleksi Buku',
+                'nama_lengkap'  => $nama_lengkap
+            ];
+            echo view('member/layout/head', $data);
+            echo view('member/layout/nav');
+            echo view('member/koleksi_buku');
+        } else {
+            return redirect()->to(base_url('/login_member'));
+        }
+    }
+
+    public function proses_tambah_koleksi()
+    {
+        $request = \Config\Services::request();
+        $id_member = $request->getVar('id_member');
+        $id_buku = $request->getVar('id_buku');
+        $id_kategori_buku = $request->getVar('id_kategori_buku');
+        $cek_user_koleksi = $this->ModelKoleksiBuku->cek_user_koleksi($id_member, $id_buku);
+
+        if($cek_user_koleksi) {
+            session()->setFlashdata('info', 'Buku Sudah Ada Dikoleksi');
+            return redirect()->back();
+        } else {
+            $data = [
+                'id_member' => $id_member,
+                'id_buku' => $id_buku,
+                'id_kategori_buku' => $id_kategori_buku,
+            ];
+            $tambah = $this->ModelKoleksiBuku->tambah_koleksi($data);
+            session()->setFlashdata('success', 'Anda Berhasil Menambahkan Koleksi Buku');
+            return redirect()->back();
+        }
+       
     }
 
     public function proses_ulasan()

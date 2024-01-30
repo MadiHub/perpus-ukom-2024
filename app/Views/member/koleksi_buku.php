@@ -14,7 +14,7 @@
           <div class="row">
                 <div class="card">
                     <div class="card-header text-center">
-                        <h5>Riwayat Pengembalian</h5>
+                        <h5>Koleksi Buku</h5>
                     </div>
                     <div class="card-body">
                         <table id="tablePeminjaman" class="table table-bordered table-striped table-hover">
@@ -23,26 +23,20 @@
                                     <th>#</th>
                                     <th>Sampul Buku</th>
                                     <th>Judul</th>
-                                    <th>Tanggal Pengembalian</th>
-                                    <th>Total Dikembalikan</th>
-                                    <th>Hari Keterlambatan</th>
-                                    <th>Total Denda</th>
-                                    <th>Uang Dibayarkan</th>
-                                    <th>Uang Kembalian</th>
+                                    <th>Nama Kategori</th>
+                                    <th>Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php $no = 1; foreach($buku_dikembalikan_by_member as $buku_dikembalikan): ?>
+                                <?php $no = 1; foreach($semua_koleksi_by_member as $koleksi): ?>
                                 <tr>
                                     <td><?= $no++ ?></td>
-                                    <td><img src="<?= base_url() ?>buku/<?= $buku_dikembalikan['sampul_buku'] ?>" alt="sampul" width="50"></td>
-                                    <td><?= $buku_dikembalikan['judul'] ?></td>
-                                    <td><?= $buku_dikembalikan['tanggal_pengembalian'] ?></td>
-                                    <td><?= $buku_dikembalikan['total_pengembalian'] ?> Buku</td>
-                                    <td><?= $buku_dikembalikan['hari_keterlambatan'] ?></td>
-                                    <td><?= $buku_dikembalikan['total_denda'] ?></td>
-                                    <td><?= $buku_dikembalikan['uang_dibayarkan'] ?></td>
-                                    <td><?= $buku_dikembalikan['uang_kembalian'] ?></td>
+                                    <td><img src="<?= base_url() ?>buku/<?= $koleksi['sampul_buku'] ?>" alt="sampul" width="50"></td>
+                                    <td><?= $koleksi['judul'] ?></td>
+                                    <td><?= $koleksi['nama_kategori_buku'] ?></td>
+                                    <td>
+                                    <a href="<?= base_url() ?>pinjam_buku/<?= $koleksi['id_buku']?>" class="btn btn-success">Detail Buku</a>
+                                    </td>
                                 </tr>
                                 <?php endforeach; ?>
                                 

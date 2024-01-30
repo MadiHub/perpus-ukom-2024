@@ -12,6 +12,9 @@
                 <li class="nav-item">
                     <a class="nav-link mx-2 active" href="<?= base_url() ?>"><i class="fa-solid fa-house active"></i> Beranda</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link mx-2" href="<?= base_url() ?>koleksi_buku"><i class="fa-solid fa-bookmark"></i> Koleksi Buku</a>
+                </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="fa-solid fa-clock-rotate-left"></i> Riwayat

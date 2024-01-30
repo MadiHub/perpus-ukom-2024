@@ -54,6 +54,14 @@
                                 <li class="nav-item">
                                     <a class="nav-link  text-secondary" href="#" data-bs-toggle="tab" data-bs-target="#content2">Lihat Ulasan</a>
                                 </li>
+                                <li class="nav-item">
+                                    <form action="<?= base_url() ?>proses_tambah_koleksi" method="post">
+                                        <input type="hidden" name="id_member" value="<?= $id_member?>">
+                                        <input type="hidden" name="id_buku" value="<?= $id_buku?>">
+                                        <input type="hidden" name="id_kategori_buku" value="<?= $id_kategori_buku?>">
+                                        <button type="submit"  class="nav-link  text-secondary"><i class="fa-solid fa-bookmark"></i> Tambah Koleksi</button>
+                                    </form>
+                                </li>
                             </ul>
                             <div class="tab-content">
                                 <div class="tab-pane fade show active" id="content1">

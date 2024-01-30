@@ -13,6 +13,9 @@
     <div class="container-lg" style="margin-top:110px">
           <div class="row">
                 <div class="card">
+                    <div class="card-header text-center">
+                        <h5>Riwayat Peminjaman</h5>
+                    </div>
                     <div class="card-body">
                         <table id="tablePeminjaman" class="table table-bordered table-striped table-hover">
                             <thead>

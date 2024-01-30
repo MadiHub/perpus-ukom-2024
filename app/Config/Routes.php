@@ -14,6 +14,8 @@ $routes->post('proses_pinjam_buku', 'Member::proses_pinjam_buku');
 $routes->post('proses_ulasan', 'Member::proses_ulasan');
 $routes->get('riwayat_peminjaman', 'Member::riwayat_peminjaman');
 $routes->get('riwayat_pengembalian', 'Member::riwayat_pengembalian');
+$routes->get('koleksi_buku', 'Member::koleksi_buku');
+$routes->post('proses_tambah_koleksi', 'Member::proses_tambah_koleksi');
 
 // auth
 $routes->get('login_petugas', 'Auth::login_petugas');
