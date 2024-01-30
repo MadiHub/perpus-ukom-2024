@@ -35,6 +35,20 @@ class ModelPengembalian extends Model
         ->getResultArray();
     }
 
+    // query untuk method buku_dikembalikan by member
+    public function buku_dikembalikan_by_member($id_member)
+    {
+        $query = $this->db->table('tb_pengembalian');
+        $result = $query->select('*')
+            ->join('tb_member', 'tb_member.id_member = tb_pengembalian.id_member')
+            ->join('tb_buku', 'tb_buku.id_buku = tb_pengembalian.id_buku')
+            ->where('tb_pengembalian.id_member', $id_member)
+            ->get()
+            ->getResultArray();
+    
+        return $result;
+    }
+
     public function cetak_pengembalian($bulan, $tahun)
     {
         return $this->select('tb_pengembalian.*, tb_member.*, tb_buku.*')

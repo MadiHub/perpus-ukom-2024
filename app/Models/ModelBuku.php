@@ -8,7 +8,7 @@ class ModelBuku extends Model
 {
     protected $table = 'tb_buku';
     protected $primaryKey = 'id_buku';
-    protected $allowedFields = ['id_buku','id_kategori_buku', 'judul', 'penulis', 'penerbit', 'tahun_terbit', 'stok', 'sampul_buku'];
+    protected $allowedFields = ['id_buku','id_kategori_buku', 'id_sub_kategori', 'judul', 'penulis', 'penerbit', 'tahun_terbit', 'stok', 'sampul_buku'];
 
     public function tambah_buku($data)
     {

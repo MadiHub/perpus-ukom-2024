@@ -5,12 +5,15 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
+
+// member
 $routes->get('/', 'Member::index');
 $routes->get('not_found', 'Member::not_found');
 $routes->get('pinjam_buku/(:segment)', 'Member::pinjam_buku/$1');
 $routes->post('proses_pinjam_buku', 'Member::proses_pinjam_buku');
 $routes->post('proses_ulasan', 'Member::proses_ulasan');
-$routes->get('buku_dipinjam', 'Member::buku_dipinjam');
+$routes->get('riwayat_peminjaman', 'Member::riwayat_peminjaman');
+$routes->get('riwayat_pengembalian', 'Member::riwayat_pengembalian');
 
 // auth
 $routes->get('login_petugas', 'Auth::login_petugas');
@@ -24,17 +27,21 @@ $routes->get('logout', 'Auth::logout');
 // admin 
 $routes->get('dashboard_admin', 'Admin::dashboard_admin');
 
+// admin daftar admin
 $routes->get('daftar_admin', 'Admin::daftar_admin');
 $routes->post('proses_tambah_admin', 'Admin::proses_tambah_admin');
 $routes->post('proses_edit_admin', 'Admin::proses_edit_admin');
 $routes->get('hapus_admin/(:segment)', 'Admin::hapus_admin/$1');
 
+// admin daftar petugas
 $routes->get('daftar_petugas', 'Admin::daftar_petugas');
 $routes->post('proses_tambah_petugas', 'Admin::proses_tambah_petugas');
 $routes->post('proses_edit_petugas', 'Admin::proses_edit_petugas');
 $routes->get('hapus_petugas/(:segment)', 'Admin::hapus_petugas/$1');
 
+// admin daftar member
 $routes->get('daftar_member', 'Admin::daftar_member');
+
 // admin kategori buku
 $routes->get('kategori_buku', 'Admin::kategori_buku');
 $routes->post('proses_tambah_kategori_buku', 'Admin::proses_tambah_kategori_buku');

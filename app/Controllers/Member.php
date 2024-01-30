@@ -4,6 +4,7 @@ namespace App\Controllers;
 use App\Models\ModelBuku;
 use App\Models\ModelMember;
 use App\Models\ModelPeminjaman;
+use App\Models\ModelPengembalian;
 use App\Models\ModelUlasan;
 
 class Member extends BaseController
@@ -13,6 +14,7 @@ class Member extends BaseController
         $this->ModelBuku = new ModelBuku();
         $this->ModelMember = new ModelMember();
         $this->ModelPeminjaman = new ModelPeminjaman();
+        $this->ModelPengembalian = new ModelPengembalian();
         $this->ModelUlasan = new ModelUlasan();
     }
 
@@ -136,14 +138,13 @@ class Member extends BaseController
         return redirect()->to(base_url('/'));
     }
 
-    public function buku_dipinjam()
+    public function riwayat_peminjaman()
     {
         $status_login = session()->get('status_login');
         $id_member = session()->get('id_member');
         $nama_lengkap = session()->get('nama_lengkap');
         $email = session()->get('email');
         $status_login = session()->get('status_login');
-        $tanggal_pinjam = date("Y-m-d");
         
         $buku_dipinjam_by_member = $this->ModelPeminjaman->buku_dipinjam_by_member($id_member);
 
@@ -155,12 +156,39 @@ class Member extends BaseController
                 'nama_lengkap'  => $nama_lengkap
             ];
             echo view('member/layout/head', $data);
-            // echo view('member/layout/nav', $data);
-            echo view('member/buku_dipinjam', $data);
+            echo view('member/layout/nav');
+            echo view('member/riwayat_peminjaman');
         } else {
             return redirect()->to(base_url('/login_member'));
         }
     }
+
+    public function riwayat_pengembalian()
+    {
+        $status_login = session()->get('status_login');
+        $id_member = session()->get('id_member');
+        $nama_lengkap = session()->get('nama_lengkap');
+        $email = session()->get('email');
+        $status_login = session()->get('status_login');
+        $tanggal_pinjam = date("Y-m-d");
+        
+        $buku_dikembalikan_by_member = $this->ModelPengembalian->buku_dikembalikan_by_member($id_member);
+
+        if ($status_login == TRUE) {
+            $data = [
+                'buku_dikembalikan_by_member'  => $buku_dikembalikan_by_member,
+                'status_login'  => $status_login,
+                'judul'  => 'Riwayat Pengembalian',
+                'nama_lengkap'  => $nama_lengkap
+            ];
+            echo view('member/layout/head', $data);
+            echo view('member/layout/nav');
+            echo view('member/riwayat_pengembalian');
+        } else {
+            return redirect()->to(base_url('/login_member'));
+        }
+    }
+
     public function proses_ulasan()
     {
         $request = \Config\Services::request();

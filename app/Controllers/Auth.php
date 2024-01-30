@@ -79,14 +79,12 @@ class Auth extends BaseController
     public function proses_register_member()
     {
         $request = \Config\Services::request();
-        $username = $request->getVar('username');
         $password = $request->getVar('password');
         $email = $request->getVar('email');
         $no_telpon = $request->getVar('no_telpon');
         $nama_lengkap = $request->getVar('nama_lengkap');
         $alamat = $request->getVar('alamat');
         $data = [
-            'username' => $username,
             'password' => $password,
             'email' => $email,
             'no_telpon' => $no_telpon,
@@ -124,7 +122,6 @@ class Auth extends BaseController
                 session()->set([
                     'id_member' => $dapatkan_member->id_member,
                     'email' => $dapatkan_member->email,
-                    'username' => $dapatkan_member->username,
                     'nama_lengkap' => $dapatkan_member->nama_lengkap,
                     'alamat' => $dapatkan_member->alamat,
                     'no_telpon' => $dapatkan_member->no_telpon,

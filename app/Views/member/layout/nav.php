@@ -17,8 +17,8 @@
                         <i class="fa-solid fa-clock-rotate-left"></i> Riwayat
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="buku_dipinjam">Riwayat Peminjaman</a></li>
-                        <li><a class="dropdown-item" href="#">Riwayat Pengembalian</a></li>
+                        <li><a class="dropdown-item" href="<?= base_url() ?>riwayat_peminjaman">Riwayat Peminjaman</a></li>
+                        <li><a class="dropdown-item" href="<?= base_url() ?>riwayat_pengembalian">Riwayat Pengembalian</a></li>
                     </ul>
                 </li>
                 <li class="nav-item ms-3">

@@ -44,6 +44,7 @@ class ModelPeminjaman extends Model
             ->join('tb_buku', 'tb_buku.id_buku = tb_peminjaman.id_buku')
             ->join('tb_kategori_buku', 'tb_kategori_buku.id_kategori_buku = tb_buku.id_kategori_buku')
             ->where('tb_peminjaman.id_member', $id_member)
+            ->where('status_peminjaman', 'di-pinjam')
             ->get()
             ->getResultArray();
     
