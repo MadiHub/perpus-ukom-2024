@@ -44,5 +44,23 @@ class ModelKoleksiBuku extends Model
         ])->getRow();
     }
 
+    public function dapatkan_buku_koleksi($id_buku = false)
+    {
+        $this->select('*');
+        $this->join('tb_kategori_buku', 'tb_kategori_buku.id_kategori_buku = '.$this->table.'.id_kategori_buku');
+
+        if ($id_buku === false) {
+            return $this->findAll();
+        } else {
+            return $this->getWhere(['id_buku' => $id_buku])->getRow();
+        }
+    }
+
+    public function hapus_koleksi_buku($id_buku)
+    {
+        $builder = $this->db->table($this->table);
+        return $builder->delete(['id_buku' => $id_buku]);
+    }
+
 
 }

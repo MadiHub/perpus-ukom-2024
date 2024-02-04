@@ -110,11 +110,11 @@
                 </div>
                 <div class="mb-3">
                     <label for="total_pengembalian" class="form-label">Total Pengembalian</label>
-                    <input type="number" class="form-control" name="total_pengembalian" placeholder="Masukkan Total Pengembalian Buku" oninput="validateTotalPengembalian()">
+                    <input type="number" class="form-control" name="total_pengembalian" placeholder="Masukkan Total Pengembalian Buku" oninput="validateTotalPengembalian()" required>
                 </div>
                 <div class="mb-3">
                     <label for="total_pinjam" class="form-label">Tanggal Hari Ini</label>
-                    <input type="date" value="" class="form-control" id="tanggal_hari_ini" name="tanggal_hari_ini" placeholder="status_peminjaman Buku">
+                    <input type="date" value="" class="form-control" id="tanggal_hari_ini" name="tanggal_hari_ini"  required>
                 </div>
                 <div class="mb-3">
                     <label for="total_pinjam" class="form-label">Total Keterlambatan</label>
@@ -126,7 +126,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="total_pinjam" class="form-label">Uang Dibayar</label>
-                    <input type="text" class="form-control" id="uang_dibayarkan" name="uang_dibayarkan" >
+                    <input type="text" class="form-control" id="uang_dibayarkan" name="uang_dibayarkan" value="-">
                 </div>
                 <div class="mb-3">
                     <label for="total_pinjam" class="form-label">Kembalian</label>

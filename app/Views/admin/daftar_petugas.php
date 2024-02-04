@@ -32,7 +32,7 @@
                                 <td>
                                     <button type="button" class="btn btn-success mr-2" id="btn-edit-petugas"
                                         data-bs-toggle="modal"  data-bs-target="#editPetugas"
-                                        data-id_role="<?= $petugas['id_role'] ?>"
+                                        data-id_petugas="<?= $petugas['id_petugas'] ?>"
                                         data-nama_lengkap="<?= $petugas['nama_lengkap'] ?>"
                                         data-email="<?= $petugas['email'] ?>"
                                         data-alamat="<?= $petugas['alamat'] ?>"
@@ -41,7 +41,7 @@
                                         data-password="<?= $petugas['password'] ?>"
                                         > <i class="fa-solid fa-square-pen"></i>
                                     </button>
-                                    <button type="button" class="btn btn-danger" onclick="hapusPetugas('<?= $petugas['id_role'] ?>', '<?= $petugas['nama_lengkap'] ?>')">
+                                    <button type="button" class="btn btn-danger" onclick="hapusPetugas('<?= $petugas['id_petugas'] ?>', '<?= $petugas['nama_lengkap'] ?>')">
                                         <i class="fa-solid fa-trash-can"></i>
                                     </button>
                                 </td>
@@ -116,7 +116,7 @@
             </div>
             <div class="modal-body">
                 <form method="post" action="<?= base_url() ?>proses_edit_petugas">
-                    <input type="hidden" name="id_role" id="id_role">
+                    <input type="hidden" name="id_petugas" id="id_petugas">
                     <div class="mb-3">
                         <label for="input" class="form-label">Role</label>
                         <input type="email" class="form-control" name="role" id="role" readonly>
@@ -163,7 +163,7 @@
 <!-- script edit kategori buku -->
 <script>
     $(document).on('click', '#btn-edit-petugas', function() {
-        $('.modal-body #id_role').val($(this).data('id_role'));
+        $('.modal-body #id_petugas').val($(this).data('id_petugas'));
         $('.modal-body #nama_lengkap').val($(this).data('nama_lengkap'));
         $('.modal-body #alamat').val($(this).data('alamat'));
         $('.modal-body #email').val($(this).data('email'));
@@ -174,7 +174,7 @@
 </script>
 <!-- script hapus buku -->
 <script>
-    function hapusPetugas(id_role, nama_lengkap) {
+    function hapusPetugas(id_petugas, nama_lengkap) {
         Swal.fire({
             title: "Apa anda yakin?",
             text: "Data Petugas Dengan Nama : " + nama_lengkap + " ini akan terhapus!",
@@ -186,7 +186,7 @@
             cancelButtonText: "Batal" 
         }).then((result) => {
             if (result.isConfirmed) {
-                window.location.href = '<?= base_url() ?>hapus_petugas/' + id_role;
+                window.location.href = '<?= base_url() ?>hapus_petugas/' + id_petugas;
             }
         });
     }

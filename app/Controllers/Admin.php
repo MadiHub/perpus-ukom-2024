@@ -5,7 +5,7 @@ namespace App\Controllers;
 use App\Models\ModelKategoriBuku;
 use App\Models\ModelBuku;
 use App\Models\ModelSubKategori;
-use App\Models\ModelRoles;
+use App\Models\ModelPetugas;
 use App\Models\ModelMember;
 
 
@@ -16,7 +16,7 @@ class Admin extends BaseController
         $this->ModelKategoriBuku = new ModelKategoriBuku();
         $this->ModelBuku = new ModelBuku();
         $this->ModelSubKategori = new ModelSubKategori();
-        $this->ModelRoles = new ModelRoles();
+        $this->ModelPetugas = new ModelPetugas();
         $this->ModelMember = new ModelMember();
     }
 
@@ -372,12 +372,12 @@ class Admin extends BaseController
     
     public function hapus_buku($id_buku)
     {
-        $dapatkan_admin = $this->ModelBuku->dapatkan_admin($id_buku);
+        $dapatkan_buku = $this->ModelBuku->dapatkan_buku($id_buku);
         $direktori_foto = 'buku';
-        if (isset($dapatkan_admin)) {
+        if (isset($dapatkan_buku)) {
             // Hapus file sampul_buku jika ada
-            if ($dapatkan_admin->sampul_buku && file_exists($direktori_foto . '/' . $dapatkan_admin->sampul_buku)) {
-                unlink($direktori_foto . '/' . $dapatkan_admin->sampul_buku);
+            if ($dapatkan_buku->sampul_buku && file_exists($direktori_foto . '/' . $dapatkan_buku->sampul_buku)) {
+                unlink($direktori_foto . '/' . $dapatkan_buku->sampul_buku);
             }
             $this->ModelBuku->hapus_buku($id_buku);
             session()->setFlashdata("success", "Berhasil Hapus Buku");
@@ -395,7 +395,7 @@ class Admin extends BaseController
         $nama_lengkap = session()->get('nama_lengkap');
         $email = session()->get('email');
         $role = session()->get('role');
-        $semua_admin = $this->ModelRoles->semua_admin();
+        $semua_admin = $this->ModelPetugas->semua_admin();
 
         if ($status_login == TRUE) {
             if ($role == 'admin') {
@@ -439,7 +439,7 @@ class Admin extends BaseController
             'role' => $role,
             'no_telpon' => $no_telpon,
         ];
-        $this->ModelRoles->tambah_petugas($data);
+        $this->ModelPetugas->tambah_petugas($data);
         session()->setFlashdata("success", "Berhasil Tambah Admin");
         return redirect()->to(base_url('daftar_admin'));
     }
@@ -447,7 +447,7 @@ class Admin extends BaseController
     public function proses_edit_admin() 
     {
         $request = \Config\Services::request();
-        $id_role = $this->request->getPost('id_role');
+        $id_petugas = $this->request->getPost('id_petugas');
         $nama_lengkap = $this->request->getPost('nama_lengkap');
         $alamat = $this->request->getPost('alamat');
         $email = $this->request->getPost('email');
@@ -463,16 +463,16 @@ class Admin extends BaseController
             'no_telpon' => $no_telpon,
             'password' => $password,
         ];
-        $this->ModelRoles->edit_admin($data, $id_role);
+        $this->ModelPetugas->edit_admin($data, $id_petugas);
         session()->setFlashdata("success", "Berhasil Edit Admin");
         return redirect()->to(base_url('daftar_admin'));
     }
     
-    public function hapus_admin($id_role)
+    public function hapus_admin($id_petugas)
     {
-        $dapatkan_admin = $this->ModelRoles->dapatkan_petugas($id_role);
+        $dapatkan_admin = $this->ModelPetugas->dapatkan_petugas($id_petugas);
         if (isset($dapatkan_admin)) {
-            $this->ModelRoles->hapus_admin($id_role);
+            $this->ModelPetugas->hapus_admin($id_petugas);
             session()->setFlashdata("success", "Berhasil Hapus Admin");
             return redirect()->to(base_url('daftar_admin'));
         } else {
@@ -487,7 +487,7 @@ class Admin extends BaseController
         $nama_lengkap = session()->get('nama_lengkap');
         $email = session()->get('email');
         $role = session()->get('role');
-        $semua_petugas = $this->ModelRoles->semua_petugas();
+        $semua_petugas = $this->ModelPetugas->semua_petugas();
 
         if ($status_login == TRUE) {
             if ($role == 'admin') {
@@ -531,7 +531,7 @@ class Admin extends BaseController
             'role' => $role,
             'no_telpon' => $no_telpon,
         ];
-        $this->ModelRoles->tambah_petugas($data);
+        $this->ModelPetugas->tambah_petugas($data);
         session()->setFlashdata("success", "Berhasil Tambah Petugas");
         return redirect()->to(base_url('daftar_petugas'));
     }
@@ -539,7 +539,7 @@ class Admin extends BaseController
     public function proses_edit_petugas() 
     {
         $request = \Config\Services::request();
-        $id_role = $this->request->getPost('id_role');
+        $id_petugas = $this->request->getPost('id_petugas');
         $nama_lengkap = $this->request->getPost('nama_lengkap');
         $alamat = $this->request->getPost('alamat');
         $email = $this->request->getPost('email');
@@ -555,16 +555,16 @@ class Admin extends BaseController
             'no_telpon' => $no_telpon,
             'password' => $password,
         ];
-        $this->ModelRoles->edit_admin($data, $id_role);
+        $this->ModelPetugas->edit_admin($data, $id_petugas);
         session()->setFlashdata("success", "Berhasil Edit Petugas");
         return redirect()->to(base_url('daftar_petugas'));
     }
     
-    public function hapus_petugas($id_role)
+    public function hapus_petugas($id_petugas)
     {
-        $dapatkan_admin = $this->ModelRoles->dapatkan_petugas($id_role);
+        $dapatkan_admin = $this->ModelPetugas->dapatkan_petugas($id_petugas);
         if (isset($dapatkan_admin)) {
-            $this->ModelRoles->hapus_admin($id_role);
+            $this->ModelPetugas->hapus_admin($id_petugas);
             session()->setFlashdata("success", "Berhasil Hapus Petugas");
             return redirect()->to(base_url('daftar_petugas'));
         } else {

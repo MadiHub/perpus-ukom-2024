@@ -35,7 +35,10 @@
                                     <td><?= $koleksi['judul'] ?></td>
                                     <td><?= $koleksi['nama_kategori_buku'] ?></td>
                                     <td>
-                                    <a href="<?= base_url() ?>pinjam_buku/<?= $koleksi['id_buku']?>" class="btn btn-success">Detail Buku</a>
+                                        <a href="<?= base_url() ?>pinjam_buku/<?= $koleksi['id_buku']?>" class="btn btn-success">Detail Buku</a>
+                                        <button type="button" class="btn btn-danger" onclick="hapusKoleksi('<?= $koleksi['id_buku'] ?>', '<?= $koleksi['judul'] ?>')">
+                                        <i class="fa-solid fa-trash-can"></i>
+                                    </button>
                                     </td>
                                 </tr>
                                 <?php endforeach; ?>
@@ -63,6 +66,39 @@
     <script src="<?= base_url() ?>popper/popper.js"></script>
     <!-- script bootsrap -->
     <script src="<?= base_url() ?>bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="<?= base_url() ?>sweetalert/alert.js"></script>
+    <!-- script hapus koleksi sweetalert -->
+    <script>
+        function hapusKoleksi(id_buku, judul) {
+            Swal.fire({
+                title: "Apa anda yakin?",
+                text: "Data koleksi dengan judul : " + judul + " ini akan terhapus!",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Ya",
+                cancelButtonText: "Batal" 
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = '<?= base_url() ?>hapus_koleksi_buku/' + id_buku;
+
+                }
+            });
+        }
+    </script>
+  <script>
+      $(function() {
+        <?php if (session()->has("success")) { ?>
+          Swal.fire({
+            icon: 'success',
+            title: 'Berhasil',
+            text: '<?= session("success") ?>'
+          })
+        <?php } ?>
+      });
+	  </script>
 
 </body>
 </html>

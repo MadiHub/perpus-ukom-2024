@@ -146,7 +146,7 @@
                         <input type="number" class="form-control" name="total_pinjam" required>
                     </div>
                     <div class="d-grid gap-2">
-                        <button class="btn btn-primary" type="submit">Pinjam Sekarang</button>
+                        <button class="btn" style="background-color: #DF791E; color: #ffff;" type="submit">Pinjam Sekarang</button>
                     </div>
 				</form>
             </div>

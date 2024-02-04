@@ -268,6 +268,17 @@ class Member extends BaseController
             session()->setFlashdata('success', 'Anda Berhasil Memberikan Ulasan');
             return redirect()->back();
         }
-        
+    }
+    public function hapus_koleksi_buku($id_buku)
+    {
+        $dapatkan_buku_koleksi = $this->ModelKoleksiBuku->dapatkan_buku_koleksi($id_buku);
+        if (isset($dapatkan_buku_koleksi)) {
+            $this->ModelKoleksiBuku->hapus_koleksi_buku($id_buku);
+            session()->setFlashdata("success", "Berhasil Hapus Koleksi Buku");
+            return redirect()->to(base_url('koleksi_buku'));
+        } else {
+            session()->setFlashdata("error", "Gagal Hapus Koleksi");
+            return redirect()->to(base_url('koleksi_buku'));
+        }
     }
 }

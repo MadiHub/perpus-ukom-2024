@@ -3,6 +3,7 @@
 namespace App\Controllers;
 use App\Models\ModelPeminjaman;
 use App\Models\ModelPengembalian;
+use App\Models\ModelBuku;
 
 
 class Petugas extends BaseController
@@ -11,6 +12,7 @@ class Petugas extends BaseController
     {
         $this->ModelPeminjaman = new ModelPeminjaman();
         $this->ModelPengembalian = new ModelPengembalian();
+        $this->ModelBuku = new ModelBuku();
     }
 
     public function dashboard_petugas()
@@ -109,22 +111,34 @@ class Petugas extends BaseController
             $edit = $this->ModelPeminjaman->edit_status_peminjaman($data_peminjaman, $id_peminjaman);
         }
         
-       
+        $dapatkan_buku = $this->ModelBuku->dapatkan_buku($id_buku);
+        $judul_buku = $dapatkan_buku->judul;
         $data_pengembalian = [
             'id_pengembalian' => $id_pengembalian,
             'id_member' => $id_member,
             'id_buku' => $id_buku,
             'id_peminjaman' => $id_peminjaman,
             'tanggal_pengembalian' => $tanggal_hari_ini,
-            'total_pengembalian' => $total_pengembalian,
             'hari_keterlambatan' => $total_keterlambatan,
+            'total_pengembalian' => $total_pengembalian,
+            'total_denda' => $total_denda,
+            'uang_dibayarkan' => $uang_dibayarkan,
+            'uang_kembalian' => $uang_kembalian,
+        ];
+        $data_struk = [
+            'tanggal_pengembalian' => $tanggal_hari_ini,
+            'judul_buku' => $judul_buku,
+            'hari_keterlambatan' => $total_keterlambatan,
+            'total_pengembalian' => $total_pengembalian,
             'total_denda' => $total_denda,
             'uang_dibayarkan' => $uang_dibayarkan,
             'uang_kembalian' => $uang_kembalian,
         ];
         $tambah = $this->ModelPengembalian->tambah_pengembalian($data_pengembalian);
         session()->setFlashdata('success', 'Berhasil Edit Status Pengembalian !');
-        return redirect()->to(base_url('daftar_peminjam'));
+        // return redirect()->to(base_url('daftar_peminjam'));
+        return view('petugas/cetak_struk_pengembalian', $data_struk);
+
     }
 
     public function daftar_pengembalian()

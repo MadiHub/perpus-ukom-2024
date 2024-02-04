@@ -1,14 +1,14 @@
 <?php
 
 namespace App\Controllers;
-use App\Models\ModelRoles;
+use App\Models\ModelPetugas;
 use App\Models\ModelMember;
 
 class Auth extends BaseController
 {
     public function __construct()
     {
-        $this->ModelRoles = new ModelRoles();
+        $this->ModelPetugas = new ModelPetugas();
         $this->ModelMember = new ModelMember();
     }
 
@@ -28,7 +28,7 @@ class Auth extends BaseController
         $email = $request->getVar('email');
         $password = $request->getVar('password');
 
-        $dapatkan_user_role = $this->ModelRoles->dapatkan_user_role($email)->getRow();
+        $dapatkan_user_role = $this->ModelPetugas->dapatkan_user_role($email)->getRow();
     
         if ($dapatkan_user_role) {
             // Memeriksa kecocokan password tanpa menggunakan password_verify
