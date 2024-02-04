@@ -20,6 +20,7 @@ $routes->post('proses_tambah_koleksi', 'Member::proses_tambah_koleksi');
 $routes->get('hapus_koleksi_buku/(:segment)', 'Member::hapus_koleksi_buku/$1');
 
 // auth
+$routes->get('portal_login', 'Auth::portal_login');
 $routes->get('login_petugas', 'Auth::login_petugas');
 $routes->post('proses_login_petugas', 'Auth::proses_login_petugas');
 $routes->get('login_member', 'Auth::login_member');

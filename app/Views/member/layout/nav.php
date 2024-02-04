@@ -2,8 +2,8 @@
 <nav class="navbar navbar-expand-lg fixed-top navbar-light" >
         <div class="container">
             <a class="navbar-brand" href="#"
-            ><img id="logo" src="<?= base_url() ?>logo/logo1.png" alt="Logo" draggable="false" width="75"
-            /> <span style="color:#DF791E;">Eternal Library</span></a>
+            ><img id="logo" src="<?= base_url() ?>logo/logo.png" alt="Logo" draggable="false" width="75"
+            /> <span style="color:#0E51A5;">Eternal</span><span  style="color:#DF791E;"> Library</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
@@ -26,7 +26,7 @@
                 </li>
                 <li class="nav-item ms-3">
                     <?php if($status_login == null) {
-                        echo "<a class='btn btn-danger btn-rounded' href='login_member'>Masuk | Daftar</a>";
+                        echo "<a class='btn btn-danger btn-rounded' href='portal_login'>Masuk | Daftar</a>";
                     } else {
                         echo "
                         <li class='nav-item dropdown'>
