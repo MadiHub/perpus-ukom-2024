@@ -61,11 +61,11 @@
             <form method="post" action="<?= base_url() ?>proses_tambah_kategori_buku">
                 <div class="mb-3">
                     <label for="input" class="form-label">Id Kategori</label>
-                    <input type="text" class="form-control" name="id_kategori_buku" aria-describedby="nama kategori buku" placeholder="Id Kategori Buku">
+                    <input type="text" class="form-control" name="id_kategori_buku" value="<?= $kode_kategori?>"placeholder="Id Kategori Buku" readonly>
                 </div>    
                 <div class="mb-3">
                     <label for="input" class="form-label">Nama Kategori</label>
-                    <input type="text" class="form-control" name="nama_kategori_buku"  aria-describedby="nama kategori buku" placeholder="Nama Kategori Buku">
+                    <input type="text" class="form-control" name="nama_kategori_buku" placeholder="Nama Kategori Buku">
                 </div>    
                 <button type="submit" class="btn btn-primary w-100">Tambah</button>
             </form>

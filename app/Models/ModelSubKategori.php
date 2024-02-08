@@ -10,6 +10,28 @@ class ModelSubKategori extends Model
     protected $primaryKey = 'id_sub_kategori';
     protected $allowedFields = ['id_sub_kategori', 'nama_sub_kategori'];
 
+    // KODE ID OTOMATIS
+    public function kode_sub() {
+        $query = $this->db->table('tb_sub_kategori');
+        $count = $query->countAllResults();
+    
+        if ($count == 0) {
+            return 'SK-001'; // Jika tidak ada data, beri nomor otomatis pertama
+        } else {
+            // Ambil nomor otomatis terkecil yang belum digunakan
+            $usedCodes = $query->select('id_sub_kategori')->get()->getResultArray();
+            $existingNumbers = array_map(function ($code) {
+                return (int)substr($code['id_sub_kategori'], strlen('SK-'));
+            }, $usedCodes);
+    
+            $newNumber = min(array_diff(range(1, $count + 1), $existingNumbers));
+    
+            $newCode = 'SK-' . sprintf("%03d", $newNumber);
+    
+            return $newCode;
+        }
+    }
+
     public function tambah_sub_kategori($data)
     {
         $builder = $this->db->table($this->table);

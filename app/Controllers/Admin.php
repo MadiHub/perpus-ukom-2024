@@ -60,12 +60,14 @@ class Admin extends BaseController
         $role = session()->get('role');
 
         $semua_kategori_buku = $this->ModelKategoriBuku->semua_kategori_buku();
+        $kode_kategori = $this->ModelKategoriBuku->kode_kategori();
 
         if ($status_login == TRUE) {
             if ($role == 'admin') {
                 $data = [
                     'judul' => 'Kategori Buku',
                     'semua_kategori_buku' => $semua_kategori_buku,
+                    'kode_kategori' => $kode_kategori,
                     // data sesion wajib
                     'nama_lengkap' => $nama_lengkap,
                     'email' => $email,
@@ -133,8 +135,8 @@ class Admin extends BaseController
         $role = session()->get('role');
 
         $semua_sub_kategori = $this->ModelSubKategori->semua_sub_kategori();
-
         $semua_kategori_buku = $this->ModelKategoriBuku->semua_kategori_buku();
+        $kode_sub = $this->ModelSubKategori->kode_sub();
 
         if ($status_login == TRUE) {
             if ($role == 'admin') {
@@ -142,6 +144,7 @@ class Admin extends BaseController
                     'judul' => 'Sub Kategori',
                     'semua_sub_kategori' => $semua_sub_kategori,
                     'semua_kategori_buku' => $semua_kategori_buku,
+                    'kode_sub' => $kode_sub,
                     // data sesion wajib
                     'nama_lengkap' => $nama_lengkap,
                     'email' => $email,
@@ -226,7 +229,7 @@ class Admin extends BaseController
         $semua_kategori_buku = $this->ModelKategoriBuku->semua_kategori_buku();
         $semua_buku = $this->ModelBuku->semua_buku();
         $semua_sub_kategori = $this->ModelSubKategori->semua_sub_kategori();
-
+        $kode_buku = $this->ModelBuku->kode_buku();
 
         if ($status_login == TRUE) {
             if ($role == 'admin') {
@@ -235,6 +238,7 @@ class Admin extends BaseController
                     'semua_kategori_buku' => $semua_kategori_buku,
                     'semua_sub_kategori' => $semua_sub_kategori,
                     'semua_buku' => $semua_buku,
+                    'kode_buku' => $kode_buku,
                     // data sesion wajib
                     'nama_lengkap' => $nama_lengkap,
                     'email' => $email,
@@ -309,7 +313,8 @@ class Admin extends BaseController
     
         // Jika sampul_buku tidak null dan valid, maka proses
         if ($sampul_buku && $sampul_buku->isValid()) {
-            $buku = $this->ModelBuku->dapatkan_admin($id_buku);
+            $buku = $this->ModelBuku->dapatkan_buku($id_buku);
+            dd($buku);
             $sampul_lama = $buku->sampul_buku;
     
             // Hapus file lama jika ada
@@ -395,7 +400,9 @@ class Admin extends BaseController
         $nama_lengkap = session()->get('nama_lengkap');
         $email = session()->get('email');
         $role = session()->get('role');
+
         $semua_admin = $this->ModelPetugas->semua_admin();
+        $kode_admin = $this->ModelPetugas->kode_admin();
 
         if ($status_login == TRUE) {
             if ($role == 'admin') {
@@ -403,6 +410,7 @@ class Admin extends BaseController
                     'judul' => 'Daftar Admin',
                     // data sesion wajib
                     'nama_lengkap' => $nama_lengkap,
+                    'kode_admin' => $kode_admin,
                     'email' => $email,
                     'semua_admin' => $semua_admin,
                     'nama_lengkap' => $nama_lengkap,
@@ -424,6 +432,7 @@ class Admin extends BaseController
     public function proses_tambah_admin() 
     {
         $request = \Config\Services::request();
+        $id_petugas = $this->request->getPost('id_petugas');
         $nama_lengkap = $this->request->getPost('nama_lengkap');
         $alamat = $this->request->getPost('alamat');
         $email = $this->request->getPost('email');
@@ -432,6 +441,7 @@ class Admin extends BaseController
         $role = $this->request->getPost('role');
 
         $data = [
+            'id_petugas' => $id_petugas,
             'nama_lengkap' => $nama_lengkap,
             'email' => $email,
             'alamat' => $alamat,
@@ -488,6 +498,7 @@ class Admin extends BaseController
         $email = session()->get('email');
         $role = session()->get('role');
         $semua_petugas = $this->ModelPetugas->semua_petugas();
+        $kode_petugas = $this->ModelPetugas->kode_petugas();
 
         if ($status_login == TRUE) {
             if ($role == 'admin') {
@@ -496,6 +507,7 @@ class Admin extends BaseController
                     // data sesion wajib
                     'nama_lengkap' => $nama_lengkap,
                     'email' => $email,
+                    'kode_petugas' => $kode_petugas,
                     'semua_petugas' => $semua_petugas,
                     'nama_lengkap' => $nama_lengkap,
                     'role' => $role,
@@ -516,6 +528,7 @@ class Admin extends BaseController
     public function proses_tambah_petugas() 
     {
         $request = \Config\Services::request();
+        $id_petugas = $this->request->getPost('id_petugas');
         $nama_lengkap = $this->request->getPost('nama_lengkap');
         $alamat = $this->request->getPost('alamat');
         $email = $this->request->getPost('email');
@@ -524,6 +537,7 @@ class Admin extends BaseController
         $role = $this->request->getPost('role');
 
         $data = [
+            'id_petugas' => $id_petugas,
             'nama_lengkap' => $nama_lengkap,
             'email' => $email,
             'alamat' => $alamat,

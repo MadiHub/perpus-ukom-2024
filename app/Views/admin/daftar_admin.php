@@ -9,7 +9,7 @@
                     <table id="myTablekategori" class="table table-bordered table-striped table-hover">
                         <thead>
                             <tr>
-                                <th>#</th>
+                                <th>Id Admin</th>
                                 <th>Nama</th>
                                 <th>Email</th>
                                 <th>Alamat</th>
@@ -22,7 +22,7 @@
                         <tbody>
                             <?php $no = 1; foreach($semua_admin as $admin): ?>
                             <tr>
-                                <td><?= $no++ ?></td>
+                                <td><?= $admin['id_petugas'] ?></td>
                                 <td><?= $admin['nama_lengkap'] ?></td>
                                 <td><?= $admin['email'] ?></td>
                                 <td><?= $admin['alamat'] ?></td>
@@ -71,6 +71,10 @@
             </div>
             <div class="modal-body">
                 <form method="post" action="<?= base_url() ?>proses_tambah_admin">
+                    <div class="mb-3">
+                        <label for="input" class="form-label">Id Admin</label>
+                        <input type="text" class="form-control" name="id_petugas"  value="<?= $kode_admin ?>" readonly>
+                    </div>
                     <div class="mb-3">
                         <label for="input" class="form-label">Role</label>
                         <input type="email" class="form-control" name="role" value="admin" readonly>

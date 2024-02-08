@@ -9,7 +9,7 @@
                     <table id="myTablekategori" class="table table-bordered table-striped table-hover">
                         <thead>
                             <tr>
-                                <th>#</th>
+                                <th>Id Petugas</th>
                                 <th>Nama</th>
                                 <th>Email</th>
                                 <th>Alamat</th>
@@ -22,7 +22,7 @@
                         <tbody>
                             <?php $no = 1; foreach($semua_petugas as $petugas): ?>
                             <tr>
-                                <td><?= $no++ ?></td>
+                                <td><?= $petugas['id_petugas'] ?></td>
                                 <td><?= $petugas['nama_lengkap'] ?></td>
                                 <td><?= $petugas['email'] ?></td>
                                 <td><?= $petugas['alamat'] ?></td>
@@ -75,8 +75,12 @@
             <div class="modal-body">
                 <form method="post" action="<?= base_url() ?>proses_tambah_petugas">
                     <div class="mb-3">
+                        <label for="input" class="form-label">Id Petugas</label>
+                        <input type="text" class="form-control" name="id_petugas"  value="<?= $kode_petugas ?>" readonly>
+                    </div>
+                    <div class="mb-3">
                         <label for="input" class="form-label">Role</label>
-                        <input type="email" class="form-control" name="role" value="petugas" readonly>
+                        <input type="text" class="form-control" name="role" value="petugas" readonly>
                     </div>
                     <div class="mb-3">
                         <label for="input" class="form-label">Nama</label>

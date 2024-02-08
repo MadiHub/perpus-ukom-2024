@@ -10,6 +10,27 @@ class ModelBuku extends Model
     protected $primaryKey = 'id_buku';
     protected $allowedFields = ['id_buku','id_kategori_buku', 'id_sub_kategori', 'judul', 'penulis', 'penerbit', 'tahun_terbit', 'stok', 'sampul_buku'];
 
+    // KODE ID OTOMATIS
+    public function kode_buku() {
+        $query = $this->db->table('tb_buku');
+        $count = $query->countAllResults();
+    
+        if ($count == 0) {
+            return 'KT-001'; // Jika tidak ada data, beri nomor otomatis pertama
+        } else {
+            // Ambil nomor otomatis terkecil yang belum digunakan
+            $usedCodes = $query->select('id_buku')->get()->getResultArray();
+            $existingNumbers = array_map(function ($code) {
+                return (int)substr($code['id_buku'], strlen('BK-'));
+            }, $usedCodes);
+    
+            $newNumber = min(array_diff(range(1, $count + 1), $existingNumbers));
+    
+            $newCode = 'BK-' . sprintf("%03d", $newNumber);
+    
+            return $newCode;
+        }
+    }
     public function tambah_buku($data)
     {
         $builder = $this->db->table($this->table);

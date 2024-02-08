@@ -64,7 +64,7 @@
                 <form method="post" action="<?= base_url() ?>proses_tambah_sub_kategori">
                     <div class="mb-3">
                         <label for="input" class="form-label">Id Sub Kategori</label>
-                        <input type="text" class="form-control" name="id_sub_kategori"  aria-describedby="nama sub kategori buku" placeholder="Nama Sub Kategori">
+                        <input type="text" class="form-control" name="id_sub_kategori"  value="<?= $kode_sub ?>" readonly>
                     </div>
                     <div class="mb-3">
                         <label for="input" class="form-label">Nama Sub Kategori</label>

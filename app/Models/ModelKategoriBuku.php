@@ -10,6 +10,27 @@ class ModelKategoriBuku extends Model
     protected $primaryKey = 'id_kategori_buku';
     protected $allowedFields = ['id_kategori_buku', 'nama_kategori_buku'];
 
+    public function kode_kategori() {
+        $query = $this->db->table('tb_kategori_buku');
+        $count = $query->countAllResults();
+    
+        if ($count == 0) {
+            return 'KT-001'; // Jika tidak ada data, beri nomor otomatis pertama
+        } else {
+            // Ambil nomor otomatis terkecil yang belum digunakan
+            $usedCodes = $query->select('id_kategori_buku')->get()->getResultArray();
+            $existingNumbers = array_map(function ($code) {
+                return (int)substr($code['id_kategori_buku'], strlen('KT-'));
+            }, $usedCodes);
+    
+            $newNumber = min(array_diff(range(1, $count + 1), $existingNumbers));
+    
+            $newCode = 'KT-' . sprintf("%03d", $newNumber);
+    
+            return $newCode;
+        }
+    }
+
     public function tambah_kategori_buku($data)
     {
         $builder = $this->db->table($this->table);

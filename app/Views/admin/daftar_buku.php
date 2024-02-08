@@ -9,7 +9,6 @@
                     <table id="myTable" class="table table-bordered table-striped table-hover">
                         <thead>
                             <tr>
-                                <th>#</th>
                                 <th>Id Buku</th>
                                 <th>Sampul</th>
                                 <th>Judul</th>
@@ -25,7 +24,6 @@
                         <tbody>
                             <?php $no = 1; foreach($semua_buku as $buku): ?>
                             <tr>
-                                <td><?= $no++ ?></td>
                                 <td><?= $buku['id_buku'] ?></td>
                                 <td><img src="<?= base_url() ?>buku/<?= $buku['sampul_buku'] ?>" alt="" width="50"></td>
                                 <td><?= $buku['judul'] ?></td>
@@ -120,7 +118,7 @@
                 <form method="post" action="<?= base_url() ?>proses_tambah_buku" enctype="multipart/form-data">           
                     <div class="mb-3">
                         <label for="input" class="form-label">Id Buku</label>
-                        <input type="text" class="form-control" name="id_buku"  aria-describedby="judul buku" placeholder="Judul Buku">
+                        <input type="text" class="form-control" name="id_buku" value="<?= $kode_buku ?>" placeholder="Judul Buku" readonly>
                     </div>
                     <div class="mb-3">
                         <label for="input" class="form-label">Judul</label>
