@@ -1,42 +1,27 @@
-    <!-- banner -->
-    <div class="container-content" style="margin-top:110px">
-        <div class="owl-carousel">
-            <div class="img-banner" style="height:10px;">
-                <img class=" img-fluid rounded" width="400" src="<?= base_url() ?>banner/1.jpg" alt="">
-            </div>
-            <div class="img-banner ">
-                <img class=" img-fluid rounded" width="400" src="<?= base_url() ?>banner/2.jpg" alt="">
-            </div>
-        </div>
-    </div>
 
     <!-- CARD -->
-    <div class="populer">
+    <div class="populer" style="margin-top:110px">
         <div class="container-content">
             <div class="row">
                 <div class="col mt-4">
-                    <h3>Daftar Buku</h3>
+                    <h3>Daftar Buku <?= $judul ?></h3>
                 </div>
-               
                 <div class="col text-end text-secondary">
                     <div class="mt-3">
-                        <form class="d-flex" role="search" action="<?= base_url() ?>" method="get">
-                            <div class="reload">
-                                <a href="<?= base_url() ?>" class="btn mr-5" style="background-color: #DF791E; color: #ffff;"><i class="fa-solid fa-rotate-right"></i></a>
-                            </div>
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="cari_buku">
-                            <button class="btn btn-outline" style="background-color: #DF791E; color: #ffff" type="submit">Search</button>
-                        </form>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
                     </div>
                 </div>
             </div>
-            <div class="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3 mt-3">
-            <?php if (empty($semua_buku)): ?>
-                <img src="<?= base_url() ?>buku/buku404.png" class="img buku-404" alt="course">
-            <?php else: ?>
-                <?php foreach($semua_buku as $buku): ?>
-                    <!-- Card 1 -->
-                    <div class="col">
+            <div class="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">
+                <?php if (empty($buku_kategori)): ?>
+                    <img src="<?= base_url() ?>buku/buku404.png" class="img buku-404" alt="course">
+                <?php else: ?>
+                <?php foreach($buku_kategori as $buku) : ?>
+                <!-- Card 1 -->
+                <div class="col">
                         <div class="card-produk mr-2" style="border: none; background: transparent;">
                             <a href="<?= base_url() ?>pinjam_buku/<?= $buku['id_buku']?>">
                                 <div class="img-card-produk mt-1 mr-1 ml-1 mb-1" style="max-height: 400px; max-weight: 400px; overflow: hidden;">
@@ -44,16 +29,15 @@
                                 </div>
                             </a>
                             <div class="kategori mt-2">
-                                <p><a href="<?= base_url() ?>ID-<?= $buku['id_kategori_buku']?>"><?= $buku['nama_kategori_buku']?></a></p>
+                                <p><a href="#"><?= $buku['nama_kategori_buku']?></a></p>
                             </div>
                             <div class="judul">
                                 <h6 class="mb-2"><a href="<?= base_url() ?>pinjam_buku/<?= $buku['id_buku']?>"><?= $buku['judul']?></a></h6>
                             </div>
                         </div>
-                    </div>
-                <?php endforeach; ?>
-            <?php endif; ?>
-
+                </div>
+                <?php endforeach ?>
+                <?php endif; ?>
         </div>
     </div>
 

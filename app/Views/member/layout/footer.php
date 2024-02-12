@@ -15,62 +15,15 @@
             <div class="col mt-3">
                 <h6 class="text-uppercase mb-4 font-weight-bold">Kategori</h6>
                 <div class="row row-cols-4 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 ">
+                    <?php foreach($semua_kategori_buku as $k) : ?>
                     <div class="col">
                         <div class="kategori mt-2">
                             <p>
-                            <a href="#" class="text">Fiksi</a>
+                            <a href="<?= base_url() ?>ID-<?= $k['id_kategori_buku']?>" class="text"><?= $k['nama_kategori_buku']?></a>
                             </p>
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="kategori mt-2">
-                            <p>
-                            <a href="#" class="text">Legenda</a>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="kategori mt-2">
-                            <p>
-                            <a href="#" class="text">Fiksi</a>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="kategori mt-2">
-                            <p>
-                            <a href="#" class="text">Legenda</a>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="kategori mt-2">
-                            <p>
-                            <a href="#" class="text">Fiksi</a>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="kategori mt-2">
-                            <p>
-                            <a href="#" class="text">Legenda</a>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="kategori mt-2">
-                            <p>
-                            <a href="#" class="text">Fiksi</a>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="kategori mt-2">
-                            <p>
-                            <a href="#" class="text">Legenda</a>
-                            </p>
-                        </div>
-                    </div>
+                    <?php endforeach; ?>
                 </div>
             </div>
             <hr class="w-100 clearfix d-md-none" />

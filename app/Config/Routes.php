@@ -18,6 +18,9 @@ $routes->get('riwayat_pengembalian', 'Member::riwayat_pengembalian');
 $routes->get('koleksi_buku', 'Member::koleksi_buku');
 $routes->post('proses_tambah_koleksi', 'Member::proses_tambah_koleksi');
 $routes->get('hapus_koleksi_buku/(:segment)', 'Member::hapus_koleksi_buku/$1');
+$routes->get('ID-(:segment)', 'Member::getBukuByKategori/$1');
+$routes->get('cari_buku', 'Member::cari_buku');
+
 
 // auth
 $routes->get('portal_login', 'Auth::portal_login');

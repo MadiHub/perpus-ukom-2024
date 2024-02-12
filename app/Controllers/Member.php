@@ -7,6 +7,7 @@ use App\Models\ModelPeminjaman;
 use App\Models\ModelPengembalian;
 use App\Models\ModelUlasan;
 use App\Models\ModelKoleksiBuku;
+use App\Models\ModelKategoriBuku;
 
 class Member extends BaseController
 {
@@ -18,33 +19,50 @@ class Member extends BaseController
         $this->ModelPengembalian = new ModelPengembalian();
         $this->ModelUlasan = new ModelUlasan();
         $this->ModelKoleksiBuku = new ModelKoleksiBuku();
+        $this->ModelKategoriBuku = new ModelKategoriBuku();
     }
 
     public function index()
-    {
-        // data sesion
-        $status_login = session()->get('status_login');
-        $email = session()->get('email');
-        $id_member = session()->get('id_member');
-        $username = session()->get('username');
-        $nama_lengkap = session()->get('nama_lengkap');
-        $dapatkan_member = $this->ModelMember->dapatkan_member($email)->getRow();
+{
+    // data sesion
+    $status_login = session()->get('status_login');
+    $email = session()->get('email');
+    $id_member = session()->get('id_member');
+    $username = session()->get('username');
+    $nama_lengkap = session()->get('nama_lengkap');
+    $dapatkan_member = $this->ModelMember->dapatkan_member($email)->getRow();
 
-        $semua_buku = $this->ModelBuku->semua_buku();
-        $data = [
-            'judul' => 'Beranda Member',
-            'semua_buku' => $semua_buku,  
-            'status_login' => $status_login,  
-            'id_member' => $id_member,  
-            'username' => $username,  
-            'nama_lengkap' => $nama_lengkap,  
-            'email' => $email,  
-        ];
-        echo view('member/layout/head', $data);
-        echo view('member/layout/nav', $data);
-        echo view('member/beranda', $data);
-        echo view('member/layout/footer', $data);
+    // Mendapatkan data semua buku dan kategori buku
+    $semua_buku = $this->ModelBuku->semua_buku();
+    $semua_kategori_buku = $this->ModelKategoriBuku->semua_kategori_buku();
+
+    // Cek apakah ada parameter pencarian
+    $cari_buku = $this->request->getGet('cari_buku');
+
+    // Jika ada parameter pencarian, cari buku berdasarkan pencarian
+    if ($cari_buku) {
+        $semua_buku = $this->ModelBuku->cari_buku($cari_buku);
     }
+
+    $data = [
+        'judul' => 'Beranda Member',
+        'semua_buku' => $semua_buku,
+        'semua_kategori_buku' => $semua_kategori_buku,
+        'status_login' => $status_login,
+        'id_member' => $id_member,
+        'username' => $username,
+        'nama_lengkap' => $nama_lengkap,
+        'email' => $email,
+    ];
+
+    echo view('member/layout/head', $data);
+    echo view('member/layout/nav');
+    echo view('member/beranda');
+    echo view('member/layout/footer');
+}
+
+
+  
 
     public function not_found() {
         return view('not_found');
@@ -68,6 +86,7 @@ class Member extends BaseController
         $sampul_buku = $dapatkan_buku->sampul_buku;
         $nama_kategori_buku = $dapatkan_buku->nama_kategori_buku;
 
+        $semua_kategori_buku = $this->ModelKategoriBuku->semua_kategori_buku();
         $semua_ulasan = $this->ModelUlasan->ulasanByBuku($id_buku);
 
         if ($status_login == TRUE) {
@@ -86,6 +105,7 @@ class Member extends BaseController
                     'tahun_terbit' => $tahun_terbit,
                     'sampul_buku' => $sampul_buku,
                     'nama_kategori_buku' => $nama_kategori_buku,
+                    'semua_kategori_buku' => $semua_kategori_buku,
                     'semua_ulasan' => $semua_ulasan,
                 ];
                 echo view('member/layout/head', $data);
@@ -280,5 +300,32 @@ class Member extends BaseController
             session()->setFlashdata("error", "Gagal Hapus Koleksi");
             return redirect()->to(base_url('koleksi_buku'));
         }
+    }
+
+
+    public function getBukuByKategori($id_kategori_buku)
+    {
+        $status_login = session()->get('status_login');
+        $id_member = session()->get('id_member');
+        $nama_lengkap = session()->get('nama_lengkap');
+        $email = session()->get('email');
+        
+        $getBukuByKategori = $this->ModelBuku->getBukuByKategori($id_kategori_buku);
+
+        if ($getBukuByKategori != null) {
+            $nama_kategori_buku = $getBukuByKategori[0]["nama_kategori_buku"];
+        } else {
+            $nama_kategori_buku = 'Tidak Tersedia';
+        }
+        $data = [
+            'judul' => $nama_kategori_buku,
+            'nama_lengkap' => $nama_lengkap,
+            'email' => $email,
+            'status_login' => $status_login,
+            'buku_kategori' => $getBukuByKategori,
+        ];
+        echo view('member/layout/head',$data);
+        echo view('member/layout/nav');
+        echo view('member/buku_kategori');
     }
 }

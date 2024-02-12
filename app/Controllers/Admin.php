@@ -314,7 +314,6 @@ class Admin extends BaseController
         // Jika sampul_buku tidak null dan valid, maka proses
         if ($sampul_buku && $sampul_buku->isValid()) {
             $buku = $this->ModelBuku->dapatkan_buku($id_buku);
-            dd($buku);
             $sampul_lama = $buku->sampul_buku;
     
             // Hapus file lama jika ada

@@ -31,6 +31,7 @@ class ModelBuku extends Model
             return $newCode;
         }
     }
+    
     public function tambah_buku($data)
     {
         $builder = $this->db->table($this->table);
@@ -48,7 +49,34 @@ class ModelBuku extends Model
             ->getResultArray();
         return $batasan;
     }
+
+    public function cari_buku($cari_buku)
+    {
+        $query = $this->db->table($this->table);
+        $batasan = $query->select('*')
+            ->join('tb_kategori_buku', 'tb_kategori_buku.id_kategori_buku = ' . $this->table . '.id_kategori_buku', 'left')
+            ->join('tb_sub_kategori', 'tb_sub_kategori.id_sub_kategori = ' . $this->table . '.id_sub_kategori', 'left')
+            ->like('judul', $cari_buku) 
+            ->orLike('tb_kategori_buku.nama_kategori_buku', $cari_buku)
+            ->orderBy('id_buku', 'ASC')
+            ->get()
+            ->getResultArray();
+        return $batasan;
+    }
     
+    public function getBukuByKategori($id_kategori_buku)
+    {
+        $query = $this->db->table($this->table);
+        $buku = $query->select('*')
+            ->join('tb_kategori_buku', 'tb_kategori_buku.id_kategori_buku = '.$this->table.'.id_kategori_buku', 'left')
+            ->join('tb_sub_kategori', 'tb_sub_kategori.id_sub_kategori = '.$this->table.'.id_sub_kategori', 'left')
+            ->where('tb_kategori_buku.id_kategori_buku', $id_kategori_buku) // Menambahkan klausul WHERE
+            ->orderBy('id_buku', 'ASC') 
+            ->get()
+            ->getResultArray();
+        return $buku;
+    }
+
     public function dapatkan_buku($id_buku = false)
     {
         $this->select('*');
