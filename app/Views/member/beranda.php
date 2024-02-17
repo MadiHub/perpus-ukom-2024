@@ -1,11 +1,14 @@
     <!-- banner -->
     <div class="container-content" style="margin-top:110px">
         <div class="owl-carousel">
-            <div class="img-banner" style="height:10px;">
-                <img class=" img-fluid rounded" width="400" src="<?= base_url() ?>banner/1.jpg" alt="">
+            <div class="img-banner" >
+                <img class=" img-fluid rounded" src="<?= base_url() ?>banner/4.png" alt="">
             </div>
             <div class="img-banner ">
-                <img class=" img-fluid rounded" width="400" src="<?= base_url() ?>banner/2.jpg" alt="">
+                <img class=" img-fluid rounded" src="<?= base_url() ?>banner/5.png" alt="">
+            </div>
+            <div class="img-banner ">
+                <img class=" img-fluid rounded" src="<?= base_url() ?>banner/6.png" alt="">
             </div>
         </div>
     </div>

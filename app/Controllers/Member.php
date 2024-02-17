@@ -88,6 +88,7 @@ class Member extends BaseController
 
         $semua_kategori_buku = $this->ModelKategoriBuku->semua_kategori_buku();
         $semua_ulasan = $this->ModelUlasan->ulasanByBuku($id_buku);
+        $avgRating = $this->ModelUlasan->avgRating($id_buku);
 
         if ($status_login == TRUE) {
             if ($id_member) {
@@ -107,6 +108,7 @@ class Member extends BaseController
                     'nama_kategori_buku' => $nama_kategori_buku,
                     'semua_kategori_buku' => $semua_kategori_buku,
                     'semua_ulasan' => $semua_ulasan,
+                    'avgRating' => $avgRating,
                 ];
                 echo view('member/layout/head', $data);
                 echo view('member/layout/nav', $data);

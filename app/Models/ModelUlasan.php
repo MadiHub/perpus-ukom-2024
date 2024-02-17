@@ -40,4 +40,9 @@ class ModelUlasan extends Model
         ->getResultArray();
     }
 
+    public function avgRating($id_buku)
+    {
+        $query = $this->db->query('SELECT AVG(rating) as average_rating FROM ' . $this->table . ' WHERE id_buku = ?', [$id_buku]);
+        return $query->getRow()->average_rating;
+    }
 }

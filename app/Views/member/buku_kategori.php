@@ -8,16 +8,19 @@
                 </div>
                 <div class="col text-end text-secondary">
                     <div class="mt-3">
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
+                        <form class="d-flex" role="search" action="<?= base_url() ?>" method="get">
+                            <div class="reload">
+                                <a href="<?= base_url() ?>" class="btn mr-5" style="background-color: #DF791E; color: #ffff;"><i class="fa-solid fa-rotate-right"></i></a>
+                            </div>
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="cari_buku">
+                            <button class="btn btn-outline" style="background-color: #DF791E; color: #ffff" type="submit">Search</button>
+                        </form>
                     </div>
                 </div>
             </div>
             <div class="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">
                 <?php if (empty($buku_kategori)): ?>
-                    <img src="<?= base_url() ?>buku/buku404.png" class="img buku-404" alt="course">
+                    <img src="<?= base_url() ?>buku/buku404.png" class="img buku-404 mt-3" alt="course">
                 <?php else: ?>
                 <?php foreach($buku_kategori as $buku) : ?>
                 <!-- Card 1 -->

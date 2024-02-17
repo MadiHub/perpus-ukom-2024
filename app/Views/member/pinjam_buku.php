@@ -19,6 +19,10 @@
                     <!-- Gambar Produk di Kiri -->
                     <div class="col-md-4 text-center text-md-start">
                     <img src="<?= base_url() ?>buku/<?= $sampul_buku ?>" alt="Produk" class="product-image img-fluid">
+                    <!-- avg rating -->
+                    <div id="avgRating" class="mt-2 mb-2">
+                    <!-- avg end -->
+                    </div>
                     </div>
                     <!-- Penjelasan Produk di Kanan -->
                     <div class="col-md-6">
@@ -73,9 +77,7 @@
                                             <label for="floatingTextarea" class=" text-secondary">Berikan Ulasan</label>
                                         </div>
                                         <div id="rateYo" class="mt-2 mb-2"
-                                            data-rateyo-rating="0"
-                                            data-rateyo-num-stars="5"
-                                            data-rateyo-score="3">
+                                            data-rateyo-full-star="true">
                                         </div>
                                         <span class="result mt-3">Rating: 0</span>
                                         <input type="hidden" name="rating">
@@ -210,6 +212,31 @@
   });
 </script>
 
+<script>
+  $(function () {
+    <?php foreach ($semua_ulasan as  $ulasan): ?>
+    $("#rating-data<?= $ulasan['id_member'] ?>").rateYo({
+      rating: <?= $ulasan['rating'] ?>,
+      readOnly: true, 
+    });
+    <?php endforeach; ?>
+
+  });
+</script>
+
+<script>
+    // Menggunakan nilai rata-rata rating dari controller
+    var avgRating = <?php echo $avgRating; ?>;
+
+    // Inisialisasi RateYo dengan nilai rata-rata rating
+    $("#avgRating").rateYo({
+        rating: avgRating,
+        readOnly: true, 
+        // Konfigurasi lainnya
+    });
+</script>
+<!-- rateyo end -->
+
 <!-- script sweeetalert -->
 <script src="<?= base_url() ?>sweetalert/alert.js"></script>
     <script>
@@ -235,18 +262,6 @@
 		});
 	</script>
 
-<script>
-  $(function () {
-    // Inisialisasi RateYo dengan nilai rating dari data
-    <?php foreach ($semua_ulasan as  $ulasan): ?>
 
-    $("#rating-data<?= $ulasan['id_member'] ?>").rateYo({
-      rating: <?= $ulasan['rating'] ?>,
-      readOnly: true, // Membuat rating hanya tampil dan tidak bisa diubah
-    });
-    <?php endforeach; ?>
-
-  });
-</script>
 </body>
 </html>
