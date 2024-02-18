@@ -7,11 +7,14 @@
               <div class="card mb-4 text-white bg-primary" style="height: 100px">
                 <div class="card-body pb-0 d-flex justify-content-between align-items-start">
                   <div>
-                    <div class="fs-4 fw-semibold">26K <span class="fs-6 fw-normal">(-12.4%
-                        <svg class="icon">
-                          <use xlink:href="<?= base_url() ?>admin/dist/vendors/@coreui/icons/svg/free.svg#cil-arrow-bottom"></use>
-                        </svg>)</span></div>
-                    <div>Users</div>
+                    <?php
+                      // Mendapatkan indeks bulan saat ini
+                      $bulan_sekarang = date('n'); 
+                      // Mendapatkan nama bulan saat ini 
+                      $namaBulanSaatIni = $nm_bulan[$bulan_sekarang]; //$nm_bulan dari controller
+                    ?>
+                    <div><h6>Total Peminjam Bulan <?= $namaBulanSaatIni ?></h6></div>
+                    <div class="fs-4 fw-semibold"><?= $total_peminjaman->total_peminjaman?></div>
                   </div>
                 </div>
               </div>
@@ -20,37 +23,14 @@
               <div class="card mb-4 text-white bg-primary" style="height: 100px">
                 <div class="card-body pb-0 d-flex justify-content-between align-items-start">
                   <div>
-                    <div class="fs-4 fw-semibold">26K <span class="fs-6 fw-normal">(-12.4%
-                        <svg class="icon">
-                          <use xlink:href="<?= base_url() ?>admin/dist/vendors/@coreui/icons/svg/free.svg#cil-arrow-bottom"></use>
-                        </svg>)</span></div>
-                    <div>Users</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-3">
-              <div class="card mb-4 text-white bg-primary" style="height: 100px">
-                <div class="card-body pb-0 d-flex justify-content-between align-items-start">
-                  <div>
-                    <div class="fs-4 fw-semibold">26K <span class="fs-6 fw-normal">(-12.4%
-                        <svg class="icon">
-                          <use xlink:href="<?= base_url() ?>admin/dist/vendors/@coreui/icons/svg/free.svg#cil-arrow-bottom"></use>
-                        </svg>)</span></div>
-                    <div>Users</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-3">
-              <div class="card mb-4 text-white bg-primary" style="height: 100px">
-                <div class="card-body pb-0 d-flex justify-content-between align-items-start">
-                  <div>
-                    <div class="fs-4 fw-semibold">26K <span class="fs-6 fw-normal">(-12.4%
-                        <svg class="icon">
-                          <use xlink:href="<?= base_url() ?>admin/dist/vendors/@coreui/icons/svg/free.svg#cil-arrow-bottom"></use>
-                        </svg>)</span></div>
-                    <div>Users</div>
+                    <?php
+                      // Mendapatkan indeks bulan saat ini
+                      $bulan_sekarang = date('n'); 
+                      // Mendapatkan nama bulan saat ini 
+                      $namaBulanSaatIni = $nm_bulan[$bulan_sekarang]; //$nm_bulan dari controller
+                    ?>
+                    <div><h6>Total Pengembalian Bulan <?= $namaBulanSaatIni ?></h6></div>
+                    <div class="fs-4 fw-semibold"><?= $total_pengembalian->total_pengembalian?></div>
                   </div>
                 </div>
               </div>

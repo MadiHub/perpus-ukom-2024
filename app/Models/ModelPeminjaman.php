@@ -105,4 +105,18 @@ class ModelPeminjaman extends Model
             ->get()
             ->getResultArray();
     }
+
+
+    public function total_peminjaman()
+    {
+        $currentMonth = date('m'); // Mendapatkan bulan saat ini
+
+        $query = $this->db->table($this->table)
+            ->select('COUNT(DISTINCT id_peminjaman) as total_peminjaman')
+            ->where("DATE_FORMAT(tanggal_peminjaman, '%m')", $currentMonth)
+            ->where('status_peminjaman', 'di-pinjam')
+            ->get();
+
+        return $query->getRow();
+    }
 }

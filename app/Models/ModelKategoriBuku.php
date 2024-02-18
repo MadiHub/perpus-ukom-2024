@@ -68,4 +68,13 @@ class ModelKategoriBuku extends Model
         $builder = $this->db->table($this->table);
         return $builder->delete(['id_kategori_buku' => $id_kategori_buku]);
     }
+
+    public function total_kategori()
+    {
+        $query = $this->db->table($this->table)
+            ->select('COUNT(DISTINCT id_kategori_buku) as total_kategori')
+            ->get();
+
+        return $query->getRow();
+    }
 }

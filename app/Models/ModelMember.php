@@ -33,4 +33,13 @@ class ModelMember extends Model
             ->getResultArray();
         return $batasan;
     }
+
+    public function total_member()
+    {
+        $query = $this->db->table($this->table)
+            ->select('COUNT(DISTINCT id_member) as total_member')
+            ->get();
+
+        return $query->getRow();
+    }
 }

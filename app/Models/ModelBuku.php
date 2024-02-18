@@ -111,4 +111,13 @@ class ModelBuku extends Model
         $builder = $this->db->table($this->table);
         return $builder->delete(['id_buku' => $id_buku]);
     }
+
+    public function total_buku()
+    {
+        $query = $this->db->table($this->table)
+            ->select('COUNT(DISTINCT id_buku) as total_buku')
+            ->get();
+
+        return $query->getRow();
+    }
 }

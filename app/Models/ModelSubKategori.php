@@ -83,4 +83,13 @@ class ModelSubKategori extends Model
         return $batasan;
         $query = $this->db->table($this->table);
     }
+
+    public function total_sub_kategori()
+    {
+        $query = $this->db->table($this->table)
+            ->select('COUNT(DISTINCT id_sub_kategori) as total_sub_kategori')
+            ->get();
+
+        return $query->getRow();
+    }
 }

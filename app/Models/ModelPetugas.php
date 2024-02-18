@@ -99,4 +99,24 @@ class ModelPetugas extends Model
         $builder = $this->db->table($this->table);
         return $builder->delete(['id_petugas' => $id_petugas]);
     }
+
+    public function total_petugas()
+    {
+        $query = $this->db->table($this->table)
+            ->select('COUNT(DISTINCT id_petugas) as total_petugas')
+            ->where('role', 'petugas')
+            ->get();
+
+        return $query->getRow();
+    }
+
+    public function total_admin()
+    {
+        $query = $this->db->table($this->table)
+            ->select('COUNT(DISTINCT id_petugas) as total_admin')
+            ->where('role', 'admin')
+            ->get();
+
+        return $query->getRow();
+    }
 }

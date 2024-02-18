@@ -9,7 +9,6 @@
                     <table id="myTablekategori" class="table table-bordered table-striped table-hover">
                         <thead>
                             <tr>
-                                <th>#</th>
                                 <th>Id Kategori</th>
                                 <th>Nama Kategori</th>
                                 <th>Aksi</th>
@@ -18,7 +17,6 @@
                         <tbody>
                             <?php $no = 1; foreach($semua_kategori_buku as $k_buku): ?>
                             <tr>
-                                <td><?= $no++ ?></td>
                                 <td><?= $k_buku['id_kategori_buku'] ?></td>
                                 <td><?= $k_buku['nama_kategori_buku'] ?></td>
                                 <td>

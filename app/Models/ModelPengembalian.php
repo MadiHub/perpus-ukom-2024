@@ -61,4 +61,15 @@ class ModelPengembalian extends Model
             ->getResultArray();
     }
     
+    public function total_pengembalian()
+    {
+        $currentMonth = date('m'); // Mendapatkan bulan saat ini
+
+        $query = $this->db->table($this->table)
+            ->select('COUNT(DISTINCT id_pengembalian) as total_pengembalian')
+            ->where("DATE_FORMAT(tanggal_pengembalian, '%m')", $currentMonth)
+            ->get();
+
+        return $query->getRow();
+    }
 }

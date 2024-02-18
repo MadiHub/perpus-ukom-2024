@@ -23,10 +23,19 @@ class Petugas extends BaseController
         $email = session()->get('email');
         $role = session()->get('role');
 
+        $total_peminjaman = $this->ModelPeminjaman->total_peminjaman();
+        $total_pengembalian = $this->ModelPengembalian->total_pengembalian();
+
+        $nm_bulan = ["", "Januari", "Februari", "Maret", "April", "
+        Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
+
         if ($status_login == TRUE) {
             if ($role == 'petugas') {
                 $data = [
                     'judul' => 'Dashboard Petugas',
+                    'total_peminjaman' => $total_peminjaman,
+                    'total_pengembalian' => $total_pengembalian,
+                    'nm_bulan' => $nm_bulan,
                     // data sesion wajib
                     'nama_lengkap' => $nama_lengkap,
                     'email' => $email,

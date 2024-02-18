@@ -28,10 +28,23 @@ class Admin extends BaseController
         $email = session()->get('email');
         $role = session()->get('role');
 
+        $total_buku = $this->ModelBuku->total_buku();
+        $total_kategori = $this->ModelKategoriBuku->total_kategori();
+        $total_sub_kategori = $this->ModelSubKategori->total_sub_kategori();
+        $total_admin = $this->ModelPetugas->total_admin();
+        $total_petugas = $this->ModelPetugas->total_petugas();
+        $total_member = $this->ModelMember->total_member();
+
         if ($status_login == TRUE) {
             if ($role == 'admin') {
                 $data = [
                     'judul' => 'Dashboard Admin',
+                    'total_buku' => $total_buku,
+                    'total_kategori' => $total_kategori,
+                    'total_sub_kategori' => $total_sub_kategori,
+                    'total_admin' => $total_admin,
+                    'total_petugas' => $total_petugas,
+                    'total_member' => $total_member,
                     // data sesion wajib
                     'nama_lengkap' => $nama_lengkap,
                     'email' => $email,
