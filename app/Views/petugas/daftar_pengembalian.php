@@ -3,6 +3,12 @@
         <div class="container-lg">
           <div class="row">
                 <div class="card">
+                    <div class="print text-end">
+                        <form action="<?= base_url()?>cetak_pengembalian" method="post">
+                            <input type="hidden" value="di-pinjam" name="status_peminjaman">
+                            <button type="submit" class="btn btn-danger mt-3 mr-3"><i class='fas fa-print'></i> Rekap Pengembalian</button>
+                        </form>
+                    </div>
                     <div class="card-body">
                         <table id="myTable" class="table table-bordered table-striped table-hover">
                             <thead class="text-center">

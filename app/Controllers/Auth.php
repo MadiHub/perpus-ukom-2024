@@ -12,16 +12,6 @@ class Auth extends BaseController
         $this->ModelMember = new ModelMember();
     }
 
-    public function portal_login()
-    {
-        $data = [
-            'judul' => 'Portal Login',
-            'validation' => \Config\Services::validation()
-
-        ];
-        echo view('auth/portal_login', $data);
-    }
-
     public function login_petugas()
     {
         $data = [
@@ -154,6 +144,6 @@ class Auth extends BaseController
     {
         $session = session();
         $session->destroy();
-        return redirect()->to(base_url('portal_login'));
+        return redirect()->to(base_url('login_member'));
     }
 }

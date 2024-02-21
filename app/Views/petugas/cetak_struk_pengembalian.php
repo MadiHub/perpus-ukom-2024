@@ -6,7 +6,12 @@
   <meta charset="UTF-8">
  <title>struk</title>
   <style>
-  @page { size: A4 }
+  @page {
+  size: 60mm; /* Ganti dengan lebar dan tinggi struk sesuai kebutuhan Anda */
+  margin: 0;
+}
+  body { margin: 0; font-size:10px;font-family: monospace;}
+
   #invoice-POS {
     box-shadow: 0 0 1in -0.25in rgba(0, 0, 0, 0.5);
     padding: 2mm;
@@ -95,10 +100,14 @@
     </center><!--End InvoiceTop-->
     <div id="mid">
       <div class="info">
-        <!-- <h2>Info Member</h 2> -->
+        <p>
+            Detail Member <br>
+            Nama Peminjam         : <?= $nama_lengkap ?></br>
+            Email                 : <?= $email ?></br>
+        </p>
         <p> 
-            Tanggal Pengembalian : <?= $tanggal_pengembalian ?></br>
-            Hari Keterlambatan  :<?= $hari_keterlambatan ?> Hari</br>
+            Tanggal Pengembalian  : <?= $tanggal_pengembalian ?></br>
+            Total Keterlambatan     :<?= $hari_keterlambatan ?> Hari</br>
         </p>
       </div>
     </div><!--End Invoice Mid-->
@@ -106,7 +115,7 @@
       <div id="table">
             <table>
                 <tr class="tabletitle">
-                    <td class="item"><h2>Item</h2></td>
+                    <td class="item"><h2>Judul Buku</h2></td>
                     <td class="Hours"><h2>Jumlah</h2></td>
                     <td class="Rate"><h2>Denda</h2></td>
                 </tr>

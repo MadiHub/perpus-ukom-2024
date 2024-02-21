@@ -4,6 +4,7 @@ namespace App\Controllers;
 use App\Models\ModelPeminjaman;
 use App\Models\ModelPengembalian;
 use App\Models\ModelBuku;
+use App\Models\ModelMember;
 
 
 class Petugas extends BaseController
@@ -13,6 +14,7 @@ class Petugas extends BaseController
         $this->ModelPeminjaman = new ModelPeminjaman();
         $this->ModelPengembalian = new ModelPengembalian();
         $this->ModelBuku = new ModelBuku();
+        $this->ModelMember = new ModelMember();
     }
 
     public function dashboard_petugas()
@@ -95,6 +97,7 @@ class Petugas extends BaseController
         $id_peminjaman = $this->request->getPost('id_peminjaman');
         $id_pengembalian = $this->request->getPost('id_pengembalian');
         $id_member = $this->request->getPost('id_member');
+        $email = $this->request->getPost('email');
         $id_buku = $this->request->getPost('id_buku');
         $tanggal_pengembalian = $this->request->getPost('tanggal_pengembalian');
         $tanggal_hari_ini = $this->request->getPost('tanggal_hari_ini');
@@ -122,6 +125,10 @@ class Petugas extends BaseController
         
         $dapatkan_buku = $this->ModelBuku->dapatkan_buku($id_buku);
         $judul_buku = $dapatkan_buku->judul;
+
+        $dapatkan_member = $this->ModelMember->dapatkan_member($email)->getRow();
+        $email = $dapatkan_member->email;
+        $nama_lengkap = $dapatkan_member->nama_lengkap;
         $data_pengembalian = [
             'id_pengembalian' => $id_pengembalian,
             'id_member' => $id_member,
@@ -142,6 +149,8 @@ class Petugas extends BaseController
             'total_denda' => $total_denda,
             'uang_dibayarkan' => $uang_dibayarkan,
             'uang_kembalian' => $uang_kembalian,
+            'email' => $email,
+            'nama_lengkap' => $nama_lengkap,
         ];
         $tambah = $this->ModelPengembalian->tambah_pengembalian($data_pengembalian);
         session()->setFlashdata('success', 'Berhasil Edit Status Pengembalian !');
@@ -184,111 +193,28 @@ class Petugas extends BaseController
         }
     }
 
-    public function rekap_peminjaman()
-    {
-        // data sesion wajib
-        $status_login = session()->get('status_login');
-        $nama_lengkap = session()->get('nama_lengkap');
-        $email = session()->get('email');
-        $role = session()->get('role');
-
-        $nm_bulan = ["", "Januari", "Februari", "Maret", "April", "
-        Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
-
-        if ($status_login == TRUE) {
-            if ($role == 'petugas') {
-                $data = [
-                    'judul' => 'Rekap Peminjaman Buku',
-                    'nm_bulan' =>  $nm_bulan,
-                    // data sesion wajib
-                    'nama_lengkap' => $nama_lengkap,
-                    'email' => $email,
-                    'nama_lengkap' => $nama_lengkap,
-                    'role' => $role,
-                ];
-                echo view('petugas/layout/head', $data);
-                echo view('petugas/layout/side');
-                echo view('petugas/layout/nav');
-                echo view('petugas/rekap_peminjaman');
-                echo view('petugas/layout/script');
-            } else {
-                return redirect()->to(base_url('/not_found'));            
-            }
-        } else {
-            return redirect()->to(base_url('/login_petugas'));
-        }
-        
-    }
+    
 
     public function cetak_peminjaman()
     {
-        $bulan = $this->request->getPost('bulan');
-        $tahun = $this->request->getPost('tahun');
-        $status_peminjaman =  $this->request->getPost('status_dipinjam');
-
-        $nm_bulan = ["", "Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
-        $cetak_peminjaman = $this->ModelPeminjaman->cetak_peminjaman($bulan, $tahun, $status_peminjaman);
+        $status_peminjaman = $this->request->getPost('status_peminjaman');
+        $cetak_peminjaman = $this->ModelPeminjaman->cetak_peminjaman($status_peminjaman);
         $data = [
             'judul' => 'Cetak Peminjaman',
-            'bulan' => $bulan,
-            'nm_bulan' => $nm_bulan,
+            'status_peminjaman' => $status_peminjaman,
             'data_cetak' => $cetak_peminjaman,
-            'tahun' => $tahun
         ];
 
         return view('petugas/cetak_peminjaman', $data);
     }
 
-    public function rekap_pengembalian()
-    {
-        // data sesion wajib
-        $status_login = session()->get('status_login');
-        $nama_lengkap = session()->get('nama_lengkap');
-        $email = session()->get('email');
-        $role = session()->get('role');
-
-        $nm_bulan = ["", "Januari", "Februari", "Maret", "April", "
-        Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
-
-        if ($status_login == TRUE) {
-            if ($role == 'petugas') {
-                $data = [
-                    'judul' => 'Rekap Pengembalian Buku',
-                    'nm_bulan' =>  $nm_bulan,
-                    // data sesion wajib
-                    'nama_lengkap' => $nama_lengkap,
-                    'email' => $email,
-                    'nama_lengkap' => $nama_lengkap,
-                    'role' => $role,
-                ];
-                echo view('petugas/layout/head', $data);
-                echo view('petugas/layout/side');
-                echo view('petugas/layout/nav');
-                echo view('petugas/rekap_pengembalian');
-                echo view('petugas/layout/script');
-            } else {
-                return redirect()->to(base_url('/not_found'));
-            }
-        } else {
-            return redirect()->to(base_url('/login_petugas'));
-        }
-
-        
-    }
-
     public function cetak_pengembalian()
     {
-        $bulan = $this->request->getPost('bulan');
-        $tahun = $this->request->getPost('tahun');
-
-        $nm_bulan = ["", "Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
-        $cetak_pengembalian = $this->ModelPengembalian->cetak_pengembalian($bulan, $tahun);
+      
+        $cetak_pengembalian = $this->ModelPengembalian->cetak_pengembalian();
         $data = [
             'judul' => 'Cetak Peminjaman',
-            'bulan' => $bulan,
-            'nm_bulan' => $nm_bulan,
             'data_cetak' => $cetak_pengembalian,
-            'tahun' => $tahun
         ];
 
         return view('petugas/cetak_pengembalian', $data);

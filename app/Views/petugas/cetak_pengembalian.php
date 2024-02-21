@@ -69,13 +69,15 @@
         <div class="col-2">
           <!-- <img src="" alt=""> -->
         </div>
-        <div class="col-10">
+        <div class="col-10 text-center">
         <h3>
-            LAPORAN PENGEMBALIAN BUKU
-            <br>
-            PERIODE <?= strtoupper($nm_bulan[$bulan])?> <?= $tahun?>
-            <br>
-            PERPUSTAKAAN MADI
+        <?php 
+          $today = date("Y-m-d"); 
+
+          $tanggal_sekarang = date("d F Y", strtotime($today));
+          ?>
+            LAPORAN PENGEMBALIAN BUKU <br> <?= $tanggal_sekarang?>
+           
         </h3>
         </div>
     </div>

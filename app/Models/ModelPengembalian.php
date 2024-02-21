@@ -49,13 +49,11 @@ class ModelPengembalian extends Model
         return $result;
     }
 
-    public function cetak_pengembalian($bulan, $tahun)
+    public function cetak_pengembalian()
     {
         return $this->select('tb_pengembalian.*, tb_member.*, tb_buku.*')
             ->join('tb_member', 'tb_member.id_member = tb_pengembalian.id_member')
             ->join('tb_buku', 'tb_buku.id_buku = tb_pengembalian.id_buku')
-            ->where('MONTH(tanggal_pengembalian)', $bulan)
-            ->where('YEAR(tanggal_pengembalian)', $tahun)
             ->orderBy('tanggal_pengembalian', 'DESC') // Urutan tanggal terbaru (DESC)
             ->get()
             ->getResultArray();

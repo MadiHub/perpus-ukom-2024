@@ -93,18 +93,28 @@ class ModelPeminjaman extends Model
         return $builder->update($data);
     }
     
-    public function cetak_peminjaman($bulan, $tahun, $status_peminjaman)
+    public function cetak_peminjaman($status_peminjaman)
     {
         return $this->select('tb_peminjaman.*, tb_member.*, tb_buku.*')
             ->join('tb_member', 'tb_member.id_member = tb_peminjaman.id_member')
             ->join('tb_buku', 'tb_buku.id_buku = tb_peminjaman.id_buku')
             ->where('status_peminjaman', $status_peminjaman)
-            ->where('MONTH(tanggal_peminjaman)', $bulan)
-            ->where('YEAR(tanggal_peminjaman)', $tahun)
             ->orderBy('tanggal_peminjaman', 'DESC') // Urutan tanggal terbaru (DESC)
             ->get()
             ->getResultArray();
     }
+    // public function cetak_peminjaman($bulan, $tahun, $status_peminjaman)
+    // {
+    //     return $this->select('tb_peminjaman.*, tb_member.*, tb_buku.*')
+    //         ->join('tb_member', 'tb_member.id_member = tb_peminjaman.id_member')
+    //         ->join('tb_buku', 'tb_buku.id_buku = tb_peminjaman.id_buku')
+    //         ->where('status_peminjaman', $status_peminjaman)
+    //         ->where('MONTH(tanggal_peminjaman)', $bulan)
+    //         ->where('YEAR(tanggal_peminjaman)', $tahun)
+    //         ->orderBy('tanggal_peminjaman', 'DESC') // Urutan tanggal terbaru (DESC)
+    //         ->get()
+    //         ->getResultArray();
+    // }
 
 
     public function total_peminjaman()

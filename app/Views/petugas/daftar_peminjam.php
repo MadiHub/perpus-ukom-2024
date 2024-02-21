@@ -3,6 +3,12 @@
         <div class="container-lg">
           <div class="row">
                 <div class="card">
+                    <div class="print text-end">
+                        <form action="<?= base_url()?>cetak_peminjaman" method="post">
+                            <input type="hidden" value="di-pinjam" name="status_peminjaman">
+                        <button type="submit" class="btn btn-danger mt-3"><i class='fas fa-print'></i> Rekap Peminjaman</button>
+                        </form>
+                    </div>
                     <div class="card-body">
                         <table id="myTable" class="table table-bordered table-striped table-hover display responsive" width="100%">
                             <thead>
@@ -47,6 +53,7 @@
                                             data-id_peminjaman="<?= $peminjam['id_peminjaman'] ?>"
                                             data-id_buku="<?= $peminjam['id_buku'] ?>"
                                             data-id_member="<?= $peminjam['id_member'] ?>"
+                                            data-email="<?= $peminjam['email'] ?>"
                                             data-status_peminjaman="<?= $peminjam['status_peminjaman'] ?>"
                                             data-tanggal_pengembalian="<?= $peminjam['tanggal_pengembalian'] ?>"
                                             data-total_pinjam="<?= $peminjam['total_pinjam'] ?>"
@@ -95,6 +102,7 @@
             <form method="post" action="<?= base_url() ?>proses_edit_peminjaman">
                 <input type="hidden" class="form-control" name="id_peminjaman" id="id_peminjaman">
                 <input type="hidden" class="form-control" name="id_member" id="id_member">
+                <input type="hidden" class="form-control" name="email" id="email">
                 <input type="hidden" class="form-control" name="id_buku" id="id_buku">
                 <div class="mb-3">
                     <label for="total_pinjam" class="form-label">Status</label>
@@ -173,6 +181,7 @@
             $('.modal-body #id_peminjaman').val($(this).data('id_peminjaman'));
             $('.modal-body #id_buku').val($(this).data('id_buku'));
             $('.modal-body #id_member').val($(this).data('id_member'));
+            $('.modal-body #email').val($(this).data('email'));
             $('.modal-body #tanggal_pengembalian').val($(this).data('tanggal_pengembalian'));
             $('.modal-body #status_peminjaman').val($(this).data('status_peminjaman'));
             $('.modal-body #total_pinjam').val($(this).data('total_pinjam'));

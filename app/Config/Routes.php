@@ -23,7 +23,6 @@ $routes->get('cari_buku', 'Member::cari_buku');
 
 
 // auth
-$routes->get('portal_login', 'Auth::portal_login');
 $routes->get('login_petugas', 'Auth::login_petugas');
 $routes->post('proses_login_petugas', 'Auth::proses_login_petugas');
 $routes->get('login_member', 'Auth::login_member');
@@ -76,9 +75,7 @@ $routes->get('dashboard_petugas', 'Petugas::dashboard_petugas');
 $routes->get('daftar_peminjam', 'Petugas::daftar_peminjam');
 $routes->post('proses_edit_peminjaman', 'Petugas::proses_edit_peminjaman');
 $routes->get('daftar_pengembalian', 'Petugas::daftar_pengembalian');
-$routes->get('rekap_peminjaman', 'Petugas::rekap_peminjaman');
 $routes->post('cetak_peminjaman', 'Petugas::cetak_peminjaman');
-$routes->get('rekap_pengembalian', 'Petugas::rekap_pengembalian');
 $routes->post('cetak_pengembalian', 'Petugas::cetak_pengembalian');
 
 // pinjam buku

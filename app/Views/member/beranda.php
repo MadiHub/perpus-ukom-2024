@@ -2,13 +2,13 @@
     <div class="container-content" style="margin-top:110px">
         <div class="owl-carousel">
             <div class="img-banner" >
-                <img class=" img-fluid rounded" src="<?= base_url() ?>banner/4.png" alt="">
+                <img class=" img-fluid rounded" src="<?= base_url() ?>banner/3.png" alt="">
             </div>
             <div class="img-banner ">
-                <img class=" img-fluid rounded" src="<?= base_url() ?>banner/5.png" alt="">
+                <img class=" img-fluid rounded" src="<?= base_url() ?>banner/2.png" alt="">
             </div>
             <div class="img-banner ">
-                <img class=" img-fluid rounded" src="<?= base_url() ?>banner/6.png" alt="">
+                <img class=" img-fluid rounded" src="<?= base_url() ?>banner/1.png" alt="">
             </div>
         </div>
     </div>

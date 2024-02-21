@@ -26,7 +26,7 @@
                 </li>
                 <li class="nav-item ms-3">
                     <?php if($status_login == null) {
-                        echo "<a class='btn btn-danger btn-rounded' href='portal_login'>Masuk | Daftar</a>";
+                        echo "<a class='btn btn-danger btn-rounded' href='login_member'>Masuk | Daftar</a>";
                     } else {
                         echo "
                         <li class='nav-item dropdown'>
