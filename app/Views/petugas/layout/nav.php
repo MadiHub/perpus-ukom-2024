@@ -10,22 +10,7 @@
               <use xlink:href="<?= base_url() ?>admin/dist/assets/brand/coreui.svg#full"></use>
             </svg></a>
           <ul class="header-nav ms-3">
-            <li class="nav-item dropdown"><a class="nav-link py-0" data-coreui-toggle="dropdown" href="<?= base_url() ?>admin/dist/#" role="button" aria-haspopup="true" aria-expanded="false">
-                <div class="avatar avatar-md"><img class="avatar-img" src="<?= base_url() ?>admin/dist/assets/img/avatars/8.jpg" alt="user@email.com"></div>
-              </a>
-              <div class="dropdown-menu dropdown-menu-end pt-0">
-                  <a class="dropdown-item mt-2" href="<?= base_url() ?>profile_admin">
-                    <svg class="icon me-2">
-                      <use xlink:href="<?= base_url() ?>admin/dist/vendors/@coreui/icons/svg/free.svg#cil-user"></use>
-                    </svg> Profile
-                  </a>
-                  <a class="dropdown-item" href="<?= base_url() ?>logout">
-                    <svg class="icon me-2">
-                      <use xlink:href="<?= base_url() ?>admin/dist/vendors/@coreui/icons/svg/free.svg#cil-account-logout"></use>
-                    </svg> Logout
-                  </a>
-              </div>
-            </li>
+            <li> <a href="<?= base_url()?>logout" class="nav-link"><i class="fa-solid fa-right-from-bracket"></i> Keluar</a></li>
           </ul>
         </div>
         <div class="header-divider"></div>

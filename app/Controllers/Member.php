@@ -23,46 +23,43 @@ class Member extends BaseController
     }
 
     public function index()
-{
-    // data sesion
-    $status_login = session()->get('status_login');
-    $email = session()->get('email');
-    $id_member = session()->get('id_member');
-    $username = session()->get('username');
-    $nama_lengkap = session()->get('nama_lengkap');
-    $dapatkan_member = $this->ModelMember->dapatkan_member($email)->getRow();
+    {
+        // data sesion
+        $status_login = session()->get('status_login');
+        $email = session()->get('email');
+        $id_member = session()->get('id_member');
+        $username = session()->get('username');
+        $nama_lengkap = session()->get('nama_lengkap');
+        $dapatkan_member = $this->ModelMember->dapatkan_member($email)->getRow();
 
-    // Mendapatkan data semua buku dan kategori buku
-    $semua_buku = $this->ModelBuku->semua_buku();
-    $semua_kategori_buku = $this->ModelKategoriBuku->semua_kategori_buku();
+        // Mendapatkan data semua buku dan kategori buku
+        $semua_buku = $this->ModelBuku->semua_buku();
+        $semua_kategori_buku = $this->ModelKategoriBuku->semua_kategori_buku();
 
-    // Cek apakah ada parameter pencarian
-    $cari_buku = $this->request->getGet('cari_buku');
+        // Cek apakah ada parameter pencarian
+        $cari_buku = $this->request->getGet('cari_buku');
 
-    // Jika ada parameter pencarian, cari buku berdasarkan pencarian
-    if ($cari_buku) {
-        $semua_buku = $this->ModelBuku->cari_buku($cari_buku);
+        // Jika ada parameter pencarian, cari buku berdasarkan pencarian
+        if ($cari_buku) {
+            $semua_buku = $this->ModelBuku->cari_buku($cari_buku);
+        }
+
+        $data = [
+            'judul' => 'Beranda Member',
+            'semua_buku' => $semua_buku,
+            'semua_kategori_buku' => $semua_kategori_buku,
+            'status_login' => $status_login,
+            'id_member' => $id_member,
+            'username' => $username,
+            'nama_lengkap' => $nama_lengkap,
+            'email' => $email,
+        ];
+
+        echo view('member/layout/head', $data);
+        echo view('member/layout/nav');
+        echo view('member/beranda');
+        echo view('member/layout/footer');
     }
-
-    $data = [
-        'judul' => 'Beranda Member',
-        'semua_buku' => $semua_buku,
-        'semua_kategori_buku' => $semua_kategori_buku,
-        'status_login' => $status_login,
-        'id_member' => $id_member,
-        'username' => $username,
-        'nama_lengkap' => $nama_lengkap,
-        'email' => $email,
-    ];
-
-    echo view('member/layout/head', $data);
-    echo view('member/layout/nav');
-    echo view('member/beranda');
-    echo view('member/layout/footer');
-}
-
-
-  
 
     public function not_found() {
         return view('not_found');
@@ -85,6 +82,8 @@ class Member extends BaseController
         $tahun_terbit = $dapatkan_buku->tahun_terbit;
         $sampul_buku = $dapatkan_buku->sampul_buku;
         $nama_kategori_buku = $dapatkan_buku->nama_kategori_buku;
+        $nama_sub_kategori = $dapatkan_buku->nama_sub_kategori;
+        $stok = $dapatkan_buku->stok;
 
         $semua_kategori_buku = $this->ModelKategoriBuku->semua_kategori_buku();
         $semua_ulasan = $this->ModelUlasan->ulasanByBuku($id_buku);
@@ -92,28 +91,36 @@ class Member extends BaseController
 
         if ($status_login == TRUE) {
             if ($id_member) {
-                $data = [
-                    'id_buku'  => $id_buku,
-                    'id_member'  => $id_member,
-                    'id_kategori_buku' => $id_kategori_buku,
-                    'nama_lengkap' => $nama_lengkap,
-                    'email' => $email,
-                    'status_login' => $status_login,
-                    'tanggal_pinjam' => $tanggal_pinjam,
-                    'judul' => $judul,
-                    'penulis' => $penulis,
-                    'penerbit' => $penerbit,
-                    'tahun_terbit' => $tahun_terbit,
-                    'sampul_buku' => $sampul_buku,
-                    'nama_kategori_buku' => $nama_kategori_buku,
-                    'semua_kategori_buku' => $semua_kategori_buku,
-                    'semua_ulasan' => $semua_ulasan,
-                    'avgRating' => $avgRating,
-                ];
-                echo view('member/layout/head', $data);
-                echo view('member/layout/nav', $data);
-                echo view('member/pinjam_buku', $data);
-                echo view('member/layout/footer', $data);
+                if ($stok > '0') {
+                    $data = [
+                        'id_buku'  => $id_buku,
+                        'id_member'  => $id_member,
+                        'id_kategori_buku' => $id_kategori_buku,
+                        'nama_lengkap' => $nama_lengkap,
+                        'email' => $email,
+                        'status_login' => $status_login,
+                        'tanggal_pinjam' => $tanggal_pinjam,
+                        'judul' => $judul,
+                        'penulis' => $penulis,
+                        'penerbit' => $penerbit,
+                        'tahun_terbit' => $tahun_terbit,
+                        'sampul_buku' => $sampul_buku,
+                        'nama_kategori_buku' => $nama_kategori_buku,
+                        'nama_sub_kategori' => $nama_sub_kategori,
+                        'semua_kategori_buku' => $semua_kategori_buku,
+                        'semua_ulasan' => $semua_ulasan,
+                        'avgRating' => $avgRating,
+                        'stok' => $stok,
+                    ];
+                    echo view('member/layout/head', $data);
+                    echo view('member/layout/nav', $data);
+                    echo view('member/pinjam_buku', $data);
+                    echo view('member/layout/footer', $data);
+                } else {
+                    session()->setFlashdata('info', 'Maaf Stok Buku Habis');
+                    return redirect()->to(base_url('/'));
+                }
+                
 
             } else {
                 session()->setFlashdata('info', 'Petugas Tidak Bisa Meminjam Buku');
@@ -135,12 +142,20 @@ class Member extends BaseController
         $status_peminjaman = 'di-pinjam';
 
         // Verifikasi apakah buku sudah dipinjam oleh anggota
-        $buku_dipinjam = $this->ModelPeminjaman->cek_buku_dipinjam($id_member, $id_buku);
-
+        $buku_dipinjam = $this->ModelPeminjaman->cek_buku_dipinjam($id_member, $id_buku, $tanggal_peminjaman, $tanggal_pengembalian);
+        // dd($buku_dipinjam->total_pinjam);
+    
         if ($buku_dipinjam) {
-            // Jika buku sudah dipinjam, berikan pesan kesalahan atau ambil tindakan lain sesuai kebutuhan.
-            session()->setFlashdata('error', 'Anda sudah meminjam buku ini sebelumnya.');
-            return redirect()->to(base_url('/'));
+            $total_pinjam_lama = $buku_dipinjam->total_pinjam;
+            $tanggal_peminjaman_lama = $buku_dipinjam->tanggal_peminjaman;
+            $tanggal_pengembalian_lama = $buku_dipinjam->tanggal_pengembalian;
+            $total_pinjam_baru = $total_pinjam_lama + $total_pinjam;
+            $total_pinjam_baru = [
+                'total_pinjam' => $total_pinjam_baru
+            ];
+            session()->setFlashdata('success', 'Berhasil Meminjam Buku');
+            $tambah_peminjaman = $this->ModelPeminjaman->edit_total_pinjam($total_pinjam_baru, $id_buku, $id_member, $tanggal_peminjaman_lama, $tanggal_pengembalian_lama);
+            return redirect()->to(base_url('riwayat_peminjaman'));
         }
         $data = [
             'id_member' => $id_member,
@@ -171,10 +186,12 @@ class Member extends BaseController
         $status_login = session()->get('status_login');
         
         $buku_dipinjam_by_member = $this->ModelPeminjaman->buku_dipinjam_by_member($id_member);
+        $semua_kategori_buku = $this->ModelKategoriBuku->semua_kategori_buku();
 
         if ($status_login == TRUE) {
             $data = [
                 'buku_dipinjam_by_member'  => $buku_dipinjam_by_member,
+                'semua_kategori_buku'  => $semua_kategori_buku,
                 'status_login'  => $status_login,
                 'judul'  => 'Riwayat Peminjaman',
                 'nama_lengkap'  => $nama_lengkap
@@ -182,6 +199,7 @@ class Member extends BaseController
             echo view('member/layout/head', $data);
             echo view('member/layout/nav');
             echo view('member/riwayat_peminjaman');
+            echo view('member/layout/footer');   
         } else {
             return redirect()->to(base_url('/login_member'));
         }
@@ -197,10 +215,12 @@ class Member extends BaseController
         $tanggal_pinjam = date("Y-m-d");
         
         $buku_dikembalikan_by_member = $this->ModelPengembalian->buku_dikembalikan_by_member($id_member);
+        $semua_kategori_buku = $this->ModelKategoriBuku->semua_kategori_buku();
 
         if ($status_login == TRUE) {
             $data = [
                 'buku_dikembalikan_by_member'  => $buku_dikembalikan_by_member,
+                'semua_kategori_buku'  => $semua_kategori_buku,
                 'status_login'  => $status_login,
                 'judul'  => 'Riwayat Pengembalian',
                 'nama_lengkap'  => $nama_lengkap
@@ -208,6 +228,7 @@ class Member extends BaseController
             echo view('member/layout/head', $data);
             echo view('member/layout/nav');
             echo view('member/riwayat_pengembalian');
+            echo view('member/layout/footer');   
         } else {
             return redirect()->to(base_url('/login_member'));
         }
@@ -223,17 +244,20 @@ class Member extends BaseController
         $tanggal_pinjam = date("Y-m-d");
         
         $semua_koleksi_by_member = $this->ModelKoleksiBuku->semua_koleksi_by_member($id_member);
+        $semua_kategori_buku = $this->ModelKategoriBuku->semua_kategori_buku();
 
         if ($status_login == TRUE) {
             $data = [
                 'semua_koleksi_by_member'  => $semua_koleksi_by_member,
                 'status_login'  => $status_login,
                 'judul'  => 'Koleksi Buku',
+                'semua_kategori_buku'  => $semua_kategori_buku,
                 'nama_lengkap'  => $nama_lengkap
             ];
             echo view('member/layout/head', $data);
             echo view('member/layout/nav');
             echo view('member/koleksi_buku');
+            echo view('member/layout/footer');
         } else {
             return redirect()->to(base_url('/login_member'));
         }

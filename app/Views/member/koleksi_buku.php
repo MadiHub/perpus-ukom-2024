@@ -10,49 +10,46 @@
     <link rel="stylesheet" href="<?= base_url() ?>DataTables/datatables.min.css">
 </head>
 <body>
-    <div class="container-lg" style="margin-top:110px">
-          <div class="row">
-                <div class="card">
-                    <div class="card-header text-center">
-                        <h5>Koleksi Buku</h5>
-                    </div>
-                    <div class="card-body">
-                        <table id="tablePeminjaman" class="table table-bordered table-striped table-hover">
-                            <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>Sampul Buku</th>
-                                    <th>Judul</th>
-                                    <th>Nama Kategori</th>
-                                    <th>Aksi</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <?php $no = 1; foreach($semua_koleksi_by_member as $koleksi): ?>
-                                <tr>
-                                    <td><?= $no++ ?></td>
-                                    <td><img src="<?= base_url() ?>buku/<?= $koleksi['sampul_buku'] ?>" alt="sampul" width="50"></td>
-                                    <td><?= $koleksi['judul'] ?></td>
-                                    <td><?= $koleksi['nama_kategori_buku'] ?></td>
-                                    <td>
-                                        <a href="<?= base_url() ?>pinjam_buku/<?= $koleksi['id_buku']?>" class="btn btn-success">Detail Buku</a>
-                                        <button type="button" class="btn btn-danger" onclick="hapusKoleksi('<?= $koleksi['id_buku'] ?>', '<?= $koleksi['judul'] ?>')">
-                                        <i class="fa-solid fa-trash-can"></i>
-                                    </button>
-                                    </td>
-                                </tr>
-                                <?php endforeach; ?>
-                                
-                            </tbody>
-                        </table>
-                    </div>
+
+    <!-- CARD -->
+    <div class="populer" style="margin-top: 100px">
+        <div class="container-content">
+            <div class="row">
+                <div class="col mt-4">
+                    <h3>Daftar Koleksi</h3>
                 </div>
             </div>
-          <!-- /.row-->
-          
-          <!-- /.row-->
+            <div class="card">
+                <div class="container">
+                <div class="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3 mt-3 text-center">
+                    <?php if (empty($semua_koleksi_by_member)): ?>
+                        <img src="<?= base_url() ?>buku/buku404.png" class="img buku-404" alt="course">
+                    <?php else: ?>
+                        <?php $no = 1; foreach($semua_koleksi_by_member as $koleksi): ?>
+                            <!-- Card 1 -->
+                            <div class="col">
+                                <div class="card-produk mr-2" style="border: none; background: transparent;">
+                                    <a href="<?= base_url() ?>pinjam_buku/<?= $koleksi['id_buku']?>">
+                                        <div class="img-card-produk mt-1 mr-1 ml-1 mb-1" style="max-height: 400px; max-weight: 400px; overflow: hidden;">
+                                            <img src="<?= base_url() ?>buku/<?= $koleksi['sampul_buku']?>" class="card-produk-img-top img-fluid" alt="course">
+                                        </div>
+                                    </a>
+                                    <div class="container">
+                                    <div class="kategori mt-2 mr-6 text-start">
+                                        <p><a href="<?= base_url() ?>ID-<?= $koleksi['id_kategori_buku']?>"><?= $koleksi['nama_kategori_buku']?></a></p>
+                                    </div>
+                                    <div class="judul text-start">
+                                        <h6 class="mb-2"><a href="<?= base_url() ?>pinjam_buku/<?= $koleksi['id_buku']?>"><?= $koleksi['judul']?></a></h6>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php endforeach; ?>
+                    <?php endif; ?>
+                </div>
+            </div>
+        </div>
     </div>
-
     <!-- script jquery -->
     <script src="<?= base_url() ?>jquery/jquery.slim.min.js"></script>
     <!-- script datatables -->

@@ -52,13 +52,25 @@ class ModelPeminjaman extends Model
     }
 
     // query untuk method proses_pinjam_buku
-    public function cek_buku_dipinjam($id_member, $id_buku)
+    // public function cek_buku_dipinjam($id_member, $id_buku)
+    // {
+    //     return $this->where('id_member', $id_member)
+    //                 ->where('id_buku', $id_buku)
+    //                 ->where('status_peminjaman', 'di-pinjam')
+    //                 ->countAllResults() > 0;
+    // }
+    
+    public function cek_buku_dipinjam($id_member, $id_buku, $tanggal_peminjaman, $tanggal_pengembalian)
     {
         return $this->where('id_member', $id_member)
                     ->where('id_buku', $id_buku)
+                    ->where('tanggal_peminjaman', $tanggal_peminjaman)
+                    ->where('tanggal_pengembalian', $tanggal_pengembalian)
                     ->where('status_peminjaman', 'di-pinjam')
-                    ->countAllResults() > 0;
+                    ->get()
+                    ->getRow();
     }
+    
     
     // query untuk method daftar_peminjam
     public function getAllStatusDipinjam()
@@ -103,18 +115,17 @@ class ModelPeminjaman extends Model
             ->get()
             ->getResultArray();
     }
-    // public function cetak_peminjaman($bulan, $tahun, $status_peminjaman)
-    // {
-    //     return $this->select('tb_peminjaman.*, tb_member.*, tb_buku.*')
-    //         ->join('tb_member', 'tb_member.id_member = tb_peminjaman.id_member')
-    //         ->join('tb_buku', 'tb_buku.id_buku = tb_peminjaman.id_buku')
-    //         ->where('status_peminjaman', $status_peminjaman)
-    //         ->where('MONTH(tanggal_peminjaman)', $bulan)
-    //         ->where('YEAR(tanggal_peminjaman)', $tahun)
-    //         ->orderBy('tanggal_peminjaman', 'DESC') // Urutan tanggal terbaru (DESC)
-    //         ->get()
-    //         ->getResultArray();
-    // }
+ 
+    public function edit_total_pinjam($total_pinjam_baru, $id_buku, $id_member, $tanggal_peminjaman_lama, $tanggal_pengembalian_lama)
+    {
+        $builder = $this->db->table($this->table);
+        $builder->where('id_buku', $id_buku);
+        $builder->where('id_member', $id_member);
+        $builder->where('tanggal_peminjaman', $tanggal_peminjaman_lama);
+        $builder->where('tanggal_pengembalian', $tanggal_pengembalian_lama);
+        return $builder->update($total_pinjam_baru);
+    }
+
 
 
     public function total_peminjaman()

@@ -22,11 +22,29 @@
  }
  .navbar {
 transition: background-color 0.3s, box-shadow 0.3s;
+color: #DF791E;
+
 }
 .navbar.sticky {
-background-color: #ffffff; /* Sticky background color */
+background-color: #862B0D; /* Sticky background color */
 box-shadow: 0 4px 2px -2px rgba(0,0,0,0.1); /* Sticky box shadow */
 }
+.navbar.sticky ul li a{
+    color: #FFC95F !important;
+}
+.navbar.sticky .dropdown-menu {
+    background-color: #862B0D !important; /* Sticky dropdown background color */
+}
+.navbar.sticky .navbar-brand {
+    color: #FFC95F !important; /* Sticky dropdown background color */
+}
+/* Warna latar belakang pada dropdown menu saat hover */
+/* Warna latar belakang pada semua item dropdown menu saat hover */
+.navbar .nav-item.dropdown:hover .dropdown-menu a.dropdown-item:hover {
+    background-color: #FFF9C9 !important; /* Ganti dengan warna latar belakang yang diinginkan saat hover */
+}
+
+
 
 @keyframes fadeIn {
     from {
@@ -55,6 +73,14 @@ animation: fadeIn 0.5s ease-in-out;
         margin-right: auto;
     }
 }
+/* responsive card-produk desktop */
+@media (min-width: 992px) {
+    .card-produk {
+        width: 10rem;  /* Sesuaikan lebar sesuai kebutuhan */
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
 .judul h6 a {
     font-weight: 500px;
     font-size: 20px;
@@ -63,13 +89,13 @@ animation: fadeIn 0.5s ease-in-out;
     transition: color 0.3s; 
 }
 .judul h6 a:hover {
-    color: #0E51A5;
+    color: #862B0D;
     text-decoration: none; 
 }
 .kategori p a {
     font-weight: 500;
     font-size: 15px;
-    color: #DF791E;
+    color: #862B0D;
     text-decoration: none;
     transition: color 0.3s; 
 }

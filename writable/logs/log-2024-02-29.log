@@ -1,0 +1,1021 @@
+WARNING - 2024-02-29 06:41:54 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelPetugas is deprecated in APPPATH/Controllers/Auth.php on line 11.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:41:54 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelMember is deprecated in APPPATH/Controllers/Auth.php on line 12.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+INFO - 2024-02-29 06:41:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-29 06:42:00 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelBuku is deprecated in APPPATH/Controllers/Member.php on line 16.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:42:00 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelMember is deprecated in APPPATH/Controllers/Member.php on line 17.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:42:00 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelPeminjaman is deprecated in APPPATH/Controllers/Member.php on line 18.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:42:00 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelPengembalian is deprecated in APPPATH/Controllers/Member.php on line 19.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:42:00 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelUlasan is deprecated in APPPATH/Controllers/Member.php on line 20.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:42:00 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelKoleksiBuku is deprecated in APPPATH/Controllers/Member.php on line 21.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:42:00 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelKategoriBuku is deprecated in APPPATH/Controllers/Member.php on line 22.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+INFO - 2024-02-29 06:42:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-29 06:43:18 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelBuku is deprecated in APPPATH/Controllers/Member.php on line 16.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:43:18 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelMember is deprecated in APPPATH/Controllers/Member.php on line 17.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:43:18 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelPeminjaman is deprecated in APPPATH/Controllers/Member.php on line 18.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:43:18 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelPengembalian is deprecated in APPPATH/Controllers/Member.php on line 19.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:43:18 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelUlasan is deprecated in APPPATH/Controllers/Member.php on line 20.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:43:18 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelKoleksiBuku is deprecated in APPPATH/Controllers/Member.php on line 21.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:43:18 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelKategoriBuku is deprecated in APPPATH/Controllers/Member.php on line 22.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+INFO - 2024-02-29 06:43:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-29 06:43:18 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelPetugas is deprecated in APPPATH/Controllers/Auth.php on line 11.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:43:18 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelMember is deprecated in APPPATH/Controllers/Auth.php on line 12.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+INFO - 2024-02-29 06:43:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-29 06:43:28 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelPetugas is deprecated in APPPATH/Controllers/Auth.php on line 11.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:43:28 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelMember is deprecated in APPPATH/Controllers/Auth.php on line 12.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+INFO - 2024-02-29 06:43:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-29 06:43:28 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelBuku is deprecated in APPPATH/Controllers/Member.php on line 16.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:43:28 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelMember is deprecated in APPPATH/Controllers/Member.php on line 17.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:43:28 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelPeminjaman is deprecated in APPPATH/Controllers/Member.php on line 18.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:43:28 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelPengembalian is deprecated in APPPATH/Controllers/Member.php on line 19.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:43:28 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelUlasan is deprecated in APPPATH/Controllers/Member.php on line 20.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:43:28 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelKoleksiBuku is deprecated in APPPATH/Controllers/Member.php on line 21.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:43:28 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelKategoriBuku is deprecated in APPPATH/Controllers/Member.php on line 22.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+INFO - 2024-02-29 06:43:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-29 06:43:55 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelBuku is deprecated in APPPATH/Controllers/Member.php on line 16.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:43:55 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelMember is deprecated in APPPATH/Controllers/Member.php on line 17.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:43:55 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelPeminjaman is deprecated in APPPATH/Controllers/Member.php on line 18.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:43:55 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelPengembalian is deprecated in APPPATH/Controllers/Member.php on line 19.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:43:55 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelUlasan is deprecated in APPPATH/Controllers/Member.php on line 20.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:43:55 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelKoleksiBuku is deprecated in APPPATH/Controllers/Member.php on line 21.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:43:55 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelKategoriBuku is deprecated in APPPATH/Controllers/Member.php on line 22.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+INFO - 2024-02-29 06:43:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-29 06:44:19 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelBuku is deprecated in APPPATH/Controllers/Member.php on line 16.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:44:19 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelMember is deprecated in APPPATH/Controllers/Member.php on line 17.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:44:19 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelPeminjaman is deprecated in APPPATH/Controllers/Member.php on line 18.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:44:19 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelPengembalian is deprecated in APPPATH/Controllers/Member.php on line 19.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:44:19 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelUlasan is deprecated in APPPATH/Controllers/Member.php on line 20.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:44:19 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelKoleksiBuku is deprecated in APPPATH/Controllers/Member.php on line 21.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:44:19 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelKategoriBuku is deprecated in APPPATH/Controllers/Member.php on line 22.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+INFO - 2024-02-29 06:44:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-29 06:44:19 --> Attempt to read property "id_buku" on null
+in APPPATH/Controllers/Member.php on line 77.
+ 1 APPPATH/Controllers/Member.php(77): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Member->pinjam_buku()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:44:25 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelBuku is deprecated in APPPATH/Controllers/Member.php on line 16.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:44:25 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelMember is deprecated in APPPATH/Controllers/Member.php on line 17.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:44:25 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelPeminjaman is deprecated in APPPATH/Controllers/Member.php on line 18.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:44:25 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelPengembalian is deprecated in APPPATH/Controllers/Member.php on line 19.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:44:25 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelUlasan is deprecated in APPPATH/Controllers/Member.php on line 20.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:44:25 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelKoleksiBuku is deprecated in APPPATH/Controllers/Member.php on line 21.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:44:25 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelKategoriBuku is deprecated in APPPATH/Controllers/Member.php on line 22.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+INFO - 2024-02-29 06:44:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-29 06:44:27 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelBuku is deprecated in APPPATH/Controllers/Member.php on line 16.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:44:27 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelMember is deprecated in APPPATH/Controllers/Member.php on line 17.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:44:27 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelPeminjaman is deprecated in APPPATH/Controllers/Member.php on line 18.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:44:27 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelPengembalian is deprecated in APPPATH/Controllers/Member.php on line 19.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:44:27 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelUlasan is deprecated in APPPATH/Controllers/Member.php on line 20.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:44:27 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelKoleksiBuku is deprecated in APPPATH/Controllers/Member.php on line 21.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:44:27 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelKategoriBuku is deprecated in APPPATH/Controllers/Member.php on line 22.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+INFO - 2024-02-29 06:44:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-29 06:44:33 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelPetugas is deprecated in APPPATH/Controllers/Auth.php on line 11.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:44:33 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelMember is deprecated in APPPATH/Controllers/Auth.php on line 12.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+INFO - 2024-02-29 06:44:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-29 06:44:33 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelBuku is deprecated in APPPATH/Controllers/Member.php on line 16.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:44:33 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelMember is deprecated in APPPATH/Controllers/Member.php on line 17.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:44:33 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelPeminjaman is deprecated in APPPATH/Controllers/Member.php on line 18.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:44:33 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelPengembalian is deprecated in APPPATH/Controllers/Member.php on line 19.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:44:33 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelUlasan is deprecated in APPPATH/Controllers/Member.php on line 20.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:44:33 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelKoleksiBuku is deprecated in APPPATH/Controllers/Member.php on line 21.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:44:33 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelKategoriBuku is deprecated in APPPATH/Controllers/Member.php on line 22.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+INFO - 2024-02-29 06:44:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-29 06:44:42 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelPetugas is deprecated in APPPATH/Controllers/Auth.php on line 11.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:44:42 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelMember is deprecated in APPPATH/Controllers/Auth.php on line 12.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+INFO - 2024-02-29 06:44:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-29 06:44:52 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelPetugas is deprecated in APPPATH/Controllers/Auth.php on line 11.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:44:52 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelMember is deprecated in APPPATH/Controllers/Auth.php on line 12.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+INFO - 2024-02-29 06:44:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-29 06:44:53 --> [DEPRECATED] Creation of dynamic property App\Controllers\Petugas::$ModelPeminjaman is deprecated in APPPATH/Controllers/Petugas.php on line 14.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Petugas->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:44:53 --> [DEPRECATED] Creation of dynamic property App\Controllers\Petugas::$ModelPengembalian is deprecated in APPPATH/Controllers/Petugas.php on line 15.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Petugas->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:44:53 --> [DEPRECATED] Creation of dynamic property App\Controllers\Petugas::$ModelBuku is deprecated in APPPATH/Controllers/Petugas.php on line 16.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Petugas->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:44:53 --> [DEPRECATED] Creation of dynamic property App\Controllers\Petugas::$ModelMember is deprecated in APPPATH/Controllers/Petugas.php on line 17.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Petugas->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+INFO - 2024-02-29 06:44:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-29 06:44:57 --> [DEPRECATED] Creation of dynamic property App\Controllers\Petugas::$ModelPeminjaman is deprecated in APPPATH/Controllers/Petugas.php on line 14.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Petugas->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:44:57 --> [DEPRECATED] Creation of dynamic property App\Controllers\Petugas::$ModelPengembalian is deprecated in APPPATH/Controllers/Petugas.php on line 15.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Petugas->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:44:57 --> [DEPRECATED] Creation of dynamic property App\Controllers\Petugas::$ModelBuku is deprecated in APPPATH/Controllers/Petugas.php on line 16.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Petugas->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:44:57 --> [DEPRECATED] Creation of dynamic property App\Controllers\Petugas::$ModelMember is deprecated in APPPATH/Controllers/Petugas.php on line 17.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Petugas->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+INFO - 2024-02-29 06:44:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-29 06:45:14 --> [DEPRECATED] Creation of dynamic property App\Controllers\Petugas::$ModelPeminjaman is deprecated in APPPATH/Controllers/Petugas.php on line 14.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Petugas->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:45:14 --> [DEPRECATED] Creation of dynamic property App\Controllers\Petugas::$ModelPengembalian is deprecated in APPPATH/Controllers/Petugas.php on line 15.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Petugas->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:45:14 --> [DEPRECATED] Creation of dynamic property App\Controllers\Petugas::$ModelBuku is deprecated in APPPATH/Controllers/Petugas.php on line 16.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Petugas->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:45:14 --> [DEPRECATED] Creation of dynamic property App\Controllers\Petugas::$ModelMember is deprecated in APPPATH/Controllers/Petugas.php on line 17.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Petugas->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+INFO - 2024-02-29 06:45:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-29 06:45:39 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelPetugas is deprecated in APPPATH/Controllers/Auth.php on line 11.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:45:39 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelMember is deprecated in APPPATH/Controllers/Auth.php on line 12.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+INFO - 2024-02-29 06:45:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-29 06:45:39 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelBuku is deprecated in APPPATH/Controllers/Member.php on line 16.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:45:39 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelMember is deprecated in APPPATH/Controllers/Member.php on line 17.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:45:39 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelPeminjaman is deprecated in APPPATH/Controllers/Member.php on line 18.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:45:39 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelPengembalian is deprecated in APPPATH/Controllers/Member.php on line 19.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:45:39 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelUlasan is deprecated in APPPATH/Controllers/Member.php on line 20.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:45:39 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelKoleksiBuku is deprecated in APPPATH/Controllers/Member.php on line 21.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:45:39 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelKategoriBuku is deprecated in APPPATH/Controllers/Member.php on line 22.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+INFO - 2024-02-29 06:45:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-29 06:45:55 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelPetugas is deprecated in APPPATH/Controllers/Auth.php on line 11.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:45:55 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelMember is deprecated in APPPATH/Controllers/Auth.php on line 12.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+INFO - 2024-02-29 06:45:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-29 06:46:03 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelPetugas is deprecated in APPPATH/Controllers/Auth.php on line 11.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:46:03 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelMember is deprecated in APPPATH/Controllers/Auth.php on line 12.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+INFO - 2024-02-29 06:46:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-29 06:46:03 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin::$ModelKategoriBuku is deprecated in APPPATH/Controllers/Admin.php on line 16.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Admin->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:46:03 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin::$ModelBuku is deprecated in APPPATH/Controllers/Admin.php on line 17.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Admin->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:46:03 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin::$ModelSubKategori is deprecated in APPPATH/Controllers/Admin.php on line 18.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Admin->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:46:03 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin::$ModelPetugas is deprecated in APPPATH/Controllers/Admin.php on line 19.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Admin->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:46:03 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin::$ModelMember is deprecated in APPPATH/Controllers/Admin.php on line 20.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Admin->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+INFO - 2024-02-29 06:46:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-29 06:46:19 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin::$ModelKategoriBuku is deprecated in APPPATH/Controllers/Admin.php on line 16.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Admin->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:46:19 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin::$ModelBuku is deprecated in APPPATH/Controllers/Admin.php on line 17.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Admin->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:46:19 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin::$ModelSubKategori is deprecated in APPPATH/Controllers/Admin.php on line 18.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Admin->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:46:19 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin::$ModelPetugas is deprecated in APPPATH/Controllers/Admin.php on line 19.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Admin->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:46:19 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin::$ModelMember is deprecated in APPPATH/Controllers/Admin.php on line 20.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Admin->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+INFO - 2024-02-29 06:46:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-29 06:46:24 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin::$ModelKategoriBuku is deprecated in APPPATH/Controllers/Admin.php on line 16.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Admin->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:46:24 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin::$ModelBuku is deprecated in APPPATH/Controllers/Admin.php on line 17.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Admin->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:46:24 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin::$ModelSubKategori is deprecated in APPPATH/Controllers/Admin.php on line 18.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Admin->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:46:24 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin::$ModelPetugas is deprecated in APPPATH/Controllers/Admin.php on line 19.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Admin->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:46:24 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin::$ModelMember is deprecated in APPPATH/Controllers/Admin.php on line 20.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Admin->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+INFO - 2024-02-29 06:46:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-29 06:46:41 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelPetugas is deprecated in APPPATH/Controllers/Auth.php on line 11.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:46:41 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelMember is deprecated in APPPATH/Controllers/Auth.php on line 12.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+INFO - 2024-02-29 06:46:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-29 06:46:41 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelBuku is deprecated in APPPATH/Controllers/Member.php on line 16.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:46:41 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelMember is deprecated in APPPATH/Controllers/Member.php on line 17.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:46:41 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelPeminjaman is deprecated in APPPATH/Controllers/Member.php on line 18.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:46:41 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelPengembalian is deprecated in APPPATH/Controllers/Member.php on line 19.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:46:41 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelUlasan is deprecated in APPPATH/Controllers/Member.php on line 20.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:46:41 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelKoleksiBuku is deprecated in APPPATH/Controllers/Member.php on line 21.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:46:41 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelKategoriBuku is deprecated in APPPATH/Controllers/Member.php on line 22.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+INFO - 2024-02-29 06:46:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-29 06:46:44 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelBuku is deprecated in APPPATH/Controllers/Member.php on line 16.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:46:44 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelMember is deprecated in APPPATH/Controllers/Member.php on line 17.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:46:44 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelPeminjaman is deprecated in APPPATH/Controllers/Member.php on line 18.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:46:44 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelPengembalian is deprecated in APPPATH/Controllers/Member.php on line 19.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:46:44 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelUlasan is deprecated in APPPATH/Controllers/Member.php on line 20.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:46:44 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelKoleksiBuku is deprecated in APPPATH/Controllers/Member.php on line 21.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:46:44 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelKategoriBuku is deprecated in APPPATH/Controllers/Member.php on line 22.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+INFO - 2024-02-29 06:46:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-29 06:46:44 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelPetugas is deprecated in APPPATH/Controllers/Auth.php on line 11.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:46:44 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelMember is deprecated in APPPATH/Controllers/Auth.php on line 12.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+INFO - 2024-02-29 06:46:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-29 06:47:44 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelPetugas is deprecated in APPPATH/Controllers/Auth.php on line 11.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:47:44 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelMember is deprecated in APPPATH/Controllers/Auth.php on line 12.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+INFO - 2024-02-29 06:47:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-29 06:50:49 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelPetugas is deprecated in APPPATH/Controllers/Auth.php on line 11.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:50:49 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelMember is deprecated in APPPATH/Controllers/Auth.php on line 12.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+INFO - 2024-02-29 06:50:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-29 06:50:49 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelPetugas is deprecated in APPPATH/Controllers/Auth.php on line 11.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:50:49 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelMember is deprecated in APPPATH/Controllers/Auth.php on line 12.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+INFO - 2024-02-29 06:50:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-29 06:51:01 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelPetugas is deprecated in APPPATH/Controllers/Auth.php on line 11.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:51:01 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelMember is deprecated in APPPATH/Controllers/Auth.php on line 12.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+INFO - 2024-02-29 06:51:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-29 06:51:01 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelPetugas is deprecated in APPPATH/Controllers/Auth.php on line 11.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:51:01 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelMember is deprecated in APPPATH/Controllers/Auth.php on line 12.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+INFO - 2024-02-29 06:51:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-29 06:51:17 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelPetugas is deprecated in APPPATH/Controllers/Auth.php on line 11.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:51:17 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelMember is deprecated in APPPATH/Controllers/Auth.php on line 12.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+INFO - 2024-02-29 06:51:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-29 06:51:17 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelPetugas is deprecated in APPPATH/Controllers/Auth.php on line 11.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:51:17 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelMember is deprecated in APPPATH/Controllers/Auth.php on line 12.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+INFO - 2024-02-29 06:51:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-29 06:52:45 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelPetugas is deprecated in APPPATH/Controllers/Auth.php on line 11.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:52:45 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelMember is deprecated in APPPATH/Controllers/Auth.php on line 12.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+INFO - 2024-02-29 06:52:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-29 06:52:45 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelBuku is deprecated in APPPATH/Controllers/Member.php on line 16.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:52:45 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelMember is deprecated in APPPATH/Controllers/Member.php on line 17.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:52:45 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelPeminjaman is deprecated in APPPATH/Controllers/Member.php on line 18.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:52:45 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelPengembalian is deprecated in APPPATH/Controllers/Member.php on line 19.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:52:45 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelUlasan is deprecated in APPPATH/Controllers/Member.php on line 20.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:52:45 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelKoleksiBuku is deprecated in APPPATH/Controllers/Member.php on line 21.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:52:45 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelKategoriBuku is deprecated in APPPATH/Controllers/Member.php on line 22.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+INFO - 2024-02-29 06:52:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-29 06:55:26 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelPetugas is deprecated in APPPATH/Controllers/Auth.php on line 11.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:55:26 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelMember is deprecated in APPPATH/Controllers/Auth.php on line 12.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+INFO - 2024-02-29 06:55:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-29 06:55:26 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelBuku is deprecated in APPPATH/Controllers/Member.php on line 16.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:55:26 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelMember is deprecated in APPPATH/Controllers/Member.php on line 17.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:55:26 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelPeminjaman is deprecated in APPPATH/Controllers/Member.php on line 18.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:55:26 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelPengembalian is deprecated in APPPATH/Controllers/Member.php on line 19.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:55:26 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelUlasan is deprecated in APPPATH/Controllers/Member.php on line 20.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:55:26 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelKoleksiBuku is deprecated in APPPATH/Controllers/Member.php on line 21.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:55:26 --> [DEPRECATED] Creation of dynamic property App\Controllers\Member::$ModelKategoriBuku is deprecated in APPPATH/Controllers/Member.php on line 22.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Member->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+INFO - 2024-02-29 06:55:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-29 06:55:28 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelPetugas is deprecated in APPPATH/Controllers/Auth.php on line 11.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:55:28 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelMember is deprecated in APPPATH/Controllers/Auth.php on line 12.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+INFO - 2024-02-29 06:55:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-29 06:55:32 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelPetugas is deprecated in APPPATH/Controllers/Auth.php on line 11.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+WARNING - 2024-02-29 06:55:32 --> [DEPRECATED] Creation of dynamic property App\Controllers\Auth::$ModelMember is deprecated in APPPATH/Controllers/Auth.php on line 12.
+ 1 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/madi/Documents/project/ci4/perpus-ukom-2024/public/index.php')
+INFO - 2024-02-29 06:55:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

@@ -10,8 +10,9 @@
     <link rel="stylesheet" href="<?= base_url() ?>owl-slide/dist/assets/owl.theme.default.min.css">
     <link rel="stylesheet" href="<?= base_url() ?>fontawesome/css/all.min.css">
     <link rel="stylesheet" href="<?= base_url() ?>member_assets/style.css">
+    <link rel="stylesheet" href="<?= base_url() ?>member_assets/fonts.css">
     
     
 
 </head>
-<body>
+<body  style="background-color: #FFC95F">

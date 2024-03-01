@@ -74,7 +74,7 @@
         </div>
       </div>
       <footer class="footer">
-        <div class="ms-auto">Powered by&nbsp;<a href="<?= base_url() ?>admin/dist/https://coreui.io/docs/">Rahmadi Cahyo Saputro</a></div>
+        <div class="ms-auto">Dibuat Oleh&nbsp; <span class="text-primary">Rahmadi Cahyo Saputro</span></div>
       </footer>
     </div>
     
@@ -134,7 +134,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="total_pinjam" class="form-label">Uang Dibayar</label>
-                    <input type="text" class="form-control" id="uang_dibayarkan" name="uang_dibayarkan" value="-">
+                    <input type="text" class="form-control" id="uang_dibayarkan" name="uang_dibayarkan" value="">
                 </div>
                 <div class="mb-3">
                     <label for="total_pinjam" class="form-label">Kembalian</label>
@@ -229,7 +229,6 @@
 
         if (totalPengembalian > totalPinjam) {
             alert('Total pengembalian tidak boleh melebihi total pinjam.');
-            totalPengembalianInput.value = totalPinjam;
         }
     }
 </script>

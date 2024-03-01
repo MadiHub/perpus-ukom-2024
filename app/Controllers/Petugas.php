@@ -125,10 +125,14 @@ class Petugas extends BaseController
         
         $dapatkan_buku = $this->ModelBuku->dapatkan_buku($id_buku);
         $judul_buku = $dapatkan_buku->judul;
+        $stok = $dapatkan_buku->stok;
 
         $dapatkan_member = $this->ModelMember->dapatkan_member($email)->getRow();
         $email = $dapatkan_member->email;
         $nama_lengkap = $dapatkan_member->nama_lengkap;
+
+        $stok_baru = $stok + $total_pengembalian;
+
         $data_pengembalian = [
             'id_pengembalian' => $id_pengembalian,
             'id_member' => $id_member,
@@ -152,7 +156,12 @@ class Petugas extends BaseController
             'email' => $email,
             'nama_lengkap' => $nama_lengkap,
         ];
-        $tambah = $this->ModelPengembalian->tambah_pengembalian($data_pengembalian);
+
+        $data_stok_baru = [
+            'stok' => $stok_baru,
+        ];
+        $this->ModelPengembalian->tambah_pengembalian($data_pengembalian);
+        $this->ModelBuku->edit_stok_baru($data_stok_baru, $id_buku);
         session()->setFlashdata('success', 'Berhasil Edit Status Pengembalian !');
         // return redirect()->to(base_url('daftar_peminjam'));
         return view('petugas/cetak_struk_pengembalian', $data_struk);

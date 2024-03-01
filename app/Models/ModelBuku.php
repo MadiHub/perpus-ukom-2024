@@ -81,6 +81,7 @@ class ModelBuku extends Model
     {
         $this->select('*');
         $this->join('tb_kategori_buku', 'tb_kategori_buku.id_kategori_buku = '.$this->table.'.id_kategori_buku');
+        $this->join('tb_sub_kategori', 'tb_sub_kategori.id_sub_kategori = '.$this->table.'.id_sub_kategori');
 
         if ($id_buku === false) {
             return $this->findAll();
@@ -104,6 +105,13 @@ class ModelBuku extends Model
         $builder->update(['stok' => $stok_baru]);
                 
         return $this->db->affectedRows(); 
+    }
+
+    public function edit_stok_baru($data_stok_baru, $id_buku)
+    {
+        $builder = $this->db->table($this->table);
+        $builder->where('id_buku', $id_buku);
+        return $builder->update($data_stok_baru);
     }
 
     public function hapus_buku($id_buku)

@@ -58,7 +58,7 @@
     </div>
     </div>
     <footer class="footer">
-    <div class="ms-auto">Powered by&nbsp;<a href="<?= base_url() ?>petugas/dist/https://coreui.io/docs/">Rahmadi Cahyo Saputro</a></div>
+     <div class="ms-auto">Dibuat Oleh&nbsp; <span class="text-primary">Rahmadi Cahyo Saputro</span></div>
     </footer>
 </div>
 

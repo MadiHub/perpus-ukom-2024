@@ -52,6 +52,22 @@
     .table-group-divider td {
       border-top: 2px solid #ddd;
     }
+
+  @media print {
+    body {
+      size: landscape A4;
+    }
+
+    .page {
+      padding: 10mm;
+    }
+
+    /* Tambahkan lebih banyak gaya cetak sesuai kebutuhan Anda */
+    /* Jika data lebih dari 10, misalnya, atur gaya sesuai kebutuhan */
+    .page + .page {
+      page-break-before: always;
+    }
+  }
   </style>
 </head>
 
@@ -61,7 +77,7 @@
 
   <!-- Each sheet element should have the class "sheet" -->
   <!-- "padding-**mm" is optional: you can set 10, 15, 20 or 25 -->
-  <section class="sheet padding-10mm">
+<section class="page">
 
     <!-- HEAD -->
     <div class="container">

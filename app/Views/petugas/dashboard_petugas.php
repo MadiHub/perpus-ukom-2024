@@ -43,8 +43,7 @@
         </div>
       </div>
       <footer class="footer">
-        <div><a href="<?= base_url() ?>admin/dist/https://coreui.io">CoreUI </a><a href="<?= base_url() ?>admin/dist/https://coreui.io">Bootstrap Admin Template</a> © 2023 creativeLabs.</div>
-        <div class="ms-auto">Powered by&nbsp;<a href="<?= base_url() ?>admin/dist/https://coreui.io/docs/">Rahmadi Cahyo Saputro</a></div>
+        <div class="ms-auto">Dibuat Oleh&nbsp; <span class="text-primary">Rahmadi Cahyo Saputro</span></div>
       </footer>
     </div>
     

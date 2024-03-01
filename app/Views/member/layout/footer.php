@@ -1,5 +1,5 @@
 <!-- Footer -->
-<footer class="text-center text-lg-start mt-5 shadow" style="background-color: #ffffff;">
+<footer class="text-center text-lg-start mt-5 shadow"  style="background-color: #862B0D; color:#FFC95F;" >
         <div class="container p-4 pb-0">
         <section class="">
             <div class="row">
@@ -19,7 +19,7 @@
                     <div class="col">
                         <div class="kategori mt-2">
                             <p>
-                            <a href="<?= base_url() ?>ID-<?= $k['id_kategori_buku']?>" class="text"><?= $k['nama_kategori_buku']?></a>
+                            <a href="<?= base_url() ?>ID-<?= $k['id_kategori_buku']?>"  style="color:#FFC95F;" class="text" ><?= $k['nama_kategori_buku']?></a>
                             </p>
                         </div>
                     </div>

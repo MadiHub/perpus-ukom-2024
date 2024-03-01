@@ -144,6 +144,6 @@ class Auth extends BaseController
     {
         $session = session();
         $session->destroy();
-        return redirect()->to(base_url('login_member'));
+        return redirect()->to(base_url('/'));
     }
 }
