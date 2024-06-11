@@ -27,15 +27,7 @@
                                 <td><?= $buku['id_buku'] ?></td>
                                 <td><img src="<?= base_url() ?>buku/<?= $buku['sampul_buku'] ?>" alt="" width="50"></td>
                                 <td><?= $buku['judul'] ?></td>
-                                <?php 
-                                $nama_kategori = $buku['nama_kategori_buku'];
-                                if ($buku['id_kategori_buku'] == null) {
-                                    echo '<td>Belum Ada Kategori</td>';
-                                } else {
-                                    echo "<td>$nama_kategori</td>
-                                    ";
-                                }
-                                ?>
+                                <td><?= $buku['nama_kategori_buku'] ?></td>
                                 <?php 
                                 $nama_sub_kategori = $buku['nama_sub_kategori'];
                                 if ($buku['id_sub_kategori'] == null) {

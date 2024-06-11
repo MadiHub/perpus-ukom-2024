@@ -19,7 +19,7 @@
                     <h3>Daftar Koleksi</h3>
                 </div>
             </div>
-            <div class="card">
+            <div class="card"  style="background-color: #FFF9C9;">
                 <div class="container">
                 <div class="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3 mt-3 text-center">
                     <?php if (empty($semua_koleksi_by_member)): ?>

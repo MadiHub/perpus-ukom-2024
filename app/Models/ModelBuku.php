@@ -16,7 +16,7 @@ class ModelBuku extends Model
         $count = $query->countAllResults();
     
         if ($count == 0) {
-            return 'KT-001'; // Jika tidak ada data, beri nomor otomatis pertama
+            return 'BK-001'; // Jika tidak ada data, beri nomor otomatis pertama
         } else {
             // Ambil nomor otomatis terkecil yang belum digunakan
             $usedCodes = $query->select('id_buku')->get()->getResultArray();
@@ -44,7 +44,7 @@ class ModelBuku extends Model
         $batasan = $query->select('*')
             ->join('tb_kategori_buku', 'tb_kategori_buku.id_kategori_buku = '.$this->table.'.id_kategori_buku', 'left')
             ->join('tb_sub_kategori', 'tb_sub_kategori.id_sub_kategori = '.$this->table.'.id_sub_kategori', 'left')
-            ->orderBy('id_buku', 'ASC') 
+            ->orderBy('judul', 'ASC') 
             ->get()
             ->getResultArray();
         return $batasan;
@@ -80,8 +80,8 @@ class ModelBuku extends Model
     public function dapatkan_buku($id_buku = false)
     {
         $this->select('*');
-        $this->join('tb_kategori_buku', 'tb_kategori_buku.id_kategori_buku = '.$this->table.'.id_kategori_buku');
-        $this->join('tb_sub_kategori', 'tb_sub_kategori.id_sub_kategori = '.$this->table.'.id_sub_kategori');
+        $this->join('tb_kategori_buku', 'tb_kategori_buku.id_kategori_buku = '.$this->table.'.id_kategori_buku', 'left');
+        $this->join('tb_sub_kategori', 'tb_sub_kategori.id_sub_kategori = '.$this->table.'.id_sub_kategori', 'left');
 
         if ($id_buku === false) {
             return $this->findAll();

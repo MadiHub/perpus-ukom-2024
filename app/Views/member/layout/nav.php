@@ -34,7 +34,7 @@
                                 <i class='fa-solid fa-user'></i> $nama_lengkap
                             </a>
                             <ul class='dropdown-menu' style='background-color: #FFC95F;'>
-                                <li><a class='dropdown-item' href='buku_dipinjam' ><i class='fa-regular fa-id-card'></i> Profil</a></li>
+                                <li><a class='dropdown-item' href='profile' ><i class='fa-regular fa-id-card'></i> Profil</a></li>
                                 <li><a class='dropdown-item' href='logout' ><i class='fa-solid fa-right-from-bracket'></i> Keluar</a></li>
                             </ul>
                         </li>                     

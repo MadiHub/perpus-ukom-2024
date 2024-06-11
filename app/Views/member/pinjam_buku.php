@@ -10,61 +10,62 @@
 <link rel="stylesheet" href="<?= base_url() ?>rateyo/jquery.rateyo.min.css" />
     
     <div class="container-content" style="margin-top: 110px">
-    <div class="row">
-        <!-- Card untuk Gambar -->
-        <div class="col-md-4 text-center text-md-start mb-4">
-            <div class="card" style="margin-top: 20px">
-                <img src="<?= base_url() ?>buku/<?= $sampul_buku ?>" alt="Produk" class="card-img-top">
-               
+        <div class="card"  style="background-color: #FFF9C9;">
+            <div class="container">
+                <div class="row">
+                    <!-- Card untuk Gambar -->
+                    <div class="col-md-4 text-center text-md-start mb-4">
+                        <div class="card" style="margin-top: 20px">
+                            <img src="<?= base_url() ?>buku/<?= $sampul_buku ?>" alt="Produk" class="card-img-top">
+                        
+                        </div>
+                    </div>
+                    <!-- Card untuk detail buku -->
+                    <div class="col-md-8">
+                        
+                        <table class="table table-bordered table-striped mt-4">
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Judul</th>
+                                    <td><?= $judul ?></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Kategori</th>
+                                    <td><?= $nama_kategori_buku ?></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Sub Kategori</th>
+                                    <td><?= $nama_sub_kategori ?></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Penulis</th>
+                                    <td><?= $penulis ?></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Penerbit</th>
+                                    <td><?= $penerbit ?></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Tahun Terbit</th>
+                                    <td><?= $tahun_terbit ?></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Rating</th>
+                                    <td><span id="avgRating"></span></td>
+                                </tr>
+                                <!-- ... (data lainnya) ... -->
+                            </tbody>
+                        </table>
+                        <!-- ... (lanjutan penjelasan) ... -->
+                        <button class="btn w-100 " style="background-color: #862B0D; color: #FFF9C9;" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Pinjam Buku</button>
+                    </div>
+                </div>
             </div>
         </div>
-
-        <!-- Card untuk Penjelasan -->
-        <div class="col-md-8">
-            
-            <table class="table table-bordered table-striped mt-4">
-                <tbody>
-                    <tr>
-                        <th scope="row">Judul</th>
-                        <td><?= $judul ?></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Kategori</th>
-                        <td><?= $nama_kategori_buku ?></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Sub Kategori</th>
-                        <td><?= $nama_sub_kategori ?></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Penulis</th>
-                        <td><?= $penulis ?></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Penerbit</th>
-                        <td><?= $penerbit ?></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Tahun Terbit</th>
-                        <td><?= $tahun_terbit ?></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Rating</th>
-                        <td><span id="avgRating"></span></td>
-                    </tr>
-                    <!-- ... (data lainnya) ... -->
-                </tbody>
-            </table>
-            <!-- ... (lanjutan penjelasan) ... -->
-            <button class="btn w-100 " style="background-color: #DF791E; color: #ffff;" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Pinjam Buku</button>
-        </div>
-        
-        </div>
-
         
     <!-- Ulasan dan Rating -->
     <div class="ulasan mt-4">
-        <div class="card">
+        <div class="card" style="background-color: #FFF9C9;">
             <div class="container mt-3 mb-3">
         <ul class="nav nav-tabs" id="myTabs">
             <!-- ... (tab lainnya) ... -->
@@ -98,12 +99,12 @@
                     </div>
                     <span class="result mt-3">Rating: 0</span>
                     <input type="hidden" name="rating">
-                    <button class="btn w-100 mt-3" style="background-color: #DF791E; color: #ffff;">Kirim</button>
+                    <button class="btn w-100 mt-3 text-bold" style="background-color: #862B0D; color: #FFF9C9;">Kirim</button>
                 </form>
             </div>
             <div class="tab-pane fade" id="content2">
                 <?php if(empty($semua_ulasan) ): ?>
-                    <span style="color: #DF791E">Belum ada ulasan...</span>
+                    <span style="color: #862B0D">Belum ada ulasan...</span>
                 <?php endif; ?>
                 <?php foreach($semua_ulasan as $ulasan): ?>
                 <div class="profil">
@@ -174,14 +175,14 @@
                                 </span> 
                                 <input type="number" class="form-control text-end" value="0" min="0" id="total_pinjam" name="total_pinjam" readonly>
                                 <span class="input-group-btn">
-                                <button type="button" class="btn btn-outline-secondary" onclick="incrementValue()">+</button>
+                                <button type="button" class="btn" style="background-color: #862B0D; color: #FFF9C9;" onclick="incrementValue()">+</button>
                                 </span>
                             </div>
                         <!-- </div> -->
                     <!-- <input type="number" class="form-control" name="total_pinjam" id="total_pinjam" required oninput="validateTotalPengembalian()"> -->
                     </div>
                     <div class="d-grid gap-2">
-                        <button class="btn" style="background-color: #DF791E; color: #ffff;" type="submit">Pinjam Sekarang</button>
+                        <button class="btn" style="background-color: #862B0D; color: #FFF9C9;" type="submit">Pinjam Sekarang</button>
                     </div>
 				</form>
             </div>

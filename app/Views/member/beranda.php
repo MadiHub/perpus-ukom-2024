@@ -23,8 +23,8 @@
                             <div class="reload">
                                 <a href="<?= base_url() ?>" class="btn mr-5" style="background-color: #862B0D; color: #FFC95F;"><i class="fa-solid fa-rotate-right"></i></a>
                             </div>
-                            <input class="form-control me-2 text-align-center" type="search" placeholder="Temukan Buku Mu.." aria-label="Search" name="cari_buku" style="width: 200px;">
-                            <button class="btn btn-outline" style="background-color: #862B0D; color: #FFC95F;" type="submit">Search</button>
+                            <input class="form-control me-2 text-align-center" type="search" placeholder="Temukan Buku Mu.." aria-label="Cari" name="cari_buku" style="width: 200px;">
+                            <button class="btn btn-outline" style="background-color: #862B0D; color: #FFC95F;" type="submit">Cari</button>
                         </form>
                     </div>
                 </div>

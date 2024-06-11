@@ -8,7 +8,7 @@ use CodeIgniter\Router\RouteCollection;
 
 // member
 $routes->get('/', 'Member::index');
-$routes->get('/', 'Member::index');
+$routes->get('profile', 'Member::profile');
 $routes->get('not_found', 'Member::not_found');
 $routes->get('pinjam_buku/(:segment)', 'Member::pinjam_buku/$1');
 $routes->post('proses_pinjam_buku', 'Member::proses_pinjam_buku');

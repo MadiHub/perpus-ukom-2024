@@ -283,9 +283,10 @@ class Admin extends BaseController
         $stok = $this->request->getPost('stok');
         $sampul_buku = $request->getFile('sampul_buku');
     
-        $id_kategori_buku = ($id_kategori_buku !== null) ? $id_kategori_buku : 'null';
-        $id_sub_kategori = ($id_sub_kategori !== null) ? $id_sub_kategori : 'null';
+        // $id_kategori_buku = ($id_kategori_buku !== null) ? $id_kategori_buku : 'null';
+        // $id_sub_kategori = ($id_sub_kategori !== null) ? $id_sub_kategori : 'null';
 
+        // dd($id_kategori_buku, $id_sub_kategori);
         $direktori_foto = 'buku';
         $fileName = $id_buku . '_' . $judul . '.png';
     
@@ -328,7 +329,7 @@ class Admin extends BaseController
         if ($sampul_buku && $sampul_buku->isValid()) {
             $buku = $this->ModelBuku->dapatkan_buku($id_buku);
             $sampul_lama = $buku->sampul_buku;
-    
+
             // Hapus file lama jika ada
             if ($sampul_lama && file_exists($direktori_foto . '/' . $sampul_lama)) {
                 unlink($direktori_foto . '/' . $sampul_lama);

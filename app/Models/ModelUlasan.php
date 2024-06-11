@@ -35,6 +35,7 @@ class ModelUlasan extends Model
         return $this->select('tb_ulasan_buku.*, tb_member.*, tb_buku.*')
         ->join('tb_member', 'tb_member.id_member = tb_ulasan_buku.id_member')
         ->join('tb_buku', 'tb_buku.id_buku = tb_ulasan_buku.id_buku')
+        ->orderBy('tanggal_ulasan', 'DESC') 
         ->where('tb_ulasan_buku.id_buku', $id_buku) // Ubah agar spesifik ke kolom ulasan_buku
         ->get()
         ->getResultArray();

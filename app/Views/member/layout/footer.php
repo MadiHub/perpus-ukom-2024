@@ -29,9 +29,9 @@
             <hr class="w-100 clearfix d-md-none" />
             <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
                 <h6 class="text-uppercase mb-4 font-weight-bold">Info</h6>
-                <p><i class="fa-solid fa-location-dot"></i> Bekasi, Jembatan Viral 2 Arah</p>
+                <p><i class="fa-solid fa-location-dot"></i> Bekasi, Jl Jaka Kusuma Utara</p>
                 <p><i class="fas fa-envelope mr-3"></i> eternal_library@gmail.com</p>
-                <p><i class="fas fa-phone mr-3"></i> + 08 210 447 88</p>
+                <p><i class="fas fa-phone mr-3"></i> + 08-210-485-499</p>
             </div>
             </div>
         </section>
@@ -43,7 +43,7 @@
                     <!-- Copyright -->
                     <div class="p-3">
                     © 2024 Copyright:
-                    <a class="text" href="https://mdbootstrap.com/"
+                    <a class="text" style="color:#FFF9C9" href="https://github.com/MadiHub/perpus-ukom-2024"
                         >Rahmadi Cahyo Saputro Dev</a
                         >
                     </div>

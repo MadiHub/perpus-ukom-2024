@@ -2,22 +2,24 @@
     <!-- CARD -->
     <div class="populer" style="margin-top:110px">
         <div class="container-content">
-            <div class="row">
-                <div class="col mt-4">
-                    <h3>Daftar Buku <?= $judul ?></h3>
-                </div>
-                <div class="col text-end text-secondary">
-                    <div class="mt-3">
+        <div class="row">
+                <div class="text-end text-secondary">
+                    <div class="mt-3 d-flex justify-content-end mb-3 ">
                         <form class="d-flex" role="search" action="<?= base_url() ?>" method="get">
                             <div class="reload">
-                                <a href="<?= base_url() ?>" class="btn mr-5" style="background-color: #DF791E; color: #ffff;"><i class="fa-solid fa-rotate-right"></i></a>
+                                <a href="<?= base_url() ?>" class="btn mr-5" style="background-color: #862B0D; color: #FFC95F;"><i class="fa-solid fa-rotate-right"></i></a>
                             </div>
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="cari_buku">
-                            <button class="btn btn-outline" style="background-color: #DF791E; color: #ffff" type="submit">Search</button>
+                            <input class="form-control me-2 text-align-center" type="search" placeholder="Temukan Buku Mu.." aria-label="Search" name="cari_buku" style="width: 200px;">
+                            <button class="btn btn-outline" style="background-color: #862B0D; color: #FFC95F;" type="submit">Search</button>
                         </form>
                     </div>
                 </div>
             </div>
+               <!-- <div class="container"> -->
+               <div class="card" style="background-color: #FFF9C9;">
+                <div class="card-header">
+                <h3 class="text-center mt-3" style="color: #862B0D;">Daftar Buku  <?= $judul ?></h3>
+                </div>
             <div class="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">
                 <?php if (empty($buku_kategori)): ?>
                     <img src="<?= base_url() ?>buku/buku404.png" class="img buku-404 mt-3" alt="course">
@@ -41,6 +43,8 @@
                 </div>
                 <?php endforeach ?>
                 <?php endif; ?>
+        </div>
+        </div>
         </div>
     </div>
 

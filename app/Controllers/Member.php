@@ -64,6 +64,9 @@ class Member extends BaseController
     public function not_found() {
         return view('not_found');
     }
+    public function profile() {
+        return view('member/profile');
+    }
 
     public function pinjam_buku($id_buku)
     {

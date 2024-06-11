@@ -3,7 +3,7 @@
 <?php
 
 if (empty($semua_sub_kategori)) {
-    echo "<option>Sub Kategori Belum Ada</option>";
+    echo "<option value='null'>Sub Kategori Belum Ada</option>";
 } else {
     foreach ($semua_sub_kategori as $s) {
         ?>
